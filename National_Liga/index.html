@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Національна хокейна ліга</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Костів Лілія">
+    <meta name="description" content="html || tags || other">
+    <link rel="icon" type="image/png" href="./pictures/iconfinder_Sith_Empire_logo_star_wars_3151559.png" />
+</head>
+<body>
+    <header>
+        <h2>Національна ліга</h2>
+        <nav>
+            <ul>
+                <li> Новини </li>
+				<ul>
+					<li> Наступний чемпіонат</li>
+					<li> Новини в команді</li>
+				</ul>
+				<li> Про лігу </li>
+				<ul>
+					<li> <a href="./templates/chempionat.html">Чемпіонати</a></li>
+					<li> <a href="./templates/players.html">Гравці</a></li>
+					<li> <a href="./templates/victories.html">Перемоги</a></li>
+				</ul>
+               	<li> Відео </li>
+				<ul>
+					<li> <a href="https://www.nhl.com/video/trebek-announces-stuetzle-to-sens/t-277350912/c-6791389">Відео чемпіонат</a></li>
+					<li> <a href="https://cms.nhl.bamgrid.com/images/photos/319544364/1024x576/cut.jpg">Гравці</a></li>
+					<li> <a href="https://cdn.segodnya.ua/img/article/11560/7_main_new.1532022311.jpg"> Перемоги </a></li>
+				</ul>
+				<li> Квитки</li>
+                <input type="text" id="searchInput" placeholder="search">
+                <button id="search-button">Пошук</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav>
+            <ul>
+				<li> <a href="./templates/chempionat.html">Чемпіонати</a></li>
+				<li> <a href="./templates/players.html">Гравці</a></li>
+				<li> <a href="./templates/victories.html">Перемоги</a></li>
+			</ul>
+        </nav>
+        <section>
+            <h2>Новини</h2>
+			<a href="./templates/news.html"> <img style="background: #b7ff8e; padding: 20px;" width="50%" src="./pictures/news.jpg" alt="Новини"></a> 
+		</section>
+        <section>
+            <h2>Про лігу</h2>
+			<a href="./templates/about_liga.html"> <img style="background: #b7ff8e; padding: 20px;" width="50%" src="./pictures/about_liga.jpg" alt="Про лігу"></a> 
+			<details> 
+                <summary>Open it </summary>
+                <p>Більше про хокейну лігу на сайті <a href="https://www.nhl.com">https://www.nhl.com</a</p>
+            </details>
+        </section>
+		<section>
+            <h2>Відео</h2>
+			<a href="./templates/video.html"> <img style="background: #b7ff8e; padding: 20px;" width="50%" src="./pictures/video.jpg" alt="Відео"></a> 
+		</section>
+		<article>
+			<h4>Найактуальніші новини</h4>
+			<date>2020</date>
+			<hr>
+			<p><span style="color: brown;">10 жовтня <b>національна хокейна ліга</b></span> <i>перемогла</i> у ювілейному чемпіонаті, який проходив у  
+			   <em>Варшаві</em> </p>
+			<h4>Найцікавіші відео</h4>
+			<p><span style="color: brown;">Шукайте на сайті <b>національної хокейної ліги</b></span> </p>          
+        </article>
+        <aside>
+            <p>Aside area про гравців ліги</p>
+        </aside>
+        <br>
+        <h2>Форма для реєстрації на сайті</h2>
+        <form method="GET" action="./templates/contacts.html">
+            <fieldset>
+                <legend>Заповніть форму</legend>
+                <label for="userName">
+                    <p>Введіть Ваше ім'я</p>
+                    <input id="userName" type="text" name="userName" placeholder="" required maxlength="10" minlength="3">
+                </label>
+                <label>
+                    <p>Введіть Ваш вік</p>
+                    <input type="number" name="userAge" placeholder="" required max="100" min="10">
+                </label>
+				<label>
+                    <p>Введіть номер телефону</p>
+                    <input type="tel" placeholder="800 000 000" name="userPhone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                </label>
+                <hr>
+                <label>
+                    <p>Введіть e-mail</p>
+                    <input type="email" required placeholder="Email" name="userEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </label>
+				<label>
+                    <p>Введіть пароль</p>
+                    <input type="password" required name="userPassword">
+                </label>              
+                <hr>
+                <p>Вкажіть країну</p>
+                <input type="radio" name="cityName" value="Ukraine" checked> <span>Україна</span>
+                <input type="radio" name="cityName" value="Polish"> <span>Польща</span>
+                <input type="radio" name="cityName" value="England"> <span>Англія</span>
+                <br> 
+				<p>Виберіть місто</p>				
+                <select name="favoriteCity" >
+                    <option value="Lviv" selected>Lviv</option>
+                    <option value="Kiev">Kiev</option>
+                    <option value="Odessa">Odessa</option>
+                </select>
+				<br>
+				<p>Додайте коментар</p>	
+                <textarea name="userText"></textarea> 
+                <hr>           
+                <input type="submit" value="Підтвердити дані">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <h4>Підтримайте національну лігу на своїх сторінках у соціальних мережах &#128512; </h4>
+		<p style="font-size: 3em;">   </p>
+    </footer>
+</body>
+</html>
+
