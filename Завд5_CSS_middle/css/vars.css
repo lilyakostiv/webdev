@@ -1,0 +1,10 @@
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --fonts-color:rgb(149, 47, 197);
+
+    /* height*/
+    --header-height: 55px;
+    --main-height: 450px; 
+    --article-height: 250px;
+    --footer-height: 150px;
+}

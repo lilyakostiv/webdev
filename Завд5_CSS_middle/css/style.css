@@ -1,0 +1,5 @@
+@import 'vars.css';
+
+/* Page style */
+@import 'selectors.css';
+@import 'shop-items.css';

@@ -1,0 +1,222 @@
+body {
+    font-family: var(--main-font);
+    color: var(--fonts-color);
+    background-image: url(../public/image/backgrounds/istockphoto-1151621417-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 50px;
+    background-position: center; /*top right bottom left */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    color: #035a25;
+    font-size: 20px;
+    font-weight:400;
+    font-style: italic;
+}
+
+.left-color-size {
+    font-size: 2rem;
+    background: rgb(233, 236, 14);
+}
+.centre-color-size {
+    font-size: 1 cm;
+    background: rgb(20, 212, 20);
+}
+.right-color-size {
+    font-size: 50 pt;
+    background: rgb(165, 34, 165);
+}
+#nav-left {
+    text-transform: uppercase; 
+    background: red;
+}
+.lower-color {
+    background: rgb(149, 184, 52); 
+    min-height:var(--article-height);
+}
+.aside-color {
+    background: rgb(9, 105, 57); 
+    min-height:600;
+}
+.footer-color {
+    background: rgb(41, 2, 38); 
+    min-height:var(--footer-height);
+}
+main section div p.font-decorator {
+    background: rgb(7, 29, 158);
+    column-count: 2;
+    line-height: 1.5em;
+    letter-spacing: -0.1rem;
+    text-align: justify;
+    color: rgb(28, 175, 175);
+}
+
+/* wraper - обгортки для блочних елементів  */
+.header-wraper {
+    font-size:20px;
+    font-weight:700;
+    font-style:bond;
+    background: rgb(179, 83, 127);
+    min-height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.header-wraper .header1-logo {
+    background-image: url("../public/image/backgrounds/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+.header-wraper .logo-link {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.header-wraper .main-container .header1-manu {
+    list-style: none;
+    display: flex;
+    float: right;
+}
+.header-wraper .main-container .header1-manu a {
+    padding: 20px;
+}
+.header-wraper .main-container .header1-manu a.selected,
+.header-wraper .main-container .header1-manu a:hover {
+    background: rgb(175, 37, 37);
+    color: rgb(123, 158, 25); 
+}
+body .header2 {
+    background: rgb(39, 77, 109);
+    background-image: url("../public/image/backgrounds/city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 650px;
+    overflow:auto;
+    margin-top: var(--header-height);
+    align-items: center;
+    display: flex;
+}
+body .header2 .header2-article {
+    width: 300px;
+    color: rgb(236, 238, 231);
+    background: rgb(7, 7, 7);
+    background: rgba(7, 7, 7, 0.318);
+    /* background: #000000FF; */
+    padding: 20px;
+    padding-top:40px;
+    padding: 40px 20px 20px 20px;
+    margin: 30px;
+    border-radius: 15px;
+    /* border-radius: 5% 10% 30% 20%; */
+    box-shadow: 5px 25px 20px rgb(23, 23, 75);
+}
+body .header2 .header2-article button,
+.middle-wraper .shop-items .single-shop-card a.card-btn {
+    padding: 15px;
+    min-width: 50%; /*від батьківського елемента*/
+    background: rgb(138, 14, 14);
+    color: aliceblue;
+    border: 0;
+    border: 2px solid rgb(29, 1, 1);
+    text-transform: uppercase;
+    font-size:16px;
+    font-weight: 500;
+    border-radius: 50%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block; /*none; inline-block;*/
+    top:20px; /*==margin-top*/
+    left: -20px;
+    position: relative /*до чого привязаний елемент*/
+    /*absolute,relative з top i без top,fixed,static*/
+}
+body .header2 .header2-article button:active,
+.middle-wraper .shop-items .single-shop-card a.card-btn:active {
+    background: rgb(211, 197, 197);
+    color: rgb(18, 18, 19);
+}
+
+.body-wraper {
+    min-height: var(--main-height);
+    display: flex;
+    flex-wrap: wrap;
+}
+.middle-wraper {
+    background: rgb(19, 18, 18);
+    min-height:var(--article-height);
+}
+.upper-wraper {
+    min-height:var(--article-height);
+}
+.body-wraper nav#nav-left,
+.body-wraper aside.aside-color {
+    /* width: 20%; */
+}
+.body-wraper .upper-div {
+    width: 60%;
+}
+.upper-wraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.upper-wraper div {
+    width: calc(100%/3);
+}
+.main-container {     /* обгортка щоб header був ширший ніж main */
+    /*max-width: 1200px;*/
+    margin: 0 auto;   /*щою main (середина) вирівнялась по центру*/
+    overflow: auto;
+}
+
+.round-conteiner {
+    min-width: 50%;
+    height: 50%;
+    border-radius: 50%;/*малює круги зліва*/
+    background: rgb(99, 96, 104);
+    margin: 0 auto;/*круги будуть по центру*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.round-conteiner.round-image-1 {
+    background-image:  url("../public/image/backgrounds/city.jpg");
+}
+.round-conteiner.round-image-2 {
+    background-image:  url("../public/image/backgrounds/istockphoto-1151621417-612x612.jpg");
+}
+.round-conteiner.round-image-3 {
+    background-image:  url("https://giffiles.alphacoders.com/209/209734.gif");
+}
+/* д/з */
+#nav-left, .aside-color {
+    width: 200px;
+    padding: 15px;
+}
+.upper-div {
+    padding: 15px;
+    border: 5px solid rgb(128, 15, 15);
+}
+.middle-wraper {
+    padding: 15px;
+    border: 1px solid rgb(9, 128, 58);
+}
+.lower-color {
+    padding: 15px;
+    border: 2px solid rgb(180, 176, 184);
+    display:flex;
+    flex-wrap: wrap;
+}
+.lower_three {
+    width:calc(99%/3);
+    border: 1px solid rgb(27, 26, 27);
+}
