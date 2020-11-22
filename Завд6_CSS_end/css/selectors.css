@@ -1,0 +1,364 @@
+body {
+    font-family: var(--main-font);
+    color: var(--fonts-color);
+    background-image: url(../public/image/backgrounds/istockphoto-1151621417-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 50px;
+    background-position: center; /*top right bottom left */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    color: #035a25;
+    font-size: 20px;
+    font-weight:400;
+    font-style: italic;
+}
+
+.left-color-size {
+    font-size: 2rem;
+    background: rgb(233, 236, 14);
+}
+.centre-color-size {
+    font-size: 1 cm;
+    background: rgb(20, 212, 20);
+}
+.right-color-size {
+    font-size: 50 pt;
+    background: rgb(165, 34, 165);
+}
+#nav-left {
+    text-transform: uppercase; 
+    background: red;
+}
+.lower-color {
+    background: rgb(166, 228, 10); 
+    min-height:var(--article-height);
+}
+.lower-color .gradient-area {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 5px;
+}
+.lower-color .gradient-area .box {
+   height:  150px;
+   background: rgb(207, 116, 25);
+}
+/*colorzilla.com/gradient-editor - градієнт*/
+.lower-color .gradient-area .box.linear-gradient {
+    background: linear-gradient(to right,red,rgb(143, 62, 62),rgb(160, 147, 147));
+}
+.lower-color .gradient-area .box.radial-gradient {
+    background: radial-gradient(circle,red,rgb(143, 62, 62),rgb(160, 147, 147));
+}
+/*css-tricks.com  - фільтри*/
+.image-filter-area {
+    padding: 10px;
+}
+.image-filter-area .city-image  {
+    width: 100%;
+    background-image: url("../public/image/backgrounds/city.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    z-index: 1;
+    position: relative;
+    transition: filter .5s linear;
+}
+.image-filter-area .filter-blur {
+    filter: blur(5px); /*розмиття зображення*/ 
+    /*тільки такий порядок параметрів*/ 
+    transition: filter .5s linear;
+}
+.image-filter-area .filter-sepia {
+    filter: sepia(100%); /*висвітлення зображення*/  
+}
+.image-filter-area .filter-rotate {
+    filter: hue-rotate(180deg) saturate(0); /*deg-градуси,max-360*/  
+    transition: filter .5s linear;
+}
+.image-filter-area .filter-opacity {
+    filter: opacity(100%); /*прозорість*/ 
+}
+.image-filter-area .filter-invert {
+    filter: invert(0.8); /*або invert(.8) -прозорість*/ 
+    transition: filter .5s linear;
+}
+/*псевдокласи*/
+.pseudo-text p:first-child {
+    color: rgb(124, 34, 7); 
+}
+.pseudo-text p:last-child {
+    color: rgb(5, 1, 10); 
+}
+/*псевдоелементи мають :: */
+.pseudo-text p::first-letter {
+    color: rgb(212, 197, 197); 
+    background: black;
+    padding: 4px;
+}
+.pseudo-text p.first-text::after {
+    content: " - This is after";
+    color: red;
+}
+.pseudo-text p.first-text::before {
+    content: "This is before - ";
+    color: rgb(5, 22, 78);
+}
+.pseudo-text p:nth-last-child(even) {
+    background: white;
+}
+.lower-list li {
+    background: white;
+    padding: 10px;
+}
+.lower-list li:nth-last-child(odd) {
+    /*непарні елементи*/
+    background: rgb(61, 5, 5);
+    color: aliceblue;
+}
+/*псевдоселектори*/
+/*як буде виглядати link при кліку, наведенні,...*/
+.pseudo-text a:link {
+    color: rgb(219, 159, 29)
+}
+.pseudo-text a:visited {
+    color: rgb(202, 13, 13)
+}
+.pseudo-text {
+    overflow: hidden;/*обрізає частину box,що є за межами*/
+}
+
+/*animation*/
+/*1.transition - реагує на event*/
+/*2.keyframes - реагує завжди, і при запуску сайту*/
+
+.image-filter-area .filter-blur:hover {
+    filter: blur(0px); /*розмиття зображення*/ 
+}
+.image-filter-area .city-image:hover {
+    transform: scale(1.3);/*збільшується в 1.3рази*/
+    z-index: 5;
+}
+.image-filter-area .filter-rotate:hover {
+    filter: hue-rotate(300deg) saturate(10); /*deg-градуси,max-360*/  
+}
+
+.image-filter-area .filter-invert:hover {
+    transform: rotateX(180deg) scale(1.3);/*повернути*/
+}  
+
+/*transform*/
+.pseudo-text .box {
+    width: 100%;
+    height:100px;
+    background: rgb(214, 110, 110);
+    border: 10px dotted white;
+    box-sizing: border-box;/*границя всередині box*/
+}
+.pseudo-text .box.transform-skew {
+    transform: skewX(20deg) skewY(10deg);/*rotate(50deg)*/
+}
+
+/*keyframe*/
+.image-filter-area .animation-keyframe {
+    background-position-x: 0px;
+    animation: rotate-animation 5s linear infinite;
+    /*infinite -безконечна анімація
+    forwards - до кінцевої точки*/
+}
+@keyframes rotate-animation {
+    /*from to  або  0% 100%*/
+    0% { transform: rotateX(0deg) rotateY(0deg); background-position-x: 0px;}
+    30% { transform: rotateX(-50deg) rotateY(-50deg); }
+    100% { transform: rotateX(180deg) rotateY(180deg); background-position-x: 1000px;}
+}
+
+
+/* aside  */
+.aside-color {
+    background: rgb(215, 224, 220); 
+    min-height:600;
+}
+.aside-color .aside-items {
+    display: grid;
+    grid-template-columns: auto auto;/*2 колонки, автоматично вирівнюються*/
+    column-gap: 5px; /*відстань між колонками*/
+    grid-row-gap: 15px; /*відстань між рядками*/
+}
+.aside-color .aside-items .single-shop-card {
+    overflow: auto;
+}
+.aside-color .aside-items .single-shop-card h2,
+.aside-color .aside-items .single-shop-card h3,
+.aside-color .aside-items .single-shop-card p {
+    font-size: 0.5rem;
+}
+
+.footer-color {
+    background: rgb(41, 2, 38); 
+    min-height:var(--footer-height);
+}
+main section div p.font-decorator {
+    background: rgb(7, 29, 158);
+    column-count: 2;
+    line-height: 1.5em;
+    letter-spacing: -0.1rem;
+    text-align: justify;
+    color: rgb(28, 175, 175);
+}
+
+/* wraper - обгортки для блочних елементів  */
+.header-wraper {
+    font-size:20px;
+    font-weight:700;
+    font-style:bond;
+    background: rgb(179, 83, 127);
+    min-height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.header-wraper .header1-logo {
+    background-image: url("../public/image/backgrounds/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+.header-wraper .logo-link {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.header-wraper .main-container .header1-manu {
+    list-style: none;
+    display: flex;
+    float: right;
+}
+.header-wraper .main-container .header1-manu a {
+    padding: 20px;
+}
+.header-wraper .main-container .header1-manu a.selected,
+.header-wraper .main-container .header1-manu a:hover {
+    background: rgb(175, 37, 37);
+    color: rgb(123, 158, 25); 
+}
+body .header2 {
+    background: rgb(39, 77, 109);
+    background-image: url("../public/image/backgrounds/city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 650px;
+    overflow:auto;
+    margin-top: var(--header-height);
+    align-items: center;
+    display: flex;
+}
+body .header2 .header2-article {
+    width: 300px;
+    color: rgb(236, 238, 231);
+    background: rgb(7, 7, 7);
+    background: rgba(7, 7, 7, 0.318);
+    /* background: #000000FF; */
+    padding: 20px;
+    padding-top:40px;
+    padding: 40px 20px 20px 20px;
+    margin: 30px;
+    border-radius: 15px;
+    /* border-radius: 5% 10% 30% 20%; */
+    box-shadow: 5px 25px 20px rgb(23, 23, 75);
+}
+body .header2 .header2-article button,
+.middle-wraper .shop-items .single-shop-card a.card-btn,
+.upper-div .main-btn {
+    padding: 15px;
+    min-width: 50%; /*від батьківського елемента*/
+    background: rgb(138, 14, 14);
+    color: aliceblue;
+    border: 0;
+    border: 2px solid rgb(29, 1, 1);
+    text-transform: uppercase;
+    font-size:16px;
+    font-weight: 500;
+    border-radius: 50%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block; /*none; inline-block;*/
+    top:20px; /*==margin-top*/
+    left: -20px;
+    position: relative /*до чого привязаний елемент*/
+    /*absolute,relative з top i без top,fixed,static*/
+}
+ /*псевдоселектори*/
+body .header2 .header2-article button:active,
+.middle-wraper .shop-items .single-shop-card a.card-btn:active,
+.upper-div .main-btn:active {
+    background: rgb(211, 197, 197);
+    color: rgb(18, 18, 19);
+}
+.upper-div .main-btn {
+    left: 0px;
+    top:0;
+    margin:0 auto; /*кнопки по центру*/
+}
+
+.body-wraper {
+    min-height: var(--main-height);
+    display: flex;
+    flex-wrap: wrap;
+}
+.middle-wraper {
+    background: rgb(19, 18, 18);
+    min-height:var(--article-height);
+}
+.upper-wraper {
+    min-height:var(--article-height);
+}
+.body-wraper nav#nav-left,
+.body-wraper aside.aside-color {
+    width: 20%;
+}
+.body-wraper .upper-div {
+    width: 60%;
+}
+.upper-wraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.upper-wraper div {
+    width: calc(100% /3);
+}
+.main-container {     /* обгортка щоб header був ширший ніж main */
+    max-width: 1200px;
+    margin: 0 auto;   /*щою main (середина) вирівнялась по центру*/
+    overflow: auto;
+}
+
+.round-conteiner {
+    min-width: 50%;
+    height: 50%;
+    border-radius: 50%;/*малює круги зліва*/
+    background: rgb(99, 96, 104);
+    margin: 0 auto;/*круги будуть по центру*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.round-conteiner.round-image-1 {
+    background-image:  url("../public/image/backgrounds/city.jpg");
+}
+.round-conteiner.round-image-2 {
+    background-image:  url("../public/image/backgrounds/istockphoto-1151621417-612x612.jpg");
+}
+.round-conteiner.round-image-3 {
+    background-image:  url("https://giffiles.alphacoders.com/209/209734.gif");
+}

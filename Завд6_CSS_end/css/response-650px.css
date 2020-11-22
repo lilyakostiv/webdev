@@ -1,0 +1,34 @@
+@media screen and (max-width: 650px) {
+    body .header2 {
+        margin-top: 0;
+    }
+    .header-wraper {
+        position: relative;
+    }
+    .header-wraper .main-container .header1-manu {
+        display: block;
+        float: none;
+        padding: 0px;
+        overflow: hidden;
+    }
+    .header-wraper .main-container .header1-manu a.selected,
+    .header-wraper .main-container .header1-manu a:hover,
+    .header-wraper .main-container .header1-manu li a {
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+    .body-wraper nav#nav-left {
+        display: none;
+    }
+
+    .body-wraper nav#nav-left,
+    .body-wraper aside.aside-color,
+    .body-wraper .upper-div {
+        width: 100%;
+    }   
+    .middle-wraper .shop-items .single-shop-card {
+        width: calc(100%/2);
+    }
+}
+ 
