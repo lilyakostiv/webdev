@@ -1,0 +1,155 @@
+#navbarNav ul.navbar-nav {
+    float: left;
+}
+.header-my {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+.header2, .main, footer {
+    z-index: 1;
+}
+body .header2 {
+    background: rgb(39, 77, 109);
+    background-image: url("../public/city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    min-height: 450px;
+    overflow:auto;
+    align-items: center;
+    display: flex;
+}
+body .header2 .header2-article {
+    width: 600px;
+    color: rgb(236, 238, 231);
+    background: rgb(7, 7, 7);
+    background: rgba(7, 7, 7, 0.2518);
+    padding: 20px;
+    padding-top:40px;
+    padding: 50px 50px 50px 50px;
+    margin: 70px;
+    border-radius: 15px;
+    font-size: 50px;
+}
+.section1 {
+    min-height: 200px;
+    padding: 0px 50px 0px 50px;
+}
+.section1 .font-decorator {
+    color: rgb(121, 100, 100);
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+}
+.text-decor {
+    color: rgb(121, 100, 100);
+    font-size: 20px;
+    letter-spacing: normal;
+    text-align: center;
+}
+.middle-wraper {
+    padding: 15px;
+    min-width: 50%; /*від батьківського елемента*/
+    border: 0;
+    
+    font-size:16px;
+    font-weight: 500;
+    border-radius: 50%;
+    border-radius: 10px;
+    
+    display: block; /*none; inline-block;*/
+    top:20px; /*==margin-top*/
+    left: -20px;
+    position: relative /*до чого привязаний елемент*/
+}
+.shop-items{
+    display: flex;
+    flex-wrap: wrap;/*щоб переходило на наст.сторінку*/
+}
+.single-shop-card  {
+    background: white;
+    width: calc(100% / 3);
+    padding: 15px;
+    overflow: auto;
+}
+.middle-wraper .card-inner h3 {
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+body .middle-wraper .card-btn,
+footer .card-btn,
+body .section2 .card-btn {
+    padding: 15px;
+    width: 250px; /*від батьківського елемента*/
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    /*font-size:16px;
+    font-weight: 500;*/
+    /*border-radius: 50%;*/
+    border-radius: 10px;
+    cursor: pointer;
+    display: block; /*none; inline-block;*/
+    top:20px; /*==margin-top*/
+    margin-bottom: 60px;
+    left: -20px;
+    /*position: relative;/*до чого привязаний елемент*/
+    /*absolute,relative з top i без top,fixed,static*/
+    margin: 0 auto;
+    text-align: center;
+}
+body .section2 .card-btn {
+    background: white;
+    color: rgb(170, 43, 43);
+    float: left;
+    margin-left: 50px;
+}
+
+body .middle-wraper .card-btn:hover,
+footer .card-btn:hover,
+body .section2 .card-btn:hover {
+    background: rgb(24, 12, 94);
+    color: rgb(184, 230, 20);
+}
+body .section2 {
+    background: rgb(39, 77, 109);
+    background-image: url("../public/telefon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    min-height: 450px;
+    overflow:auto;
+    align-items: center;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+body .section2 .header2-article {
+    width: 600px;
+    color: rgb(236, 238, 231);
+    /*background: rgb(7, 7, 7);
+    background: rgba(7, 7, 7, 0.2518);*/
+    padding: 20px;
+    padding-top:40px;
+    padding: 50px 50px 20px 50px;
+    margin: 0px;
+    border-radius: 15px;
+    font-size: 50px;
+}
+.text-decor2 {
+    color: white;
+    text-align: left;
+}
+footer {
+    background: rgb(228, 230, 225);
+    padding: 100px;
+    margin-top: 100px;
+}
+footer div {
+    text-align: center;
+}
+
+
