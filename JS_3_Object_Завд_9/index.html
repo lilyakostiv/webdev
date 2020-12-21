@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object</title>
+</head>
+<style>
+    ul li {
+        list-style: none;
+    }
+    .container{
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .student-card {
+        padding: 10px;
+    }
+    .student-card:nth-child(even){
+        background: #eee;
+    }
+    .green-list:nth-child(even){
+        background: rgba(1, 59, 1, 0.425)
+    }
+    .green-list:nth-child(odd){
+        background: rgba(119, 156, 119, 0.425)
+    }
+
+    .yellow-list:nth-child(even){
+        background: rgba(59, 48, 1, 0.425)
+    }
+    .yellow-list:nth-child(odd){
+        background: rgba(156, 137, 119, 0.425)
+    }
+
+    .red-list:nth-child(even){
+        background: rgba(59, 1, 1, 0.425)
+    }
+    .red-list:nth-child(odd){
+        background: rgba(156, 119, 119, 0.425)
+    }
+	.user-header {
+		background: yellow;
+	}
+</style>
+<body>
+	<h1>Успішність студентів</h1>
+	
+	<div class="container">
+		<ul id="user-list-display"></ul>  
+	</div>
+	
+    <script src="script.js"></script>  
+</body>
