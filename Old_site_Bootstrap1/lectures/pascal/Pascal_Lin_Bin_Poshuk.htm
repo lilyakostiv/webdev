@@ -1,0 +1,250 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Лінійний та бінарний пошук</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>Лінійний та бінарний пошук</span></b></p>
+
+<p class=MsoNormal><b>1. Лінійний (послідовний) пошук</b></p>
+
+<p class=MsoNormal>            Досить часто потрібно відшукати інформацію у
+невідсортованій послідовності елементів (масиві елементів). Тоді пошук
+зводиться до послідовного перегляду всіх елементів масиву, поки не знайдемо
+шуканий елемент. Такий пошук називається лінійним.</p>
+
+<p class=MsoNormal>            Нехай задано масив а<span lang=RU>[</span><span
+lang=EN-US>i</span><span lang=RU>], </span><span lang=EN-US>i</span><span
+lang=RU>=1..</span><span lang=EN-US>n</span>, шукаємо елемент <span lang=EN-US>x</span><span
+lang=RU>:</span></p>
+
+<p class=MsoNormal><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>t:=false;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>for i:=1 to n do</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    if a[i] = x then t:=true;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>if t then write ('</span>Шуканий елемент
+знайдено<span lang=EN-US>')</span></p>
+
+<p class=MsoNormal><span lang=RU>      </span><span lang=EN-US>else</span><span
+lang=EN-US> </span><span lang=EN-US>write</span><span lang=RU>('</span>Шуканий
+елемент не знайдено<span lang=RU>');</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            Цей алгоритм буде перевіряти <b>всі</b> елементи
+масиву із шуканим елементом. Якщо елемент <span lang=EN-US>x</span> буде не
+останнім у масиві, то ми виконаємо зайві порівняння.</p>
+
+<p class=MsoNormal>Запишемо алгоритм лінійного пошуку, який виконуватиметься
+доти, доки не знайде шуканий елемент <span lang=EN-US>x</span><span lang=RU>:</span><span
+lang=RU> </span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span lang=EN-US>i:=1;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>t:=false;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>while (i&lt;=n) and (t=false) do</span></p>
+
+<p class=MsoNormal><span lang=EN-US>begin</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    if a[i] = x then t:=true;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    i:=i+1;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>end;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>if t then write ('</span>Шуканий елемент
+знайдено<span lang=EN-US>')</span></p>
+
+<p class=MsoNormal><span lang=RU>      </span><span lang=EN-US>else</span><span
+lang=EN-US> </span><span lang=EN-US>write</span><span lang=RU>('</span>Шуканий
+елемент не знайдено<span lang=RU>');</span></p>
+
+<p class=MsoNormal><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=RU>Вдосконалимо цей алгоритм</span><span
+lang=EN-US>:</span></p>
+
+<p class=MsoNormal><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>i:=1;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>while (i &lt;= n) and (a[i] &lt; &gt; x) do</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    i:=i+1;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>if i &lt;= n then write ('</span>Шуканий
+елемент знайдено<span lang=EN-US>')</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>      </span><span lang=EN-US>else</span><span
+lang=EN-US> </span><span lang=EN-US>write</span><span lang=RU>('</span>Шуканий
+елемент не знайдено<span lang=RU>');</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b>2. Бінарний (двійковий) пошук</b></p>
+
+<p class=MsoNormal>Усім є відома гра <span lang=RU>&quot;</span>Відгадай число<span
+lang=RU>&quot;</span>. Перший учасник гри загадує число і повідомляє другому,
+на якому проміжку воно знаходиться (наприклад, число від 1 до 100).   1. Другий
+учасник називає число, якщо вгадав, то гра закінчилась.</p>
+
+<p class=MsoNormal>            2. Якщо ні, то  перший учасник повідомляє, чи
+задумане число є більше ніж назване (тоді потрібно шукати число на проміжку від
+названого до 100), якщо ж число менше ніж назване (тоді потрібно шукати число
+на проміжку від 1 до названого числа). Повертаємось на пункт 1.</p>
+
+<p class=MsoNormal><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=RU>Алгоритм пошуку числа буде ефективніший, якщо
+другий учасник кожного разу називатиме число, яке знаходиться посередині
+відповідного проміжку.</span></p>
+
+<p class=MsoNormal><span lang=RU>            Наприклад, перший учасник гри
+задумав число 85.</span></p>
+
+<p class=MsoNormal><span lang=RU>2 учасник:      50</span></p>
+
+<p class=MsoNormal><span lang=RU>1 учасник:      </span>більше            (отже
+число є на проміжку <span lang=RU>[</span>5<span lang=RU>1</span>,100<span
+lang=RU>]</span></p>
+
+<p class=MsoNormal><span lang=RU>2 учасник:      75</span></p>
+
+<p class=MsoNormal><span lang=RU>1 учасник:      більше            </span>(отже
+число є на проміжку <span lang=RU>[76</span>,100<span lang=RU>]</span></p>
+
+<p class=MsoNormal><span lang=RU>2 учасник:      87</span></p>
+
+<p class=MsoNormal><span lang=RU>1 учасник:      менше            </span>(отже
+число є на проміжку <span lang=RU>[76</span>,<span lang=RU>86]</span></p>
+
+<p class=MsoNormal><span lang=RU>2 учасник:      81</span></p>
+
+<p class=MsoNormal><span lang=RU>1 учасник:      </span>більше            (отже
+число є на проміжку <span lang=RU>[</span>82,<span lang=RU>86]</span></p>
+
+<p class=MsoNormal><span lang=RU>2 учасник:      84</span></p>
+
+<p class=MsoNormal><span lang=RU>1 учасник:      </span>більше            (отже
+число є на проміжку <span lang=RU>[</span>8<span lang=RU>5</span>,<span
+lang=RU>86]</span></p>
+
+<p class=MsoNormal><span lang=RU>2 учасник:</span><span lang=EN-US>      85</span></p>
+
+<p class=MsoNormal><span lang=RU>1 учасник:</span><span lang=EN-US>      </span>відгадав</p>
+
+<p class=MsoNormal><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=RU>Ми записали алгоритм пошуку інформації у
+впорядкованій послідовності елементів. Це бінарний пошук. Його ще називають: пошук
+методом поділу навпіл.</span></p>
+
+<p class=MsoNormal><span lang=RU>Аналогічно ми здійснюємо пошук потрібного
+слова у словнику.</span></p>
+
+<p class=MsoNormal><span lang=RU>            </span>Нехай задано впорядкований
+масив а<span lang=RU>[</span><span lang=EN-US>i</span><span lang=RU>], </span><span
+lang=EN-US>i</span><span lang=RU>=1..</span><span lang=EN-US>n</span>, шукаємо
+елемент <span lang=EN-US>x</span><span lang=RU>:</span></p>
+
+<p class=MsoNormal><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>left</span><span lang=RU>:=1; </span><span
+lang=EN-US>right</span><span lang=RU>:=</span><span lang=EN-US>n</span><span
+lang=RU>;    {</span>Присвоїти межі<span lang=RU>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>t:=false;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>while (left&lt;right) and not t do</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    begin</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         m:=(left+right) div 2;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         if a[m] = x then t:=true</span></p>
+
+<p class=MsoNormal><span lang=EN-US>                            else if
+a[m]&lt;x then left:=m+1</span></p>
+
+<p class=MsoNormal><span lang=EN-US>                                                  
+else right:=m-1;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    end;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>if t then write ('</span>Шуканий елемент
+знайдено<span lang=EN-US>')</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>      </span><span lang=EN-US>else</span><span
+lang=EN-US> </span><span lang=EN-US>write</span><span lang=RU>('</span>Шуканий
+елемент не знайдено<span lang=RU>');</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Завдання </b></p>
+
+<p class=MsoNormal>1. У масиві з <span lang=EN-US>n</span> цілих елементів знайти
+порядковий номер шуканого елемента <i>х</i>, використовуючи лінійний пошук (за
+допомогою циклу з лічильником).</p>
+
+<p class=MsoNormal>2. У масиві з <span lang=EN-US>n</span> цілих елементів
+знайти порядковий номер шуканого елемента <i>х</i>, використовуючи лінійний
+пошук (за допомогою циклу з передумовою).</p>
+
+<p class=MsoNormal>3. У масиві з <span lang=EN-US>n</span> цілих елементів
+знайти порядковий номер шуканого елемента <i>х</i>, використовуючи бінарний
+пошук.</p>
+
+<p class=MsoNormal>4. У масиві з <span lang=EN-US>n</span> дійсних елементів знайти
+такий елемент (і його порядковий номер), квадрат якого рівний шуканому числу <i>х</i>,
+використовуючи лінійний пошук (за допомогою циклу з лічильником).</p>
+
+<p class=MsoNormal>5. У масиві з <span lang=EN-US>n</span> дійсних елементів
+знайти такий елемент (і його порядковий номер), квадрат якого рівний шуканому
+числу <i>х</i>, використовуючи лінійний пошук (за допомогою циклу з передумовою).</p>
+
+<p class=MsoNormal>6. У масиві з <span lang=EN-US>n</span> дійсних додатніх
+елементів знайти такий елемент (і його порядковий номер), квадрат якого рівний
+шуканому числу <i>х</i>, використовуючи двійковий пошук.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

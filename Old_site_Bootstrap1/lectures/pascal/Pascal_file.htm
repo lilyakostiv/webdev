@@ -1,0 +1,817 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>14</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoTitle>14. Типізовані файли</p>
+
+<p class=MsoTitle><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Файл - це впорядкована сукупність однотипних елементів довільної
+кількості.</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:14.2pt'><span
+style='font-size:12.0pt'>Кількість елементів масивів, множин, записів є
+визначеною при написанні програми, а кількість елементів файлу у тексті
+програми не визначається і може бути довільною.  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Опис
+файлів:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:14.2pt'><span
+lang=EN-US style='font-size:12.0pt'>var</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>file</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>of</span><span style='font-size:12.0pt'> &lt;тип елементів файлу&gt;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Наприклад,
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:14.2pt'><span
+lang=EN-US style='font-size:12.0pt'>var</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>: </span><span lang=EN-US style='font-size:12.0pt'>file</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>of</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>integer</span><span style='font-size:12.0pt'>;  
+(всі елементи файлу – цілі числа)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:14.2pt'><span
+lang=EN-US style='font-size:12.0pt'>var</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>: </span><span lang=EN-US style='font-size:12.0pt'>file</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>of</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>real</span><span style='font-size:12.0pt'>;       
+(всі елементи файлу – дійсні числа)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>або
+опишемо комбінований тип</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>type</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>asd</span><span style='font-size:12.0pt'> =
+</span><span lang=EN-US style='font-size:12.0pt'>record</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>        
+               </span><span lang=EN-US style='font-size:12.0pt'>a:integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>         </span><span style='font-size:12.0pt'>               </span><span
+lang=EN-US style='font-size:12.0pt'>b:string[27]</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>        </span><span style='font-size:12.0pt'>         </span><span
+lang=EN-US style='font-size:12.0pt'>end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>:</span><span
+lang=EN-US style='font-size:12.0pt'>file</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>of</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>asd</span><span style='font-size:12.0pt'>;          (всі елементи файлу
+– є записи)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Команди для роботи з файлами</span></i></b><span style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Assign</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,’ім’я
+файлу на диску’); - вказує адресу файлу на диску (наприклад, </span><span
+lang=EN-US style='font-size:12.0pt'>u</span><span lang=RU style='font-size:
+12.0pt'>:\</span><span lang=EN-US style='font-size:12.0pt'>text</span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Rewrite</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+створює файл і відкриває його для запису.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Write</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>); -
+в поточну позицію файлу записує значення змінної а.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Reset</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+відкриває файл для читання і запису.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Read</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>); -
+читає з поточної позиції файлу значення і записує у змінну </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Close</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+закриває файл.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Eof</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+перевірка на кінець файлу.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Seek</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>); -
+переміщує вказівник поточної позиції на </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>+1-компоненту.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Seek</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,0);
+- переміщує вказівник поточної позиції на першу компоненту.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Seek</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>FileSize</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>));
+- перехід в кінець, тобто на перший порожній запис, де </span><span lang=EN-US
+style='font-size:12.0pt'>FileSize</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>) –
+розмір файла в записах (тобто кількість елементів файлу).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>FilePos</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+повертає номер поточного запису.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>14.1.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести у
+файл 10 цілих чисел. Порахувати суму додатніх елементів файлу.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>program R1;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>var f:file of integer;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>       c,s,i:integer;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>begin </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  assign(f,’hhh’);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  rewrite(f);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  for i:=1 to10 do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>    begin</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>      read(c);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>      write(f,c);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>    end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  close(f);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  reset(f);s:=0;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  while not eof(f) do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>    begin </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>      read(f,c);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>      if c&gt;0 then s:=s+c</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>    end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  close(f);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>  writeln(‘s=’,s)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>end</span><span lang=RU
+style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести у
+файл 15 дійсних чисел. Порахувати суму та кількість від’ємних  елементів файлу.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><b><span style='font-size:12.0pt'>14.3.</span></b><span
+style='font-size:12.0pt'> Ввести дані  дійсного типу у файли </span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'> і </span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>,
+причому ці файли містять різну кількість елементів. Сформувати файл </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'> 
+послідовно з елементів файлу </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'> та елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>14.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+</span><span style='font-size:12.0pt'>letters</span><span lang=EN-US
+style='font-size:12.0pt'>=file of ‘a’..’z’;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><b><span lang=EN-US style='font-size:12.0pt'>          </span></b><span
+style='font-size:12.0pt'>Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>append</span><span style='font-size:12.0pt'>(f,g</span><span
+lang=EN-US style='font-size:12.0pt'>,h</span><span style='font-size:12.0pt'>)
+від трьох файлів типу </span><span style='font-size:12.0pt'>letters, яка
+записує у файл f спочатку всі елементи файлу g, а потім – всі елементи файлу 
+h.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><b><span style='font-size:12.0pt'>14.5.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести 20
+чисел. Всі додатні записати у файл g, а всі недодатні – у файл h. Сформувати
+файл f об’єднаннням файлів </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'> і </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><b><span lang=RU style='font-size:12.0pt'>14.6</span></b><b><span
+style='font-size:12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+style='font-size:12.0pt'>Записати у файл </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'> послідовність
+цілих чисел. Описати процедуру positiv(f,p), яка записуватиме у файл p всі
+додатні елементи файлу f.  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>14.</span></b><b><span
+lang=RU style='font-size:12.0pt'>7</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Сформувати
+файл g з елементів файлу f, піднесених до квадрату.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><b><span style='font-size:12.0pt'>14.8.</span></b><span
+style='font-size:12.0pt'> Ввести дані цілого типу у файли  </span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'> і </span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>,
+причому ці файли містять однакову кількість елементів. Сформувати файл </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>  з
+елементів файлу </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'> та елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'> таким чином:</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span style='font-size:12.0pt'>                  1).</span></i><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'>+</span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'> , тобто кожен елемент файлу </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'> складається з
+суми відповідних елементів файлів &nbsp;</span><span lang=EN-US
+style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'> і </span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>2).</span></i><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'><sub><img width=173 height=48
+src="lectures/pascal/Pascal_file_files/image001.gif"></sub></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>3). </span></i><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'><sub><img width=128 height=48
+src="lectures/pascal/Pascal_file_files/image002.gif"></sub></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>14.
+</span></b><b><span lang=RU style='font-size:12.0pt'>9</span></b><b><span
+style='font-size:12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+style='font-size:12.0pt'>Знайти середнє арифметичне елементів файлу f.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.10. </span></b><span
+style='font-size:12.0pt'>Знайти кількість всіх елементів файлу f, які більші
+середнього арифметичного додатніх елементів цього файлу.  (Описати функцію для
+пошуку середнього арифметичного). </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>11</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести у
+файл дані цілого типу. Надрукувати ті елементи файлу, які є менші середнього
+арифметичного всіх елементів цього файлу.</span></p>
+
+<p class=MsoNormal style='margin-left:63.8pt;text-align:justify;text-indent:
+-63.8pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>12</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести у
+файл дані цілого типу. Порахувати кількість цифр </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>у цьому файлі. </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>13</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести з
+клавіатури 10 цілих чисел. Всі додатні з них записати у файл </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>.
+Знайти суму та кількість елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>, які належать </span><span
+lang=RU style='font-size:12.0pt'>[</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=RU style='font-size:
+12.0pt'>].</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>14.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>14</span></b><b><span style='font-size:
+12.0pt'>.</span></b><b><span style='font-size:12.0pt'> </span></b><span
+lang=EN-US style='font-size:12.0pt'>type FB=file of boolean;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span lang=EN-US style='font-size:12.0pt'>            </span></b><span
+style='font-size:12.0pt'>Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>assignfb</span><span style='font-size:12.0pt'>(f,g)
+від двох файлів типу </span><span lang=EN-US style='font-size:12.0pt'>FB</span><span
+style='font-size:12.0pt'>, яка файлу f присвоює вміст, протилежний файлу g.
+(Наприклад, якщо значення у файлі </span><span lang=EN-US style='font-size:
+12.0pt'>g true</span><span style='font-size:12.0pt'>, то у файл </span><span
+lang=EN-US style='font-size:12.0pt'>f </span><span style='font-size:12.0pt'>записуємо 
+</span><span lang=EN-US style='font-size:12.0pt'>false)</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:63.8pt;text-align:justify;text-indent:
+-63.8pt'><b><span lang=RU style='font-size:12.0pt'>14.15</span></b><b><span
+style='font-size:12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+style='font-size:12.0pt'>Описати функцію max(t) для знаходження максимального
+елемента файлу t.</span></p>
+
+<p class=MsoNormal style='margin-left:63.8pt;text-align:justify;text-indent:
+-63.8pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень В</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання середнього рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:63.8pt;text-align:justify;text-indent:
+-63.8pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести у
+файл елементи типу </span><span lang=EN-US style='font-size:12.0pt'>char</span><span
+style='font-size:12.0pt'>. Порахувати кількість цифр у цьому файлі. </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>17</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести у
+файл n цілих чисел. Перевірити чи елементи файлу впорядковані по зростанню.</span><span
+lang=RU style='font-size:12.0pt'> (Для перевірки описати </span><span
+style='font-size:12.0pt'>логічну </span><span lang=RU style='font-size:12.0pt'>функцію</span><span
+style='font-size:12.0pt'>). </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>18</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Ввести у файл </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>дані дійсного типу. Сформувати файл</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'>, в який записати всі додатні елементи, і файл</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'>, в який записати всі недодатні елементи. </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>19</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Ввести у файл </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>дані цілого типу. Сформувати файл</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'>, в який записати всі елементи більші 5 і файл</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'>, в який записати всі елементи менші 0.   </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>20</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>У файлах </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'> і </span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>елементи впорядковані по
+зростанню. Злити ці файли в один файл </span><span lang=EN-US style='font-size:
+12.0pt'>h</span><span style='font-size:12.0pt'>, який також впорядкований по
+зростанню. (Використати процедуру zrostaye(f,g,h).</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>21</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Ввести у файл </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>дані дійсного типу. Сформувати файл </span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>
+таким чином: якщо елемент файлу f додатній, то у файл g записуємо 1, якщо від’ємний,
+то записуємо -1. </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.22.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести дані
+цілого типу в файли </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'> і </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'>, причому розмірність цих файлів різна. Якщо сума
+елементів файлу </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'> рівна сумі елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>, то сформувати
+файл </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'> з елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>, інакше
+сформувати файл </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'> з елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>23</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести дані
+цілого типу в файли </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'> і </span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'>, причому розмірність цих файлів є однакова. Якщо ці
+файли є однакові, то сформувати файл </span><span lang=EN-US style='font-size:
+12.0pt'>f</span><span style='font-size:12.0pt'>, що є сумою файлів </span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'> і </span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>,
+інакше сформувати файл </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'> з елементів файлу </span><span lang=EN-US
+style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>, піднесених до
+квадрату.</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>24</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+цілочисельну матрицю розмірністю n×</span><span lang=EN-US style='font-size:
+12.0pt'>m</span><span lang=RU style='font-size:12.0pt'>. Записати у файл рядок
+матриці, сума елементів якого є найбільша.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>25</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+цілочисельну матрицю розмірністю n×</span><span lang=EN-US style='font-size:
+12.0pt'>m</span><span lang=RU style='font-size:12.0pt'>. Записати у файл рядок
+матриці, який містить її максимальний елемент.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>26</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Описати
+логічну функцію, яка перевіряє два файли символів на рівність.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=EN-US
+style='font-size:12.0pt'>27</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>type
+strichka=</span><span lang=EN-US style='font-size:12.0pt'>string[30];</span></p>
+
+<p class=MsoNormal style='margin-left:49.65pt;text-align:justify;text-indent:
+-49.65pt'><i><span style='font-size:12.0pt'>                 </span></i><i><span
+lang=EN-US style='font-size:12.0pt'>  </span></i><span lang=EN-US
+style='font-size:12.0pt'>text=file of char;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+lang=RU style='font-size:12.0pt'>Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>number</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>s</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+lang=RU style='font-size:12.0pt'>), яка записує в текст </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'> всі цифри із рядка </span><span lang=EN-US style='font-size:12.0pt'>s</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>28</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Записати у
+файл f всі числа Фібоначчі (1, 1, 2, 3, 5, </span><span lang=RU
+style='font-size:12.0pt'>…)</span><span style='font-size:12.0pt'>, які не
+перевищують </span><span lang=RU style='font-size:12.0pt'>ціле додатнє </span><span
+style='font-size:12.0pt'>число n. (Виконати за допомогою процедури </span><span
+lang=EN-US style='font-size:12.0pt'>fib</span><span lang=RU style='font-size:
+12.0pt'>(</span><span style='font-size:12.0pt'>f,n)</span><span lang=RU
+style='font-size:12.0pt'>).</span><span style='font-size:12.0pt'>   </span><span
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-63.0pt'><b><span
+style='font-size:12.0pt'>14.</span></b><b><span lang=EN-US style='font-size:
+12.0pt'>29</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> type </span><span lang=EN-US style='font-size:12.0pt'>data</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>record                     
+                                                                                               misaci:(sich,lut,ber,kvit,trav,cherv,lyp,serp,ver,zshov,lysr,grud);</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span lang=EN-US style='font-size:12.0pt'>                                   </span></i><span
+lang=EN-US style='font-size:12.0pt'>chislo:1..31</span></p>
+
+<p class=MsoNormal style='margin-left:49.65pt;text-align:justify;text-indent:
+-49.65pt'><span lang=EN-US style='font-size:12.0pt'>                            
+end;</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><span lang=EN-US style='font-size:12.0pt'>                   fd=file
+of data;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+lang=RU style='font-size:12.0pt'>Описати</span><span lang=RU style='font-size:
+12.0pt'> </span><span lang=RU style='font-size:12.0pt'>процедуру</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>zapys(d,s,v) від трьох файлів типу fd, </span><span lang=RU
+style='font-size:12.0pt'>яка</span><span lang=RU style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з файлу </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+style='font-size:12.0pt'> переписує у файл </span><span lang=EN-US
+style='font-size:12.0pt'>s</span><span style='font-size:12.0pt'> всі літні
+дати, а у файл </span><span lang=EN-US style='font-size:12.0pt'>v – </span><span
+style='font-size:12.0pt'>всі зимові дати.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.30.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Описати
+логічну функцію mid(f,m), яка визначає, чи має файл f дійсних елементів непарну
+довжину, і, якщо має, присвоїти параметру m середній елемент цього файла. </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>1.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Нехай
+задано файл цілих чисел. Описати логічну функцію</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span lang=RU style='font-size:12.0pt'>                     </span></i><i><span
+style='font-size:12.0pt'>а)</span></i><span style='font-size:12.0pt'> яка
+перевіряє, чи кожна третя цифра файлу є додатнім числом</span><span lang=RU
+style='font-size:12.0pt'>;</span><span style='font-size:12.0pt'>  </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span style='font-size:12.0pt'>                     б) </span></i><span
+style='font-size:12.0pt'>яка перевіряє, чи у файлі чергуються додатні та від</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>ємні
+числа.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span lang=RU style='font-size:12.0pt'>14</span></b><b><span
+style='font-size:12.0pt'>.</span></b><b><span lang=RU style='font-size:12.0pt'>32</span></b><b><span
+style='font-size:12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+style='font-size:12.0pt'>Нехай задано файл символів. Описати логічну функцію,
+яка перевіряє, чи кожен другий символ це цифра.  </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень С</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання високого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>33</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Задана
+послідовність слів, що складається з 1 до 8 букв, між сусідніми словами - кома,
+за останнім словом – крапка. </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span style='font-size:12.0pt'>                     а) </span></i><span
+style='font-size:12.0pt'>Надрукувати всі слова найменшої довжини.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span style='font-size:12.0pt'>                     б) </span></i><span
+style='font-size:12.0pt'>Надрукувати всі слова, відмінні від останнього слова.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=EN-US
+style='font-size:12.0pt'>34</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+cina=record grn:0..maxint; kop:0..99 end;</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span lang=EN-US style='font-size:12.0pt'>                  </span></i><span
+lang=EN-US style='font-size:12.0pt'> tovary=file of cina;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><span lang=EN-US style='font-size:12.0pt'>          </span><span
+lang=RU style='font-size:12.0pt'>Описати</span><span lang=RU style='font-size:
+12.0pt'> </span><span lang=RU style='font-size:12.0pt'>процедуру</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>min(T,C),</span><span style='font-size:12.0pt'> яка присвоює параметру
+C ціну найдешевшого товару.</span><span lang=EN-US style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=EN-US
+style='font-size:12.0pt'>35</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>data</span><span lang=EN-GB style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>record den:1..31;mis:1..12 end;</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span lang=EN-US style='font-size:12.0pt'>                   </span></i><span
+lang=EN-US style='font-size:12.0pt'>kanikuly=file of data; </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span style='font-size:12.0pt'>            Описати логічну функцію,
+яка перевіряє два файли типу </span><span lang=EN-US style='font-size:12.0pt'>kanikuly</span><span
+style='font-size:12.0pt'> на рівність.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>36</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Описати
+логічну функцію </span><span lang=EN-US style='font-size:12.0pt'>pred</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>r</span><span lang=RU style='font-size:12.0pt'>1,</span><span
+lang=EN-US style='font-size:12.0pt'>r</span><span lang=RU style='font-size:
+12.0pt'>2), яка перевіряє</span><span style='font-size:12.0pt'>,</span><span
+lang=RU style='font-size:12.0pt'> чи</span><span style='font-size:12.0pt'>
+символу r2 передує символ r1</span><span lang=RU style='font-size:12.0pt'> у
+заданому файлі</span><span style='font-size:12.0pt'>. (Чи кожному символу r2
+передує символ r1</span><span lang=RU style='font-size:12.0pt'> у заданому
+файлі).</span></p>
+
+<p class=MsoNormal style='margin-left:70.9pt;text-align:justify;text-indent:
+-70.9pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=RU
+style='font-size:12.0pt'>37</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Описати
+функцію для пошуку передостаннього елемента файлу дійсних елементів.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=EN-US
+style='font-size:12.0pt'>38</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>man</span><span
+lang=EN-GB style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:
+12.0pt'>record name:string[10];vik:1..99 end;</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span lang=EN-US style='font-size:12.0pt'>                    </span></i><span
+lang=EN-US style='font-size:12.0pt'>group=file of man; </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><b><span lang=EN-US style='font-size:12.0pt'>            </span></b><span
+style='font-size:12.0pt'>Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>young</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>gr</span><span style='font-size:12.0pt'>), </span><span
+style='font-size:12.0pt'>яка друкує імена всіх людей найменшого зросту з групи </span><span
+lang=EN-US style='font-size:12.0pt'>group</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>14.</span></b><b><span lang=EN-US
+style='font-size:12.0pt'>39</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>te</span><span
+lang=EN-US style='font-size:12.0pt'>kst=file of char; </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><span lang=EN-US style='font-size:12.0pt'>            v</span><span
+style='font-size:12.0pt'>ar</span><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>tekst</span><span
+lang=RU style='font-size:12.0pt'>;</span><span lang=RU style='font-size:12.0pt'>
+</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span lang=RU style='font-size:12.0pt'>         </span><span
+style='font-size:12.0pt'>Описати процедуру</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>а) addf</span><span lang=EN-US
+style='font-size:12.0pt'>i</span><span style='font-size:12.0pt'>rst</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>t</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка додає літеру с на початку
+файлу  </span><span style='font-size:12.0pt'>t;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>б)</span><span lang=EN-US
+style='font-size:12.0pt'>addlast</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>, яка
+додає літеру с </span><span lang=RU style='font-size:12.0pt'>в кінець </span><span
+style='font-size:12.0pt'>файлу  </span><span style='font-size:12.0pt'>t;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>в)</span><span lang=EN-US
+style='font-size:12.0pt'>double</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка подвоює у файлі </span><span
+style='font-size:12.0pt'>t кожну літеру;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>г)</span><span lang=EN-US
+style='font-size:12.0pt'>replace</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>, яка
+замінює останню літер у файлі  </span><span style='font-size:12.0pt'>t на
+літеру с;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>д)</span><span lang=EN-US
+style='font-size:12.0pt'>next</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка замінює у файлі </span><span
+style='font-size:12.0pt'>t кожну цифру на наступну по  величині цифру (‘</span><span
+lang=RU style='font-size:12.0pt'>9’                       замінювати ‘0’)</span><span
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>е)</span><span lang=EN-US
+style='font-size:12.0pt'>delete</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка видаляє із файлу t</span><span
+lang=RU style='font-size:12.0pt'> всі літери ‘+’ </span><span lang=EN-US
+style='font-size:12.0pt'>i</span><span lang=RU style='font-size:12.0pt'> ‘ –‘;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>є)</span><span lang=EN-US
+style='font-size:12.0pt'>del</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка видаляє із файлу t</span><span
+style='font-size:12.0pt'> <span lang=RU>передостанній елемент;</span></span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+7.1pt'><span style='font-size:12.0pt'>ж)</span><span lang=EN-US
+style='font-size:12.0pt'>firsts</span><span lang=RU style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка у файлі t залишає тільки
+перші входження кожної літери.</span></p>
+
+</div>
+
+</body>
+
+</html>

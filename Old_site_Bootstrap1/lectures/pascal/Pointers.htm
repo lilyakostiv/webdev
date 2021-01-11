@@ -1,0 +1,710 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:TimesNewRomanPSMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:TimesNewRomanPS-ItalicMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:TimesNewRomanPS-BoldMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:CourierNewPSMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Arial-BoldItalicMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 28.3pt 42.5pt 36.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:TimesNewRomanPSMT'>                   </span></b><b><span
+style='font-size:14.0pt;font-family:TimesNewRomanPSMT'>Вказівники</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Усім
+змінним ставиться у відповідність певна <b>адреса</b></span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'> </span></i><span
+style='font-family:TimesNewRomanPSMT'>ділянки пам’яті комп’ютера, у якій зберігатиметься
+її поточне значення. Термін “змінна” використовуємо для позначення як власне
+змінних, так і структурованих даних (масивів, записів).</span></p>
+
+<p class=MsoNormal><span lang=RU style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Звертання
+у програмі до значення, розміщеного за цією адресою, відбувається за допомогою
+відповідної змінної. Відповідність між змінною і адресою пам’яті зберігається
+протягом усього часу виконання програми для </span><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>глобальних </span></b><span style='font-family:TimesNewRomanPSMT'>змінних
+або протягом усього часу виконання підпрограми для </span><b><span
+style='font-family:TimesNewRomanPS-BoldMT'>локальних </span></b><span
+style='font-family:TimesNewRomanPSMT'>змінних.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Розмір
+необхідної ділянки пам’яті для розміщення </span><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>глобальних </span></b><span style='font-family:TimesNewRomanPSMT'>змінних
+компілятор розраховує під час етапу компілювання програми і на цьому ж етапі виділяє
+пам’ять. Глобальні змінні розміщуються компілятором в одній неперервній області
+оперативної пам’яті, яка називається <b>сегментом даних</b> (або <b>областю
+глобальних даних</b>). У процесі виконання програми місце розміщення та розмір
+глобальних змінних не змінюються. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>            Локальні </span></b><span style='font-family:
+TimesNewRomanPSMT'>змінні розміщуються компілятором у сегменті </span><b><span
+style='font-family:TimesNewRomanPS-BoldMT'>стека</span></b><span
+style='font-family:TimesNewRomanPSMT'>. Стек (</span><i><span style='font-family:
+TimesNewRomanPS-ItalicMT'>stack</span></i><span style='font-family:TimesNewRomanPSMT'>)
+– це динамічна область пам’яті, яка виділяється і звільняється у порядку </span><span
+style='font-family:CourierNewPSMT'>LIFO </span><span style='font-family:TimesNewRomanPSMT'>(</span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'>last in, first out </span></i><span
+style='font-family:TimesNewRomanPSMT'>– останнім прийшов, першим вийшов). Це
+означає, що останій, розміщений у пам’яті, об’єкт буде першим у черзі на
+знищення. Стек використовується підпрограмами для передавання аргументів і
+результуючих значень, а також для локальних змінних підпрограми. Після
+завершення</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>виклику
+підпрограми її область пам’яті у стеку звільняється.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Отже,
+усі глобальні змінні розміщуються в оперативній пам’яті до початку виконання
+програми (</span><b><span style='font-family:TimesNewRomanPS-BoldMT'>статично</span></b><span
+style='font-family:TimesNewRomanPSMT'>) у процесі компілювання програми.
+Розміщення локальних змінних також є статичним, оскільки компілятор до початку
+виконання програми резервує під стек ділянку оперативної пам’яті (зазвичай 64
+Кб). Крім цього, частину оперативної пам’яті займає код самої програми. Вся
+інша </span><b><span style='font-family:TimesNewRomanPS-BoldMT'>вільна </span></b><span
+style='font-family:TimesNewRomanPSMT'>оперативна пам’ять комп’ютера, що
+надається програмі при її роботі, називається </span><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>динамічною пам’яттю</span></b><span style='font-family:
+TimesNewRomanPSMT'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Оскільки
+розмір сегмента даних обмежений, то часто виникають проблеми під час
+опрацювання великих масивів даних. Бувають також випадки, коли розміри пам’яті
+для розміщення деяких даних у ході виконання програми можуть змінюватися. Такі проблеми
+вирішують, використовуючи змінні, які розміщують у динамічній пам’яті
+(називатимемо такі змінні </span><b><span style='font-family:TimesNewRomanPS-BoldMT'>динамічними</span></b><span
+style='font-family:TimesNewRomanPSMT'>). Появою і часом існуваня динамічних
+змінних керує програміст.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Доступ
+до статичних змінних реалізують за допомого відповідних ідентифікаторів. Але
+такий підхід неможливий для динамічних змінних, оскільки заздалегідь є
+невідомою їхня кількість та місце у пам’яті. Доступ до динамічних змінних
+реалізується за допомогою особливих змінних –</span><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>вказівників</span></b><span style='font-family:TimesNewRomanPSMT'>,
+значеннями яких є адреси розміщення у пам’яті змінних (динамічних і статичних).
+Сам вказівник є статичною</span><i><span style='font-family:TimesNewRomanPS-ItalicMT'>
+</span></i><span style='font-family:TimesNewRomanPSMT'>змінною.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Динамічне
+розміщення даних означає використання динамічної пам’яті безпосередньо під час
+виконання програми. При динамічному розміщенні попередньо не є відомий ні тип,
+ні кількість</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>даних.
+Динамічний розподіл пам’яті широко використовується для економії обчислювальних
+ресурсів: ті змінні чи об’єкти, які стають непотрібними, програма знищує, а
+звільнене місце використовує для нових змінних чи об’єктів.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Всю
+динамічну пам’ять у Паскалі розглядають як суцільний масив байтів, який
+називають <b>купою</b></span><i><span style='font-family:TimesNewRomanPS-ItalicMT'>.
+</span></i><span style='font-family:TimesNewRomanPSMT'>Купа (</span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'>heap</span></i><span
+style='font-family:TimesNewRomanPSMT'>) – це область, в якійрозміщення і
+звільнення пам’яті відбувається випадково. Фізично купа розміщується у старших
+адресах відразу за областю пам’яті, яку займає тіло програми. </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+TimesNewRomanPSMT'>Опис вказівників</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Паскаль
+надає у розпорядження програміста гнучкий засіб керування динамічною пам’яттю –
+вказівники</span><i><span style='font-family:TimesNewRomanPS-ItalicMT'>. </span></i><b><span
+style='font-family:TimesNewRomanPS-BoldMT'>Вказівник </span></b><span
+style='font-family:TimesNewRomanPSMT'>– це змінна, яка містить адресу байта
+пам’яті. За допомогою вказівників</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>можна
+розміщувати у динамічній пам’яті змінні будь-яких типів даних. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Опис
+вказівника задається так:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>type </span></b><span style='font-family:CourierNewPSMT'>p= ^t;     
+- опис типу вказівника</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>var </span></b><span style='font-family:CourierNewPSMT'>v,w: p;      
+- опис вказівників   </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Змінні
+</span><span style='font-family:CourierNewPSMT'>v </span><span
+style='font-family:TimesNewRomanPSMT'>і </span><span style='font-family:CourierNewPSMT'>w
+</span><span style='font-family:TimesNewRomanPSMT'>є об’єктами типу </span><span
+style='font-family:CourierNewPSMT'>p </span><span style='font-family:TimesNewRomanPSMT'>(вказівники</span><b><span
+style='font-family:TimesNewRomanPS-BoldMT'> </span></b><span style='font-family:
+TimesNewRomanPSMT'>на тип </span><span style='font-family:CourierNewPSMT'>t</span><span
+style='font-family:TimesNewRomanPSMT'>), які містять адресу першого байта
+пам’яті, виділеного для об’єктів типу </span><span style='font-family:CourierNewPSMT'>t</span><span
+style='font-family:TimesNewRomanPSMT'>. Такі вказівники називають <b>типізованими</b>.
+Типізовані покажчики оголошують символом “^”, який ставиться перед відповідним
+типом. Попередні описи можна</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>задати
+і так:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>var </span></b><span style='font-family:CourierNewPSMT'>v,w: ^t;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Тип
+</span><span style='font-family:CourierNewPSMT'>t </span><span
+style='font-family:TimesNewRomanPSMT'>називають </span><b><span
+style='font-family:TimesNewRomanPS-BoldMT'>базовим типом </span></b><span
+style='font-family:TimesNewRomanPSMT'>покажчика. У ролі </span><span
+style='font-family:CourierNewPSMT'>t </span><span style='font-family:TimesNewRomanPSMT'>може
+бути будь-який тип, окрім файлового. Крім адреси, значенням вказівника може
+бути </span><span style='font-family:CourierNewPSMT'>nil </span><span
+style='font-family:TimesNewRomanPSMT'>(порожний вказівник-константа, що не вказує
+на жодне місце у пам’яті). Типи вказівників, які утворені від різних</span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'> </span></i><span
+style='font-family:TimesNewRomanPSMT'>базових типів, вважаються різними.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Ще
+одне, самі вказівники </span><span style='font-family:CourierNewPSMT'>v </span><span
+style='font-family:TimesNewRomanPSMT'>і </span><span style='font-family:CourierNewPSMT'>w
+</span><span style='font-family:TimesNewRomanPSMT'>є </span><b><span
+style='font-family:TimesNewRomanPS-BoldMT'>статичними </span></b><span
+style='font-family:TimesNewRomanPSMT'>змінними, пам’ять для яких компілятор
+відводить у сегменті даних (вказівник займає </span><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>чотири байти </span></b><span style='font-family:TimesNewRomanPSMT'>пам’яті).</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Опис
+</span><b><span style='font-family:TimesNewRomanPS-BoldMT'>типів </span></b><span
+style='font-family:TimesNewRomanPSMT'>покажчиків: </span><b><span
+style='font-family:"Courier New"'>type </span></b><span style='font-family:
+CourierNewPSMT'>p</span><span lang=EN-US style='font-family:CourierNewPSMT'>real=</span><span
+style='font-family:CourierNewPSMT'>^</span><span lang=EN-US style='font-family:
+CourierNewPSMT'>real</span><span style='font-family:CourierNewPSMT'>; ps</span><span
+lang=EN-US style='font-family:CourierNewPSMT'>tring</span><span
+style='font-family:CourierNewPSMT'>=^string; </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:CourierNewPSMT'>p</span><span
+lang=EN-US style='font-family:CourierNewPSMT'>real</span><span lang=EN-US
+style='font-family:CourierNewPSMT'> </span><span style='font-family:TimesNewRomanPSMT'>визначає
+тип вказівника на змінні типу </span><span lang=EN-US style='font-family:CourierNewPSMT'>real</span><span
+style='font-family:TimesNewRomanPSMT'>; </span><span style='font-family:CourierNewPSMT'>ps</span><span
+lang=EN-US style='font-family:CourierNewPSMT'>tring</span><span lang=EN-US
+style='font-family:CourierNewPSMT'> </span><span style='font-family:TimesNewRomanPSMT'>–
+на змінні-рядки;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Опис
+<b>вказівників</b>: </span><b><span style='font-family:"Courier New"'>var </span></b><span
+style='font-family:CourierNewPSMT'>b1,b2: p</span><span lang=EN-US
+style='font-family:CourierNewPSMT'>real</span><span style='font-family:CourierNewPSMT'>;
+s1: ps</span><span lang=EN-US style='font-family:CourierNewPSMT'>tring</span><span
+style='font-family:CourierNewPSMT'>; v1: ^integer;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:CourierNewPSMT'>b1,b2
+– вказівники</span><span style='font-family:TimesNewRomanPSMT'> на змінні типу </span><span
+lang=EN-US style='font-family:CourierNewPSMT'>real</span><span
+style='font-family:TimesNewRomanPSMT'>; </span><span style='font-family:CourierNewPSMT'>s1
+</span><span style='font-family:TimesNewRomanPSMT'>– вказівник на змінні-рядки;
+</span><span style='font-family:CourierNewPSMT'>v1 </span><span
+style='font-family:TimesNewRomanPSMT'>– вказівник на змінні цілого типу.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Над
+значеннями вказівників допускаються тільки операції порівняння на
+рівність/нерівність (перевіряють, чи вказують вказівники на одне і те ж саме
+місце у пам’яті). У порівнянні можуть</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>брати
+участь лише вказівники одного типу. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+TimesNewRomanPSMT'>Операція рознайменування</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Важливою
+операцією при роботі з вказівниками є операція рознайменування, яка дає змогу
+отримати значення, що знаходиться у ділянці пам’яті, на яку вказує вказівник. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Щоб
+отримати доступ до змінної через вказівник, треба виконати операцію рознайменування</span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'> </span></i><span
+style='font-family:TimesNewRomanPSMT'>(після вказівника записати символ “^”). У
+нашому випадку: </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>^ – </span><b><span style='font-family:
+TimesNewRomanPS-BoldMT'>значення</span></b><span style='font-family:TimesNewRomanPSMT'>,
+на яке вказує вказівник </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>. Значення, яке отримують унаслідок
+операції рознайменування, має тип, що збігається з базовим типом вказівника
+(для </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>^ тип </span><span lang=EN-US
+style='font-family:TimesNewRomanPSMT'>real</span><span style='font-family:TimesNewRomanPSMT'>).
+Щоб збільшити значення змінної </span><span lang=EN-US style='font-family:TimesNewRomanPSMT'>b</span><span
+lang=RU style='font-family:TimesNewRomanPSMT'>1 </span><span style='font-family:
+TimesNewRomanPSMT'>на</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>5</span><span
+style='font-family:TimesNewRomanPSMT'> </span><span style='font-family:TimesNewRomanPSMT'>виконаємо
+операцію </span><span lang=RU style='font-family:TimesNewRomanPSMT'>: </span><span
+lang=RU style='font-family:TimesNewRomanPSMT'> </span><span style='font-family:
+CourierNewPSMT'>b1^:= b1^+5; </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Іноді
+кажуть, що </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>^ – це змінна, на яку вказує вказівник </span><span
+style='font-family:CourierNewPSMT'>b1</span><span style='font-family:TimesNewRomanPSMT'>.
+Цим самим підкреслюють той факт, що </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>^ може застосовуватися у програмі так
+само, як і звичайна змінна. Головне – це чітко розуміти, що </span><span
+style='font-family:CourierNewPSMT'>b1</span><span style='font-family:TimesNewRomanPSMT'>^
+повертає </span><b><span style='font-family:TimesNewRomanPS-BoldMT'>значення</span></b><span
+style='font-family:TimesNewRomanPSMT'>, яке зберігається за </span><b><span
+style='font-family:TimesNewRomanPS-BoldMT'>адресою </span></b><span
+style='font-family:TimesNewRomanPSMT'>в </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>. Отримане значення має тип, який
+збігається з базовим типом </span><span style='font-family:CourierNewPSMT'>b1</span><span
+style='font-family:TimesNewRomanPSMT'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Заборонено
+використовувати операцію рознайменування для покажчика, що має значення </span><span
+style='font-family:CourierNewPSMT'>nil</span><span style='font-family:TimesNewRomanPSMT'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Використання
+операції рознайменування покажчиків для отримання значень статичних змінних є
+своєрідною екзотикою, адже набаго простіше скористатися для цього
+ідентифікаторами. Переважно</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>операцію
+рознайменування покажчиків використовують для отримання значень динамічних
+змінних.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><i><span style='font-family:
+Arial-BoldItalicMT'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+TimesNewRomanPSMT'>Динамічні змінні</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Пам’ять
+під деяку динамічно розміщену змінну можна виділити за допомогою процедури </span><span
+style='font-family:CourierNewPSMT'>New(x)</span><span style='font-family:TimesNewRomanPSMT'>,
+де </span><span style='font-family:CourierNewPSMT'>x </span><span
+style='font-family:TimesNewRomanPSMT'>– типізований вказівник. У результаті
+звертання до цієї процедури вказівник набуває значення, що відповідає адресі,
+починаючи з якої розміщуються значення відповідної динамічної змінної. Таким
+чином, кожній динамічній змінній відповідає деякий вказівник і тоді можна
+сказати так: </span><span style='font-family:CourierNewPSMT'>x</span><span
+style='font-family:TimesNewRomanPSMT'>^ – це динамічна змінна, на яку вказує вказівник
+</span><span style='font-family:CourierNewPSMT'>x</span><span style='font-family:
+TimesNewRomanPSMT'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Динамічну
+пам’ять можна не тільки забирати з купи, але і повертати у купу. Для цього
+використовують процедуру </span><span style='font-family:CourierNewPSMT'>Dispose(x)</span><span
+style='font-family:TimesNewRomanPSMT'>, де параметр </span><span
+style='font-family:CourierNewPSMT'>x </span><span style='font-family:TimesNewRomanPSMT'>–вказівник,
+якому динамічна пам’ять була виділена.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Процедура
+</span><span style='font-family:CourierNewPSMT'>Dispose(x) </span><span
+style='font-family:TimesNewRomanPSMT'>не змінює значення вказівника </span><span
+style='font-family:CourierNewPSMT'>x</span><span style='font-family:TimesNewRomanPSMT'>,
+а лише повертає в купу пам’ять, раніше виділену цьому вказівнику. Цю процедуру
+потрібно використовувати щодо фіксованого вказівника</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>лише
+раз, бо повторне використання процедури призведе до помилки.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Виділення
+і звільнення динамічної пам’яті:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>type </span></b><span style='font-family:CourierNewPSMT'>v_int:
+^integer; v_real: ^real;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>var </span></b><span style='font-family:CourierNewPSMT'>int1,
+int2: v_int; real1: v_real; с:integer;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>begin </span></b><span style='font-family:CourierNewPSMT'>new(int1);
+new(int2); new(real1);</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><i><span style='font-family:
+TimesNewRomanPS-ItalicMT'>…</span></i></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:CourierNewPSMT'>dispose(int1);
+dispose(int2); dispose(real1);</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+"Courier New"'>end</span></b><i><span style='font-family:TimesNewRomanPS-ItalicMT'>.</span></i></p>
+
+<p class=MsoNormal style='text-autospace:none'><i><span style='font-family:
+TimesNewRomanPS-ItalicMT'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Після
+того, як вказівник набув деякого значення, тобто став вказувати на конкретний
+фізичний байт пам’яті, то за цією адресою можна розмістити будь-яке значення
+відповідного типу за допомогою операції рознайменування: </span><span
+style='font-family:CourierNewPSMT'>int1^:= 25; real1^:= sqrt(int1^);</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Якщо
+за вказівником немає символу “^”, то цей вказівник надає адресу, за якою
+розміщені дані. Динамічно розміщені дані можна використовувати в будь-якому
+місці програми, де це допустимо для констант і змінних відповідного типу.
+Звичайно, </span><b><span style='font-family:TimesNewRomanPS-BoldMT'>недопустимі
+</span></b><span style='font-family:TimesNewRomanPSMT'>такі оператори:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:CourierNewPSMT'>int1:=
+c; real1^:=sin(int1)+int2;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>У
+першому випадку вказівнику </span><span style='font-family:CourierNewPSMT'>int1
+</span><span style='font-family:TimesNewRomanPSMT'>присвоюється значення змінної
+</span><span style='font-family:CourierNewPSMT'>c</span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'>, </span></i><span
+style='font-family:TimesNewRomanPSMT'>а в другому – значенню </span><span
+style='font-family:CourierNewPSMT'>real1^</span><i><span style='font-family:
+TimesNewRomanPS-ItalicMT'>, </span></i><span style='font-family:TimesNewRomanPSMT'>на
+яке вказує вказівник </span><span style='font-family:CourierNewPSMT'>real1</span><span
+style='font-family:TimesNewRomanPSMT'>, присвоюється вираз, який містить
+функцію від вказівника </span><span style='font-family:CourierNewPSMT'>int1</span><i><span
+style='font-family:TimesNewRomanPS-ItalicMT'>.</span></i></p>
+
+<p class=MsoNormal><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><i><span style='font-family:
+TimesNewRomanPSMT'>Приклад 1</span></i></b><span style='font-family:TimesNewRomanPSMT'>.
+Дано натуральне число </span><span style='font-family:CourierNewPSMT'>n </span><span
+style='font-family:TimesNewRomanPSMT'>і послідовність дійсних чисел </span><span
+lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>1, </span><span lang=EN-US
+style='font-family:TimesNewRomanPSMT'>a</span><span style='font-family:TimesNewRomanPSMT'>2,...,
+</span><span lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>n. Знайти найменше</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>число
+</span><span lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>і (</span><span style='font-family:CourierNewPSMT'>і</span><span
+style='font-family:TimesNewRomanPSMT'>=1..</span><span style='font-family:CourierNewPSMT'>n</span><span
+style='font-family:TimesNewRomanPSMT'>) і найбільше число </span><span
+lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>j (</span><span style='font-family:CourierNewPSMT'>j</span><span
+style='font-family:TimesNewRomanPSMT'>=1..</span><span style='font-family:CourierNewPSMT'>n</span><span
+style='font-family:TimesNewRomanPSMT'>) та поміняти їх місцями.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US
+style='font-family:TimesNewRomanPSMT'>            </span><span
+style='font-family:TimesNewRomanPSMT'>Для розв</span><span lang=RU
+style='font-family:TimesNewRomanPSMT'>'</span><span style='font-family:TimesNewRomanPSMT'>язання
+задачі достатньо знайти порядкові номери</span><i><span style='font-family:
+TimesNewRomanPS-ItalicMT'> </span></i><span style='font-family:TimesNewRomanPSMT'>найменшого
+числа і найбільшого</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>числа
+послідовності. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US
+style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>program </b><span lang=EN-US>Example</span>_1;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>сonst </b>n<span lang=EN-US>max</span>
+= 30;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>a: <b>array </b>[1..n<span
+lang=EN-US>max</span>] <b>of </b>real;</p>
+
+<p class=MsoNormal style='text-autospace:none'>x: real; i,<span lang=EN-US> n,</span>
+kmin, kmax: <span lang=EN-US>integer</span>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'>read(n);</p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln(' Вводимо числа : ');</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>read(a[i]);</p>
+
+<p class=MsoNormal>kmin:=1; kmax:=1;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=2 <b>to </b>n <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>if </b>a<span lang=EN-US>[</span>kmin<span
+lang=EN-US>]</span>&gt;a[i] <b>then begin </b>kmin:=i <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>if </b>a<span lang=EN-US>[</span>kmax<span
+lang=EN-US>]</span>&lt;=a[i] <b>then begin </b>kmax:=i <b>end</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>x:= a[kmin]; a[kmin]:= a[kmax];
+a[kmax]:=x;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>write(a[i]:6:2,' ');</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>.</p>
+
+<p class=MsoNormal><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Число
+</span><span style='font-family:CourierNewPSMT'>n </span><span
+style='font-family:TimesNewRomanPSMT'>стає відомим тільки</span><span
+style='font-family:TimesNewRomanPSMT'> </span><span style='font-family:TimesNewRomanPSMT'>під
+час виконання програми (вводиться з клавіатури).</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            У
+Паскалі при розміщенні масиву в статичній пам’яті кількість елементів масиву.
+Тому, якщо границі масиву заздегідь точно невідомі, то їх вибирають &quot;із
+запасом&quot; (це стосується переважно верхньої межі діапазону індексу). У <b><i>Прикладі
+1</i></b> для цього використовувалася константа </span><span style='font-family:
+CourierNewPSMT'>n</span><span lang=EN-US style='font-family:CourierNewPSMT'>max</span><span
+style='font-family:TimesNewRomanPSMT'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Якщо
+кількість елементів масиву </span><span style='font-family:CourierNewPSMT'>n </span><span
+style='font-family:TimesNewRomanPSMT'>набагато менша за </span><span
+style='font-family:CourierNewPSMT'>nmax</span><span style='font-family:TimesNewRomanPSMT'>,
+то певна частина пам’яті </span><span lang=RU style='font-family:TimesNewRomanPSMT'>&quot;</span><span
+style='font-family:TimesNewRomanPSMT'>простоює</span><span lang=RU
+style='font-family:TimesNewRomanPSMT'>&quot;</span><span style='font-family:
+TimesNewRomanPSMT'>. Для малих значень </span><span style='font-family:CourierNewPSMT'>nmax
+</span><span style='font-family:TimesNewRomanPSMT'>і </span><span
+style='font-family:CourierNewPSMT'>n </span><span style='font-family:TimesNewRomanPSMT'>це
+не страшно, але ситуація змінюється, якщо ці значення є достатньо великими, а
+елементи масиву теж мають великі розміри. Можна зменшити неефективні витрати
+пам’яті, якщо розміщувати такі масиви у динамічній пам’яті.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Розв</span><span
+lang=RU style='font-family:TimesNewRomanPSMT'>'</span><span style='font-family:
+TimesNewRomanPSMT'>яжемо <b><i>Приклад 1</i></b>, використовуючи для опису масиву
+дійсних чисел <b>масив вказівників</b>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>program</b><b> </b><span
+lang=EN-US>Example</span>_<span lang=EN-US>2</span>;</p>
+
+<p class=MsoNormal><b>const </b>n<span lang=EN-US>max</span> = 30;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>vect=<b>array </b>[1..n<span
+lang=EN-US>max</span>] <b>of </b>^real;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>a: vect; x: real; i,
+n, kmin, kmax: byte;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'>read(n);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>New(a[i]); // Виділення пам'яті для масиву</p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln(' Chysla: ');</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>read(a[i]^); // Введення чисел</p>
+
+<p class=MsoNormal style='text-autospace:none'>kmin:=1; kmax:=1;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=2 <b>to </b>n <b>do
+</b>// Пошук мінімуму та максимуму</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>if </b>a[kmin]^&gt;a[i]^ <b>then
+</b>kmin:=i;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>if </b>a[kmax]^&lt;=a[i]^ <b>then
+</b>kmax:=i</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>x:= a[kmin]^; a[kmin]^:=
+a[kmax]^; a[kmax]^:=x;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>write(a[i]^:6:2,' '); // Виведення</p>
+
+<p class=MsoNormal style='text-autospace:none'>readln(n);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>Dispose(a[i]); // Звільнення пам'яті</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>.</p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Масив
+покажчиків </span><span style='font-family:CourierNewPSMT'>a </span><span
+style='font-family:TimesNewRomanPSMT'>на дійсні числа розміщується статично</span><span
+style='font-family:TimesNewRomanPSMT'> </span><span style='font-family:TimesNewRomanPSMT'>та
+займає фіксоване число байтів (</span><span style='font-family:CourierNewPSMT'>n</span><span
+lang=EN-US style='font-family:CourierNewPSMT'>max</span><span style='font-family:
+CourierNewPSMT'>·4=30·4=120</span><span style='font-family:TimesNewRomanPSMT'>).
+Масив</span><span style='font-family:TimesNewRomanPSMT'> </span><span
+style='font-family:TimesNewRomanPSMT'>дійсних чисел розміщується у динамічній
+пам’яті та займає </span><span style='font-family:CourierNewPSMT'>n·8</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>байтів.
+</span><span lang=RU style='font-family:TimesNewRomanPSMT'>(</span><span
+style='font-family:TimesNewRomanPSMT'>Ефективно використати масив вказівників,
+якщо </span><span style='font-family:CourierNewPSMT'>n·8 значно більше 120).</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US
+style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>Розв</span><span
+lang=RU style='font-family:TimesNewRomanPSMT'>'</span><span style='font-family:
+TimesNewRomanPSMT'>яжемо цей приклад, використовуючи <b>типізований вказівник
+на масив</b> дійсних чисел.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>program </b><span lang=EN-US>Examp_3</span>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>const </b>n<span lang=EN-US>max</span>
+= 30;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>vect=<b>array </b>[1..n<span
+lang=EN-US>max</span>] <b>of </b>real;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>p: ^vect; x: real; i,
+n, kmin, kmax: <span lang=EN-US>integer</span>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'>read(n);</p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln(' Chysla: '); <span
+lang=EN-US>New(p);</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>read(p^[i]);</p>
+
+<p class=MsoNormal style='text-autospace:none'>kmin:=1; kmax:=1;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=2 <b>to </b>n <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>if </b>p^[kmin]&gt;p^[i] <b>then
+</b>kmin:=i;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>if </b>p^[kmax]&lt;=p^[i] <b>then
+</b>kmax:=i</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>x:= p^[kmin]; p^[kmin]:=
+p^[kmax]; p^[kmax]:=x;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do
+</b>write(p^[i]:6:2,' ');</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>Dispose(p)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>.</p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:TimesNewRomanPSMT'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:TimesNewRomanPSMT'>            <b>Завдання</b></span></p>
+
+<p class=MsoNormal><b><span style='font-family:TimesNewRomanPSMT'>1.</span></b><span
+style='font-family:TimesNewRomanPSMT'> </span>Ввести вектор з 8 цілих
+елементів. Всі додатні елементи замінити на 1, а всі недодатні замінити на<span
+lang=RU> -1</span>. Вивести утворений вектор.</p>
+
+<p class=MsoNormal style='text-align:justify'><b>2.</b><i> </i>Ввести вектори з
+<span lang=EN-US>n</span><span lang=EN-US> </span>цілих елементів. Порахувати
+суму додатніх та суму від’ємних елементів масиву. Всі додатні елементи замінити
+на суму додатніх, а всі від’ємні  - на суму від<span lang=RU>’</span>ємних.
+Вивести новоутворений вектор.</p>
+
+<p class=MsoNormal style='text-align:justify'><b>3.</b><i> </i>Ввести вектор <span
+lang=EN-US>V</span><span lang=EN-US> </span>з <span lang=EN-US>n</span><span
+lang=EN-US> </span>дійсних елементів. Якщо всі елементи вектора додатні, то
+обчислити <sub><img width=43 height=45 src="lectures/pascal/Pointers_files/image001.gif"></sub>,
+інакше знайти <span lang=EN-US><sub><img width=56 height=24
+src="lectures/pascal/Pointers_files/image002.gif"></sub></span><span lang=RU>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b>4.</b><i> </i>Ввести вектор <span
+lang=EN-US>V</span><span lang=EN-US> </span>з <span lang=EN-US>n</span><span
+lang=EN-US> </span>дійсних елементів. Якщо всі елементи вектора від<span
+lang=RU>'</span>ємні, то обчислити <sub><img width=108 height=45
+src="lectures/pascal/Pointers_files/image003.gif"></sub>, інакше знайти <span lang=EN-US><sub><img
+width=145 height=24 src="lectures/pascal/Pointers_files/image004.gif"></sub></span><span
+lang=RU>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b>3.</b><i> </i>Ввести вектори <span
+lang=EN-US>A</span><span lang=RU>,</span><span lang=EN-US>B</span><span
+lang=EN-US> </span>з <span lang=EN-US>n</span><span lang=EN-US> </span>цілих
+елементів. Перевірити чи вони однакові. </p>
+
+<p class=MsoNormal style='text-align:justify'><b>4.</b> Ввести вектор <span
+lang=EN-US>D</span><span lang=RU>.</span> Перевірити, чи цей вектор читається
+однаково зліва направо і навпаки. </p>
+
+<p class=MsoNormal style='text-align:justify'><b>5.</b><i> </i>Ввести вектор <span
+lang=EN-US>A</span><span lang=EN-US> </span>з <span lang=EN-US>n</span><span
+lang=EN-US> </span>цілих елементів. Вивести спочатку всі додатні елементи
+вектора, а потім  - всі від’ємні, зберігаючи вихідне взаємне розташування як
+серед додатних, так і серед решти елементів.</p>
+
+<p class=MsoNormal style='text-align:justify'><b>6.</b><i> </i>Ввести масив з
+20 літер. Надрукувати спочатку всі цифри, що входять в нього, а потім решта
+літер, зберігаючи при цьому взаємне розміщення літер в кожній з цих груп.</p>
+
+<p class=MsoNormal style='text-align:justify'><b>7.</b><i> </i>Сформувати
+вектор, елементи якого є числами Фібоначчі. ( 1, 2, 3, 5, 8, 13, ...)</p>
+
+<p class=MsoNormal style='text-align:justify'><b>8.</b><i> </i>Сформувати
+вектор, елементи якого є степенями двійки.</p>
+
+</div>
+
+</body>
+
+</html>

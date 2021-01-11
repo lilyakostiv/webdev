@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Масиви у Delphi</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b>Масиви у </b><b><span
+lang=EN-US>Delphi</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>Властивості компоненти <span lang=EN-US>StringGrid</span><span
+lang=EN-US> </span>(закладка <span lang=EN-US>Additional) :</span></p>
+
+<p class=MsoNormal style='margin-left:9.0pt;text-indent:18.0pt'><span
+lang=EN-US>RowCount </span>- кількість рядків</p>
+
+<p class=MsoNormal style='margin-left:9.0pt;text-indent:18.0pt'><span
+lang=EN-US>ColCount </span>- кількість стовпців</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span lang=EN-US>Cells</span><span
+lang=EN-US> </span>- доступ до елементів таблиці <span lang=EN-US>StringGrid</span>
+відбувається за допомогою індексів. Ця властивість доступна тільки під час виконання
+програми. Індексація елементів - від 0.</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>Щоб мати можливість вводити дані
+в таблицю потрібно задати властивість <span lang=EN-US>Options</span>/<span
+lang=EN-US>goEditing</span> : <span lang=EN-US>true</span>.   </p>
+
+<p class=MsoNormal><b><span lang=EN-US>StringGrid</span>1.</b><b><span
+lang=EN-US>Cells</span>[</b><b><span lang=EN-US>j</span>,</b><b><span
+lang=EN-US>i</span>] -</b> <b><span lang=EN-US>j</span> - індекс стовпця, </b><b><span
+lang=EN-US>i</span> - індекс рядка</b>.</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>&nbsp;</p>
+
+<p class=MsoNormal><img width=696 height=482
+src="lectures/delphi/Delphi_4_Masyv_files/image001.jpg" align=left hspace=12><br clear=all>
+</p>
+
+<p class=MsoNormal>По кнопці <i>Сума додатніх елементів</i> знайти суму всіх
+додатніх елементів таблиці і записати її в <span lang=EN-US>Edit</span>1.</p>
+
+<p class=MsoNormal>По кнопці <i>Сума діагональних елементів</i> знайти суму
+всіх діагональних елементів таблиці і записати її в <span lang=EN-US>Edit</span><span
+lang=RU>1.</span></p>
+
+<p class=MsoNormal>По кнопці <i>Максимальний елемент</i> знайти максимальний
+елемент таблиці і записати його в <span lang=EN-US>Edit</span><span lang=RU>1.</span></p>
+
+<p class=MsoNormal>По кнопці <i>Вивести нову матрицю</i> сформувати нову
+матрицю таким чином <span lang=RU>: </span>всім елементам, для яких <span
+lang=EN-US>i</span><span lang=RU>&gt;</span><span lang=EN-US>j</span><span
+lang=EN-US> </span><span lang=RU>(і - індекс рядка) </span>присвоїти 1, всім
+іншим присвоїти відповідні значення з першої таблиці. </p>
+
+<p class=MsoNormal>По кнопці <i>Вивести вектор</i> сформувати вектор, кожен
+елемент якого є сумою елементів відповідного рядка першої таблиці. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Задати дві компонети <span lang=EN-US>Edit</span><span
+lang=EN-US> </span>для введення кількості рядків та стовпців таблиці (Подія <span
+lang=EN-US>Exit</span>; оператор  <span lang=EN-US>StringGrid</span>1.<span
+lang=EN-US>ColCount</span>:=<span lang=EN-US>StrToInt</span>(<span lang=EN-US>Exit</span>2.<span
+lang=EN-US>Text</span>); ).</p>
+
+<p class=MsoNormal>Для форми використати подію <span lang=EN-US>OnShow</span><span
+lang=EN-US> </span>і задати першому елементу таблиці значення 1 (<span
+lang=EN-US>StringGrid</span>1<span lang=RU>.</span><span lang=EN-US>Cells</span><span
+lang=RU>[0,0]:='1'; ).</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Цілочислові вирази</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Times New Roman CYR";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<h1><a name="_Toc494900728"><b>Цілочислові вирази</b></a></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt'>         </span><span
+style='font-size:12.0pt'>До складу таких виразів можуть входити лише
+цілочислові константи, змінні та функції. Є дві арифметичні функції, які дають
+цілочисловий результат, якщо аргумент функції цілочисловий. Це функції</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>abs(x )             <sub><img
+width=15 height=27 src="lectures/pascal/Pascal_Integer_files/image001.gif"></sub> x<sub><img
+width=15 height=27 src="lectures/pascal/Pascal_Integer_files/image001.gif"></sub></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>sqr(x)                  <sub><img
+width=19 height=21 src="lectures/pascal/Pascal_Integer_files/image002.gif"></sub></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>            Цілочислові 
+належать до дискретних величин і тому для них визначено функції наступності,
+які встановлюють значення <b><i>succ(x)</i></b> – наступного  та <b><i>pred(x)</i></b>
+– попереднього елементів. У цьому випадку ці функції визначено так:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span
+style='font-size:12.0pt'>succ(x)  </span></i></b><span style='font-size:12.0pt'>дорівнює 
+x + 1;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span
+style='font-size:12.0pt'>pred(x) )  </span></i></b><span style='font-size:12.0pt'>дорівнює 
+x - 1.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            Над
+цілочисловими елементами визначено  операції  додавання +, віднімання -,
+множення *. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:12.0pt'>Для ділення використовують дві операції: <b><i>div</i></b> 
+- результатом є частка від ділення двох цілих чисел та <b><i>mod</i></b> -
+результатом є остача від ділення. Операції <b><i>div </i></b>та <b><i>mod</i></b>
+вимагають цілочислових аргументів. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:12.0pt'>Наприклад, після виконання таких операторів присвоєння
+(змінні i,j: integer) i:=10 <b><i>div 3</i></b>; j:=10 <b><i>mod </i></b>3;
+змінні одержать такі результати i=3; j=1.  Використовуючи операції ділення
+відповідні службові слова повинні бути виділені з обох боків пропусками. Також
+треба пам'ятати про те, що використання символу ділення / перетворює вираз до
+дійсного типу.</span></p>
+
+<p class=MsoBodyText2><span style='font-size:12.0pt'>            Розглянемо
+приклад програми, яка для цілого двоцифрового числа обчислює суму його цифр.</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>program </span></i></b><i><span
+style='font-size:12.0pt'> Ex</span></i><i><span lang=EN-US style='font-size:
+12.0pt'>amp</span></i><i><span style='font-size:12.0pt'>1;</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>var </span></i></b><i><span
+style='font-size:12.0pt'>c,c1,c2,s: integer;</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>begin</span></i></b><b><i><span
+style='font-size:12.0pt'> </span></i></b><i><span style='font-size:12.0pt'>{обчислення
+суми цифр двоцифрового числа}</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            writeln('
+введіть ціле двоцифрове число');        read(c);</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            c1:= c <b>div </b>10;
+                        {знаходження  першої цифри}</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            c2:= c <b>mod</b>
+10;                      {знаходження другої цифри}</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            s:= c1 + c2;                           {обчислення
+суми цифр}</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            writeln('сума
+цифр числа ', c, ' </span></i><i><span style='font-size:12.0pt'> </span></i><i><span
+style='font-size:12.0pt'>дорівнює  ',s);</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>end.</span></i></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt'>            </span></b><span
+style='font-size:12.0pt'>Оператор присвоєння для цілочислових величин має
+вигляд</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&lt;цілочислова змінна&gt; :=
+&lt;цілочисловий вираз&gt;</span></p>
+
+<p class=MsoBodyText2><span style='font-size:12.0pt'>            Для
+перетворення дійсного виразу до цілого типу треба використати одну з двох
+функцій trunc(x) або round(x),  які мають аргумент дійсного типу, а результат
+цілого типу.</span></p>
+
+<p class=MsoBodyText2><span style='font-size:12.0pt'>            За функцією
+trunc(x) перетворення до цілого відбувається  шляхом відкидання дробової
+частини, наприклад trunc(6.9)=6 , trunc(6.2)= 6, trunc(-1.8)= -1. За функцією
+round(x) відбувається заокруглення до ближчого цілого, наприклад, round(6.9)=7
+, round(6.2)=6 , round(-1.8)= -2 .</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            Наступний
+приклад ілюструє використання функції перетворення типів.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:12.0pt'>Скласти програму, яка дає змогу визначати першу цифру
+дробової частини дійсного числа, заданого у формі з фіксованою крапкою.</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>program </span></i></b><i><span
+style='font-size:12.0pt'> Ex</span></i><i><span lang=EN-US style='font-size:
+12.0pt'>amp2</span></i><i><span style='font-size:12.0pt'>;</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>var  </span></i></b><i><span
+style='font-size:12.0pt'>x : real;</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>       c : integer;</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>begin</span></i></b><i><span
+style='font-size:12.0pt'>   {визначення першої цифри  дробової частини числа}</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            writeln('
+введіть дійсне  число');      read(x);</span></i></p>
+
+<p class=MsoNormal style='margin-left:252.0pt;text-indent:-216.0pt'><i><span
+style='font-size:12.0pt'>c:= trunc(x * 10)  <b>mod</b> 10;  {знаходження першої
+цифри дробової частини}</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>            writeln('перша 
+цифра числа ', x, ' дорівнює  ',c);</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>end.</span></i></b></p>
+
+<h4><span lang=EN-US style='font-size:12.0pt'>            </span><span
+style='font-size:12.0pt'>Завдання</span></h4>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Знайти суму цифр трицифрового
+цілого числа.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Задано двоцифрове ціле число.
+Знайти число, записане тими самими  цифрами, але у зворотному порядку,
+наприклад, для числа 32 результатом роботи програми має бути 23.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Задано трицифрове ціле число.
+Знайти число, записане тими ж цифрами, але у зворотному порядку, наприклад, для
+числа 382 результатом роботи програми має бути 283.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Триває k-та секунда доби.
+Обчислити скільки повних годин та хвилин пройшло з початку доби.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>5. Скласти програму для
+обчислення значення виразу <sub><img width=105 height=44
+src="lectures/pascal/Pascal_Integer_files/image003.gif"></sub>. </span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>6. Скласти програму для обчислення периметра
+трикутника, заданого координатами своїх  вершин.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>7. Задано три дійсні числа, які визначають сторони
+трикутника. Визначити кути цього трикутника.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>8.  Задана сторона
+рівностороннього трикутника. Знайти його площу.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>9. Задано дійсне числа x.
+Використовуючи лише операції множення, додавання та віднімання обчислити <sub><img
+width=161 height=21 src="lectures/pascal/Pascal_Integer_files/image004.gif"></sub>.
+Дозволяється використовувати не більше чотирьох множень та чотирьох додавань та
+віднімань.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>10. Знайти радіус кола, описаного
+навколо прямокутного трикутника з катетами a  та b.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>11. Скласти програми
+обчислення значень таких виразів:</span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt'><span style='font-size:12.0pt'>1.
+y=<sub><img width=88 height=49 src="lectures/pascal/Pascal_Integer_files/image005.gif"></sub>                   
+2. y=x<sub><img width=67 height=25 src="lectures/pascal/Pascal_Integer_files/image006.gif"></sub>+0.35a<sub><img
+width=12 height=20 src="lectures/pascal/Pascal_Integer_files/image007.gif"></sub>           3.
+y=e<sub><img width=21 height=23 src="lectures/pascal/Pascal_Integer_files/image008.gif"></sub>+4.39a<sub><img
+width=12 height=20 src="lectures/pascal/Pascal_Integer_files/image007.gif"></sub>-7.3a </span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt'><span style='font-size:12.0pt'>4.
+y=<sub><img width=72 height=23 src="lectures/pascal/Pascal_Integer_files/image009.gif"></sub>+4.47a-3.8      
+5. y=sin(x+e<sub><img width=16 height=20 src="lectures/pascal/Pascal_Integer_files/image010.gif"></sub>)            </span><span
+lang=EN-US style='font-size:12.0pt'>                        </span><span
+style='font-size:12.0pt'>6. y=ln(1+x<sub><img width=12 height=20
+src="lectures/pascal/Pascal_Integer_files/image007.gif"></sub>-3a)/a<sub><img width=12
+height=20 src="lectures/pascal/Pascal_Integer_files/image007.gif"></sub> </span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt'><span style='font-size:12.0pt'>7.
+z=<sub><img width=95 height=44 src="lectures/pascal/Pascal_Integer_files/image011.gif"></sub>  
+                8. z=<sub><img width=104 height=41
+src="lectures/pascal/Pascal_Integer_files/image012.gif"></sub>                9. z=<sub><img
+width=88 height=47 src="lectures/pascal/Pascal_Integer_files/image013.gif"></sub> </span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:0cm'><span
+style='font-size:12.0pt'>10.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt'>z=<sub><img width=79 height=44
+src="lectures/pascal/Pascal_Integer_files/image014.gif"></sub>                    11.y=<sub><img
+width=63 height=44 src="lectures/pascal/Pascal_Integer_files/image015.gif"></sub>                         
+12. y=<sub><img width=84 height=44 src="lectures/pascal/Pascal_Integer_files/image016.gif"></sub>
+</span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt'><span style='font-size:12.0pt'>13.
+y=<sub><img width=53 height=27 src="lectures/pascal/Pascal_Integer_files/image017.gif"></sub>+0.3x  
+               14. z=sin x + 2,37<sub><img width=20 height=24
+src="lectures/pascal/Pascal_Integer_files/image018.gif"></sub>+ 4,47x  </span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt'><span style='font-size:12.0pt'>15.
+y=<sub><img width=221 height=24 src="lectures/pascal/Pascal_Integer_files/image019.gif"></sub> </span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt'><span style='font-size:12.0pt'>16.
+y=<sub><img width=168 height=45 src="lectures/pascal/Pascal_Integer_files/image020.gif"></sub>  
+</span><span style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>17.
+y=<sub><img width=211 height=67 src="lectures/pascal/Pascal_Integer_files/image021.gif"></sub> </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-indent:-27.0pt'><span
+style='font-size:12.0pt;font-family:"Times New Roman CYR"'>12. </span><span
+style='font-size:12.0pt'>О</span><span style='font-size:12.0pt;font-family:
+"Times New Roman CYR"'>бчислити довжину кола, площу круга та об</span><span
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt;font-family:
+"Times New Roman CYR"'>єм кулі одного і того ж заданого радіуса</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-indent:-27.0pt'><span
+style='font-size:12.0pt;font-family:"Times New Roman CYR"'>13. За довжинами
+двох сторін деякого трикутника та кутом  ( у    градусах ) між    ними знайти
+довжину третьої сторони  та площу цього трикутника</span><span
+style='font-size:12.0pt'>.</span><span style='font-size:12.0pt;font-family:
+"Times New Roman CYR"'>  </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-indent:-27.0pt'><span
+style='font-size:12.0pt'>14. Визначити довжину кола, описаного навколо
+рівностороннього трикутника зі стороною a.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>15.  За радіусом кола
+визначити площу квадрата, вписаного у нього.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-indent:-27.0pt'><span
+style='font-size:12.0pt'>16. Задано сторону квадрата. Визначити довжину кола,
+вписаного у цей квадрат.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt;font-family:"Times New Roman CYR"'>17. Знайти число,
+одержане виписуванням у зворотному порядку цифр заданого трицифрового числа.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman CYR"'>18.
+Знайти добуток цифр заданого чотирицифрового </span><span style='font-size:
+12.0pt'>числа</span><span style='font-size:12.0pt;font-family:"Times New Roman CYR"'>.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman CYR"'>19.
+Обчислити дробову частину середнього геометричного  трьох заданих додатних
+чисел</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>20. Знайти другу цифру
+дробової частини дійсного числа х.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>21. Знайти останню цифру
+цілої частини дійсного числа х.</span></p>
+
+</div>
+
+</body>
+
+</html>

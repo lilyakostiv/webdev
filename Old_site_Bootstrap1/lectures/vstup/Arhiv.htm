@@ -1,0 +1,779 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Архіватори</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:Calibri;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman"'>Архіватори</span></b></p>
+
+<p class=MsoNormal style='margin-left:.25pt;text-align:justify;text-indent:
+23.05pt;line-height:normal;background:white'><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:.15pt'>Часто на сучасних
+ПК потрібно зберігати дані (графічні, звукові, відео), які потребують  багато
+пам’яті. Для економії обсягу зовнішньої пам'яті, де зберігаються такі дані,
+здійснюється їх стиснення. </span></p>
+
+<p class=MsoNormal style='margin-left:.25pt;text-align:justify;text-indent:
+23.05pt;line-height:normal;background:white'><b><i><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:.15pt'>Стиснення даних
+- це</span></i></b><b><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:.15pt'> процес перекодування початкового файла даних
+у новий файл меншого розміру, з якого можна відновити початковий.</span></i></b><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+.25pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:.25pt;text-align:justify;text-indent:
+23.05pt;line-height:normal;background:white'><i><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:.2pt'> </span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+.2pt'>На сьогоднішній день <i>розроблено багато різних </i></span><i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+.05pt'>алгоритмів стиснення, вони використовують різні методи, але в основі
+більшості з них лежить принцип заміни рівномірного двійкового коду на
+нерівномірний</span></i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:.05pt'>. </span></p>
+
+<p class=MsoNormal style='margin-left:.25pt;text-align:justify;text-indent:
+23.05pt;line-height:normal;background:white'><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:.05pt'>Один з
+найпростіших полягає в тому, що на кодування символів, які використовуються
+часто відводиться менше бітів, ніж для кодування символів, частота використання
+яких невелика. Наприклад, алгоритми архівації Шенона-Фано. Інший алгоритм
+передбачає пошук у вихідному файлі ланцюжків символів, які повторюються,
+створення “бібліотеки” таких ланцюжків і кодування кожного з них коротким
+(переважно дво- або трибайтним) номером.</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:.05pt'> </span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+.05pt'>Алгоритм арифметичного стиску будує коди символів на проміжку (0,1</span><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:.05pt'>]</span><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:.05pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:.7pt;text-align:justify;text-indent:22.8pt;
+line-height:normal;background:white'><span style='font-size:12.0pt;font-family:
+"Times New Roman";color:black;letter-spacing:.05pt'>Розглянемо метод Шенона-Фано.
+С</span><span style='font-size:12.0pt;font-family:"Times New Roman";color:black'>початку
+складається таблиця, в якій для кожного символу, з яких складаються вхідні
+дані, вказується кількість його входжень, символи сортуються в порядку спадання
+кіль­<span style='letter-spacing:.05pt'>кості входжень, а далі здійснюється
+кодування цих символів: </span><span style='letter-spacing:.15pt'>вся таблиця
+ділиться на дві групи так, щоб у кожній групі сумарна кількість </span>входжень
+всіх символів була по можливості однаковою, символам першої гру­пи присвоюється
+кодове значення 0, а символам другої — 1; <span style='letter-spacing:.15pt'>кожна
+з підгруп аналогічним чином ділиться на дві групи і так доти, доки в </span>кожній
+підгрупі не залишиться по одному символу; <span style='letter-spacing:.15pt'>результуючий
+код кожного символу складається з кодів тих підгруп, до яких </span>цей символ
+входив у процесі поділу таблиці. <span style='letter-spacing:-.1pt'>Для
+прикладу побудуємо послідовність кодів за методом Шенона-Фано для слова
+«абракадабра».</span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:.7pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>Символ</span></b></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>Кількість входжень</span></b></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>а</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>5</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>0</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>б</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>2</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>0</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>р</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>2</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>0</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>к</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=109 valign=top style='width:82.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>д</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=109 valign=top style='width:82.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+  <td width=110 valign=top style='width:82.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman"'>1</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify;line-height:
+normal;background:white'><span style='font-size:12.0pt;font-family:"Times New Roman"'>Отже,
+отримаємо такі коди символів</span><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman"'>:</span><span style='font-size:12.0pt;
+font-family:"Times New Roman"'> а - 0, б – 10, р – 110, к – 1110, д – 1111.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:normal;background:
+white'><span style='font-size:12.0pt;font-family:"Times New Roman"'>Тоді слово </span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.1pt'>«абракадабра» по методу Шенона-Фано закодується так</span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.1pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:normal;background:
+white'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.1pt'>0 10</span><span lang=EN-US style='font-size:
+12.0pt;font-family:"Times New Roman";color:black;letter-spacing:-.1pt'>&nbsp;</span><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.1pt'>110 0 1110 0 1111 0 10</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.1pt'>&nbsp;</span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.1pt'>110 0</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:normal;background:
+white'><span style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.1pt'>а  б    р   а    к    а     д    а  б   р    а</span></p>
+
+<p class=MsoNormal style='margin-right:2.65pt;text-align:justify;text-indent:
+22.1pt;line-height:normal;background:white'><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>Як бачимо, у випадку кодування цього
+слова за допомогою </span><span lang=EN-US style='font-size:12.0pt;font-family:
+"Times New Roman";color:black'>ASCII</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>-кодів у пам'яті маши­ни воно
+займатиме 11 байт (бо 11 літер у слові, кожне з яких кодується 1 байтом), а
+після стискування за методом Шенона-Фано — 3 байти (фактично по­трібно 23
+біти).</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Алгоритми стиснення даних поділяються на
+алгоритми з втратами і без втрат</span></i><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснення без втрат</span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.05pt'> – таке стиснення, при якому файл, відновлений зі стиснутого, повністю
+відповідає оригіналу.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснення з втратами </span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.05pt'>– таке стиснення, коли у відновленому файлі є спотворення, але для
+людини вони не помітні.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснення без втрат застосовується для
+текстових і числових даних, програм, тому що відсутність навіть одного символу
+може призвести до неправильного тлумачення слова, збою виконання програми, а
+стиснення з втратами – для графічних (зокрема, формат </span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.05pt'>*.</span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>jpg</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>), звукових і
+відеоданих.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Алгоритм стиснення з втратами полягає у поділі
+зображення (фотографії,відеокадру) на ділянки з кількох пікселів і надання цій
+ділянці кольору, середнього для цих пікселів.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><b><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснення даних характеризується двома
+основними параметрами</span></i></b><b><i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>:</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>1</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>. <i>Коефіцієнтом
+стиснення</i>, який визначається відношенням обсягу стиснутого файлу до обсягу
+початкового файла. Значення цього коефіцієнта міститься в межах від 1
+(стиснення вже стиснутих даних) до 10 і більше.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>2. <i>Швидкістю стиснення</i>, якам визначає
+тривалість процесу стиснення і наступного відновлення даних з архіву.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснення даних здійснюється за допомогою
+спеціальних програм. У </span><span lang=EN-US style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>Windows</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.05pt'> </span><span lang=EN-US style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>XP</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.05pt'> </span><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>та наступних версіях для цього
+використовують вбудовані програмні засоби. Вони виконують стиснення на тих
+зовнішніх пристроях, які підтримуються файловою системою </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.05pt'>NTFS.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснення даних в ОС </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.05pt'>Windows</span><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'> 7 </span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.05pt'>виконується так</span><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman";color:black;letter-spacing:-.05pt'>:</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:.55pt;text-align:justify;text-indent:22.4pt;line-height:normal;
+background:white'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>1</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>. У програмі <i>Провідник
+</i>виділити об</span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>'</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>єкти (папки,
+файли), які потрібно стиснути. Тоді у контексному меню виділених об</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black;
+letter-spacing:-.05pt'>'</span><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>єктів виконати команду <i>Властивості</i>.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>2. Відкриється вікно <i>Властивості</i>, на
+закладці <i>Загальні </i>бачимо скільки файлів містять виділені папки і скільки
+пам'яті вони займають на диску. Потрібно натиснути кнопку <i>Додатково...</i>,
+тоді відкриється вікно <i>Додаткові атрибути.</i> У цьому вікні увімкнути
+прапорці <i>Дозволити індексування вмісту цих файлів... </i>і <i>Стискати вміст
+для заощадження місця на диску</i>, натиснути кнопку <i>ОК.</i> Тоді
+відкриється вікно <i>Підтвердження зміни атрибутів</i>.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>3. У цьому вікні увімкнути перемикач для
+вкладених папок і файлів, натиснути кнопку <i>ОК. </i> Тоді починається процес
+стиснення, який може тривати від кількох секунд до десятків хвилин (це залежить
+від обсягу виділених об</span><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman";color:black;letter-spacing:-.05pt'>'</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.05pt'>єктів). </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Стиснуті об</span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman";color:black;letter-spacing:
+-.05pt'>'</span><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>єкти у вікні програми <i>Провідник </i>виділені
+іншим кольором. Для перегляду результатів стиснення потрібно виділити
+відповідні об</span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>'</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>єкти і
+виконати команду <i>Властивості </i>у їх контексному меню.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Для скасування стиснення папок і файлів
+потрібно виділити їх, відкрити вікно <i>Додаткові атрибути </i>і вимкнути у
+ньому прапорець <i>Стискати вміст для заощадження місця на диску</i>, натиснути
+кнопку <i>ОК.</i></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Окремим випадком стиснення файлів є їх
+архівування. </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><b><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Архівування - це стиснення кількох файлів і
+об'єднання їх в один архівний файл для довготривалого його зберігання або
+передавання. </span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.9pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Для архівації файлів використовують
+спеціальні програми, які називають <b>архіваторами</b>, </span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Перші
+архіватори з'явилися в 1985 р.</span></p>
+
+<p class=MsoNormal style='margin-right:1.7pt;text-align:justify;text-indent:
+22.8pt;line-height:normal;background:white'><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black;letter-spacing:-.05pt'>Основними
+можливості сучасних архіваторів є: занесення цілих груп файлів та підката­</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>логів в
+архів, поновлення архіву, перегляд файлів в архіві, вилучення файлів з архіву,
+захист <span style='letter-spacing:-.05pt'>файлів від несанкціонованого
+доступу, перевірка цілісності архіву, створення багатотомних ар­хівів та
+архівів, які автоматично розкриваються тощо. Сучасні архіватори дозволяють
+економи­</span>ти від 20 до 90% дискового простору.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:-.05pt'>Файлом, який міститься в архіві, можна
+скористатися лише після того, як він буде відно­влений у початковому вигляді,
+тобто розархівований. Розархівацію виконують або ті ж самі </span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>архіватори,
+або окремі програми, які називають <i>розархіваторами.</i></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.2pt;margin-bottom:10.0pt;
+margin-left:2.15pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black;letter-spacing:.05pt'>Широке поширення отримали програми-оболонки
+архіваторів, або архіватори із вбудо­</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>ваними функціями оболонок, які
+дозволяють у зручному інтерактивному режимі працювати з архівами. Першою такою
+програмою-оболонкою була програма </span><span lang=EN-US style='font-size:
+12.0pt;font-family:"Times New Roman";color:black'>RAR</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>, яка
+застосовувалась в ОС </span><span lang=EN-US style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>DOS</span><span style='font-size:
+12.0pt;font-family:"Times New Roman";color:black'>. Для ОС </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Windows</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'> </span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>використовуються
+програми</span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>:</span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'> </span><b><i><span lang=EN-US style='font-size:12.0pt;font-family:
+"Times New Roman";color:black'>WINRAR</span></i></b><b><i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>, </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>WINZIP</span></i></b><b><i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>, 7-</span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>ZIP</span></i></b><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>. Ц<span
+style='letter-spacing:.15pt'>і програми дозволяють переглядати вміст архівних
+файлів (різних типів), розархівовувати </span><span style='letter-spacing:.05pt'>файл
+або групу файлів, знищувати файли в архіві та інше. Сучасні архіватори мають
+зручний інтерфейс, забезпечують високий ступінь стиснення, працюють не лише з
+файлами власного формату, а й з файлами інших форматів.</span></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.95pt;margin-bottom:10.0pt;
+margin-left:2.65pt;text-align:justify;text-indent:22.3pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>Деякі оболонки операційних систем (наприклад, </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Far</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'> </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Manager</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>, </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Windows</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'> </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Commander</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>) мають
+власні засоби для роботи з архівами.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><b><i><span style='font-size:12.0pt;font-family:"Times New Roman"'>Заархівувати
+кілька об</span></i></b><b><i><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman"'>'</span></i></b><b><i><span style='font-size:12.0pt;
+font-family:"Times New Roman"'>єктів</span></i></b><i><span style='font-size:
+12.0pt;font-family:"Times New Roman"'> можна декількома способами</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman"'>:</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman"'>1.
+Відкрити вікно програми-архіватора</span><span style='font-size:12.0pt;
+font-family:"Times New Roman"'> (наприклад, </span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>WINRAR</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>), вибравши
+пункт <i>Усі програми </i>головного меню  </span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Windows</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>. За
+допомогою команди <i>Змінити диск </i>меню <i>Файл </i>перейти на диск, де
+містяться дані для архівування, виділити потрібні об</span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>'</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>єкти. Тоді
+натиснути кнопку <i>Додати </i>або вибрати команду <i>Додати файли до архіву </i>меню
+<i>Команди</i>. Відкриється вікно <i>Ім'я та параметри архіву. </i>У цьому
+вікні ввести нове ім'я архіву або погодитись із запропонованим, таком можна
+вибрати формат архіву, метод стиснення (звичайний, найкращий, ...) та інші
+параметри. </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>2. Виділити потрібні об</span><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>'</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>єкти, у їх контексному меню задати
+команду <i>Додати файли до архіву, </i>задати ім</span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>'</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>я архіву та деякі
+параметри.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>Щоб переглянути <i>заархівовані файли</i>, їх потрібно <b><i>видобути
+з архіву</i></b>. Це можна виконати декількома способами</span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>:</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'> </span><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>1. У вікні програми</span><span style='font-size:12.0pt;
+font-family:"Times New Roman"'>-архіватора</span><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'> </span><span style='font-size:12.0pt;
+font-family:"Times New Roman"'>(наприклад, </span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>WINRAR</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>), знайти і
+відкрити архівну папку (двічі клікнути на її імені). Виділити папки і файли,
+які потрібно розархівувати і натиснемо кнопку <i>Видобути до... </i>або
+виконати команду <i>Видобути файли до зазначеної папки </i>меню <i>Команди.</i>
+Відкриється вікно <i>Шлях та параметри видобування</i>, тоді ввести ім'я папки,
+до якої запишуться об'єкти з архіву, і натиснути кнопку <i>ОК.</i></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>2. У контексному меню архівної папки вибрати команду <i>Видобути
+файли до зазначеної папки.</i></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>Також можна створювати <b><i>архіви, які саморозпаковуються</i></b>.
+ Для їх розпакування не потрібно ніяких програм. Ці архіви мають розширення
+ехе. Переважно, їх використовують для пересилання файлів мережею Інтернет, якщо
+невідомо, чи має отримувач відповідну програму-архіватор.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>Для створення саморозпаковувального архіву потрібно у вікні <i>Ім'я
+та параметри архіву </i>програми </span><span lang=EN-US style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>WINRAR</span><span style='font-size:
+12.0pt;font-family:"Times New Roman";color:black'> увімкнути прапорець <i>Створити
+</i></span><i><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>SFX</span></i><i><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman";color:black'>-</span></i><i><span style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>архів.</span></i></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><i><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>Обмеження розмірів носіїв даних і обмеження розмірів файлів, які
+можуть бути приєднані до електронних листів, спричинили потребу в створенні <b><i>багатотомних
+архівів</i></b>.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:black'>Для створення багатотомного архіву потрібно у вікні <i>Ім'я та
+параметри архіву </i>програми </span><span lang=EN-US style='font-size:12.0pt;
+font-family:"Times New Roman";color:black'>WINRAR</span><span style='font-size:
+12.0pt;font-family:"Times New Roman";color:black'> вказати обсяг тому у полі <i>Розбити
+на томи розміром. </i>За замовчуванням кожний том отримує ім</span><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman";color:black'>'</span><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>я <i>Ім</i></span><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman";color:black'>'</span></i><i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>я_тому.</span></i><i><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>partNNN</span></i><i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>, </span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>де </span><i><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>NNN</span></i><i><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'> </span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>- номер
+тому. Для розпаковування архіву всі томи мають зберігатись в одній папці, а
+розпаковувати їх слід починати з першого.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.7pt;margin-bottom:10.0pt;
+margin-left:.5pt;text-align:justify;text-indent:22.1pt;line-height:normal;
+background:white'><span style='font-size:12.0pt;font-family:"Times New Roman"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt;line-height:
+normal;background:white'><span style='font-size:12.0pt;font-family:"Times New Roman"'>Література</span><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman"'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:normal;background:
+white'><span style='font-size:12.0pt;font-family:"Times New Roman"'>Гуржій,
+Карташова, Лапінський, Руденко, Інформатика 8 клас, ст. 73</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:normal;background:
+white'><span style='font-size:12.0pt;font-family:"Times New Roman"'>                   
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:115%;font-family:"Times New Roman"'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

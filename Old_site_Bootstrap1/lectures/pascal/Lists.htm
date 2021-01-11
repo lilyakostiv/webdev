@@ -1,0 +1,875 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Списки</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:TimesNewRomanPSMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:CourierNewPSMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:TimesNewRomanPS-ItalicMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 28.3pt 42.5pt 36.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center;text-autospace:none'><b><span
+style='font-size:14.0pt'>Списки</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt;text-autospace:none'>Раніше нами було
+розглянуто задачі, у яких необхідний для зберігання даних обсяг пам’яті був
+відомий або до компілювання програми, або до початку введення даних. У першому
+випадку пам’ять резервується за допомогою описів, у другому – за допомогою функцій
+виділення пам’яті.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Якщо до початку
+роботи з даними неможливо визначити, скільки пам’яті потрібно для їхнього
+зберігання, то пам’ять виділяється за потребою окремими <i>блоками</i>, які
+зв’язуються між собою показниками. Такі, взаємопов’язані показниками, блоки
+називають <b><i>динамічними структурами даних</i></b>. Слово “<i>динамічні</i>”
+у визначенні несе подвійне навантаження: такі структури даних розміщуються у динамічній
+пам’яті та їхній розмір змінюється під час виконання програми.</p>
+
+<p class=MsoNormal style='text-autospace:none'>З динамічних структур даних у
+програмах найчастіше використовують різноманітні <i>лінійні списки</i>, <i>стеки</i>,
+<i>черги </i>і <i>бінарні дерева</i>. Вони відрізняються способами зв’язування
+окремих блоків та допустимими операціями над ними. Блоки динамічних структур
+даних часто називають <b>ланками</b>. У процесі роботи програми ланки можуть
+додаватися чи видалятися.</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            Список </b>– це
+динамічна структура даних, кожна ланка якої складається з двох частин: </p>
+
+<p class=MsoNormal style='text-autospace:none'>- <i>тіла </i>(інформаційної
+частини) і </p>
+
+<p class=MsoNormal style='text-autospace:none'>- <i>поля зв’язку</i>. </p>
+
+<p class=MsoNormal style='text-autospace:none'><i>Тіло </i>містить одне або
+декілька полів даних або вказівник на ці поля. У <i>полі зв’язку </i>містяться
+адреси ланок, які визначають способи проходження списку. За кількістю цих адрес
+списки ділять на <b>одноелементні </b>(<b>лінійні </b>або <b>ланцюгові</b>) та <b>багатоелементні</b>.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Лінійний список
+характеризує наявність єдиного зв’язку – з наступною ланкою.</p>
+
+<p class=MsoNormal style='text-autospace:none'>Схематичне зображення лінійного
+списку<span lang=EN-US>:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><img width=570 height=225
+src="lectures/pascal/Lists_files/image001.gif"></p>
+
+<p class=MsoNormal style='text-autospace:none'>Кожна ланка списку, крім
+останньої, містить вказівник на наступну за нею ланку. Ознакою того, що ланка –
+остання у списку, є значення nil у полі зв’язку цієї ланки. Для кожного списку
+обов’язково існує вказівник, що містить адресу першої ланки списку (<i>вказівник
+на початок списку</i>). Якщо список не має жодної ланки (<i>порожний </i>список),
+то значення цього вказівника дорівнює nil.</p>
+
+<p class=MsoNormal>            Зображений на малюнку лінійний список є <i>однонапрямленим</i>,
+тоді як існують ще й <i>двонапрямлені </i>списки (у яких кожна наступна, крім
+початкової, ланка містить додатково вказівник і на попередню ланку списку). Під
+терміном “<i>лінійний список</i>” переважно розуміють саме “<i>однонапрямлений
+лінійний список</i>”. </p>
+
+<p class=MsoNormal style='text-autospace:none'>            Для реалізації
+лінійних списків можна використати такі оголошення типів:</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>TypTila= … // тип
+тіла ланки</p>
+
+<p class=MsoNormal style='text-autospace:none'>        List= ^Listrecord;</p>
+
+<p class=MsoNormal style='text-autospace:none'>        Listrecord = <b>record </b>Tilо:TypTila;
+next: List <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>Тип тіла ланки можна не писати
+окремо, а задавати безпосередньо при описі полів даних Наприклад, опишемо тип
+лінійного списку цілих чисел:</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>List= ^Listrecord;</p>
+
+<p class=MsoNormal style='text-autospace:none'>        Listrecord = <b>record </b>a:integer;
+next: List; <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>У цьому прикладі тип List
+оголошується вказівником на тип Listrecord (запис), який попередньо у програмі
+не був оголошений. Навіть якщо поміняти місцями визначення типів Listrecord і
+List, то ситуація все одно не зміниться: у визначенні запису Listrecord
+міститься поле типу List.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Вказівники – це <b>єдиний
+виняток</b>, для якого допустиме звертання на ще не оголошений тип даних.
+Записи, в яких є посилання на аналогічні записи, називають <i>самоадресованими</i>.
+Отже, для формування списку визначено <b><i>спеціальний шаблон</i> </b>використання
+вказівників та самоадресованих записів.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Місця вставляння чи вилучення
+ланок списку чи отримання значень тіл ланок жорстко не фіксуються і залежать
+від задачі, що розв’язується. Робота зі списками потребує доброго розуміння
+матеріалу та великої уваги. У програмах цього розділу, в яких працюватимемо зі
+списками, розглянемо підпрограми (процедури і функції), які матимуть <i>універсальне
+</i>значення. Ці підпрограми досить просто буде пристосувати до розв’язку
+різноманітних задач, змінюючи тільки тіло ланки списку. Для зручності розгляду
+матеріалу <b>зафіксуємо </b>назви підпрограм і назви параметрів.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Нехай head –
+параметр, який задає вказівник на початок списку типу List;  a_p:integer – параметр,
+який задає або отримує тіло ланки списку. Задамо такі підпрограми:</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>function </b>IsEmpty(head:List):boolean;
+– повертає true, якщо список порожний;</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>procedure </b>InBegin(<b>var
+</b>head:List; a_p:integer); – вставляє нову ланку на початок списку;</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>procedure </b>OutBegin(<b>var
+</b>head:List; <b>var </b>a_p:integer); – звертання до ланки на початку списку;</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>procedure </b>InEnd(<b>var </b>head:List;
+a_p:integer); – вставляє нову ланку на кінець списку;</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>procedure </b>OutEnd(<b>var
+</b>head:List; <b>var </b>a_p:integer); – звертання до ланки у кінці списку;</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>procedure </b>output(<b>var
+</b>head: List); – виведення усього списку на екран;</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <b>procedure </b>delall(<b>var
+</b>head:List); – видалення усього списку з пам’яті.</p>
+
+<p class=MsoNormal style='text-autospace:none'><i>            <b>Стек</b> </i>і
+<b><i>черга</i></b><i> </i>– це динамічні структури даних, у яких жорстко фіксуються
+місця вставляння і вилучення ланок. Тобто для стеку і черги характерними є дві
+операції <span lang=RU>: </span>запис і читання.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Занесення даних у <i>стек
+</i>чи звертання до ланки стека відбувається <b>тільки з одного боку </b>динамічної
+структури даних. Занесення даних у <i>чергу </i>відбувається <b>з одного боку </b>динамічної
+структури даних, а звертання до ланки черги – з <b>іншого боку</b>.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Динамічні структури
+даних (стек, чергу, дерево) можна зберігати у пам’яті за допомогою вектора (перевага
+- доступ до елементів по індексу) або списку (перевага - економія пам<span
+lang=RU>'</span>яті<span lang=RU>)</span>.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Розглянемо роботу з однонапрямленим
+<b>лінійним списком</b>, як базовою структурою даних, і з його допомогою
+реалізуємо <b>стек</b>.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            У процедурах
+OutBegin і OutEnd тіло ланки (ціле число) передається у точку виклику через
+параметр-змінну a_p, а сама ланка видаляється, тому ці процедури можуть
+використовуватися для звертання до стека. </p>
+
+<p class=MsoNormal style='text-autospace:none'>            Аналогічно,
+процедури InBegin і InEnd можуть використовуватися для вставляння нової ланки
+стека.</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU>            </span>Занесення
+даних у стек чи звертання до ланки стека може відбуватися тільки на :</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <i>початку списку </i>(дозволено
+використання тільки підпрограм InBegin, OutBegin та IsEmpty);</p>
+
+<p class=MsoNormal style='text-autospace:none'>• <i>кінці списку </i>(дозволено
+використання тільки підпрограм InEnd, OutEnd та IsEmpty).</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Лінійні списки дають
+можливість поєднувати різні підпрограми, що дозволяє звернутися до будь-якої
+ланки списку чи переглянути весь список без його знищенн.</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Для роботи з <i>чергою
+</i> часто використовують лінійний список з двома вказівниками (на початок і на
+кінець списку).</p>
+
+<p class=MsoNormal style='text-autospace:none'><b><i>&nbsp;</i></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><i><span style='font-size:
+14.0pt'>Реалізація лінійних списків</span></i></b></p>
+
+<p class=MsoNormal style='text-autospace:none'>            Розглянемо приклади,
+які дадуть можливість вивчити техніку роботи зі списками. Щоб не відволікатися
+на зайві деталі, спочатку за допомогою списків моделюватимемо послідовність
+цілих чисел <i>а</i>1, <i>а</i>2,..., <i>а</i>n, де n – натуральне число. Для
+цієї послідовності використаємо список типу List (описаний раніше).</p>
+
+<p class=MsoNormal style='text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>Приклад 1</b>. З клавіатури
+вводять послідовність цілих чисел <i>а</i>1, <i>а</i>2,..., <i>а</i>n, де n –
+натуральне число. Потрібно:</p>
+
+<p class=MsoNormal style='text-autospace:none'>1) вивести цю послідовність на
+екран у зворотному порядку;</p>
+
+<p class=MsoNormal style='text-autospace:none'>2) видалити з послідовності два
+числа, які введені останніми, з відповідним повідомленням;</p>
+
+<p class=MsoNormal style='text-autospace:none'>3) видалити послідовність з
+пам’яті.</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>Попередні міркування</b>.
+Найлегше буде виконати перші два завдання, якщо у процесі введення чисел буде
+формуватися <i>стек </i>із занесеням чисел чи звертанням до ланок на початку
+списку. При виведенні послідовності чисел на екран весь список
+переглядатиметься без знищення його ланок (тут список використовується у звичному
+для цієї структури значенні). Послідовно переглядається весь список і при
+видаленні його з пам’яті (знищення списку), оскільки кожна ланка видаляється
+окремо. Отже, на основі одного і того ж списку у програмі для різних цілей
+використовуються різні структури даних: стек і лінійний список. Вважатимемо, що
+у програмі на початок цього списку посилається змінна Сhain типу List, а
+відповідний формальний параметр, який отримуватиме адресу змінної Сhain, матиме
+назву head.</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>Зауважимо</b>, що про стек
+можна було б тут взагалі й не згадувати. Однак просте і ефективне розв’язання
+тих чи інших задач великою мірою залежить від структури даних. А для завдань 1-3
+власне ефективно використати стек.</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>program </b>Pr1;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>const </b>nmax=30;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>List = ^ListRecord;</p>
+
+<p class=MsoNormal style='text-autospace:none'>        ListRecord = <b>record </b>a:integer;
+next:List; <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>Chain:List;
+a_new:integer; i,n:byte; st:<b>string</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>function </b>IsEmpty(head:List):boolean;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            </b>IsEmpty:=
+head=nil </p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>InBegin(<b>var </b>head:List;
+a_p:integer);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>node: List; <span
+lang=RU>       {</span> нова ланка списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>new(node); <span
+lang=RU>  {</span> розміщення нової ланки<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>            node^.a:=a_p;
+node^.next:=head;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            head:=node <span
+lang=RU> {</span> додавання нової ланки у список<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>OutBegin(<b>var
+</b>head:List; <b>var </b>a_p:integer);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>node: List;    {
+допоміжна ланка }</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>IsEmpty(head)
+</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>                        </span><b>then
+</b><b><span lang=EN-US>  {</span></b> список порожний<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        </b><b><span
+lang=EN-US>            </span></b>write ('Chain is empty!'); </p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=EN-US>            <b>else
+begin</b> </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>                                   </span>node:=head;
+a_p:=head^.a; head:=head^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=EN-US>                        </span>Dispose(node)
+<span lang=EN-US>  { </span>допоміжна ланка<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US>                  
+            end</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>output(<b>var </b>head:
+List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr: List; <span
+lang=RU> {</span> поточна ланка списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>st<span lang=RU>2</span>:<b>string</b>;
+<span lang=RU>  {</span> представлення списку рядком<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>IsEmpty(head)
+</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>            </span><b>then
+</b><b><span lang=EN-US> {</span></b> список порожний<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal><b>            </b><b><span lang=EN-US>            </span></b>write
+('Chain is empty!'); </p>
+
+<p class=MsoNormal style='text-autospace:none'>            <b><span lang=EN-US>else
+begin</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>                        </span>st<span
+lang=EN-US>2</span>:=''; curr:=head;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            </b><b><span
+lang=EN-US>            </span>while </b>curr &lt;&gt; NIL <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        </b><b><span
+lang=EN-US>            </span>begin </b>st<span lang=EN-US>2</span>:=st<span
+lang=EN-US>2</span>+IntToStr(curr^.a)+' ';</p>
+
+<p class=MsoNormal style='text-autospace:none'>                                   <span
+lang=EN-US>            </span>curr:=curr^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        </b><b><span
+lang=EN-US>            </span>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=EN-US>            </span>writeln(st<span
+lang=EN-US>2</span>);</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>                 
+<b>end</b>;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>delall(<b>var </b>head:List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr:List; <span
+lang=RU> {</span> поточна ланка списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>IsEmpty(head)
+</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>            </span><b>then
+</b><b><span lang=EN-US>{</span></b> список порожний<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        </b>write
+('Chain is empty!'); </p>
+
+<p class=MsoNormal style='text-autospace:none'>            <b><span lang=EN-US>else</span> 
+</b><b><span lang=EN-US>begin</span></b>  { послідовно знищуємо ланки }</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=EN-US>            </span>curr:=head;
+head:=head^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            </b><b><span
+lang=EN-US>            </span>while </b>(head&lt;&gt;nil) <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        begin
+</b>dispose(curr);</p>
+
+<p class=MsoNormal style='text-autospace:none'>                                 
+curr:=head; </p>
+
+<p class=MsoNormal style='text-autospace:none'>                                 
+head:=head^.next</p>
+
+<p class=MsoNormal style='text-autospace:none'>                        <b>end</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US>                        dispose</span></b><span
+lang=EN-US>(curr); {</span> знищити останню ланку <span lang=EN-US>}</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US>                  
+ end</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-size:14.0pt'>                   {
+реалізація задачі }</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>Chain:=nil;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>repeat </b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            </b>write('Kilk.chysel:');
+</p>
+
+<p class=MsoNormal style='text-autospace:none'>            readln(n)</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>until </b>(n&gt;=1) <b>and </b>(n&lt;=nmax);
+<span lang=EN-US>{</span> введення n<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln('Chysla:');</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU>{</span> введення
+послідовності чисел з формуванням стека<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                         </b>read(a_new);
+</p>
+
+<p class=MsoNormal style='text-autospace:none'>                        InBegin(Chain,a_new)</p>
+
+<p class=MsoNormal style='text-autospace:none'>             <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+завдання 1<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>output(Chain); readln;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+завдання 2<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>st:='Vylucheno:';</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>2 <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            begin </b>OutBegin(Chain,
+a_new);</p>
+
+<p class=MsoNormal style='text-autospace:none'>                        st:=st+IntToStr(a_new)
++ ' '</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln(st);</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU>{</span> для
+контролю виводимо ланки, що залишилися<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>output(Chain); readln;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+завдання 3<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal>delall(Chain)</p>
+
+<p class=MsoNormal><b><span lang=EN-US>end.</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>Приклад </b><b><span lang=RU>2</span></b>.
+З клавіатури вводять послідовність цілих чисел <i>а</i>1,<i>а</i>2,..., <i>а</i>n,
+де n – натуральне число. Потрібно:</p>
+
+<p class=MsoNormal style='text-autospace:none'>1) вивести цю послідовність на
+екран у порядку введення чисел;</p>
+
+<p class=MsoNormal style='text-autospace:none'>2) видалити з послідовності два
+числа, які введені останніми, з відповідним повідомленням;</p>
+
+<p class=MsoNormal style='text-autospace:none'>3) послідовно вивести на екран: <i>а</i>1,
+<i>а</i>1+<i>а</i>2, ... , <i>а</i>1+<i>а2</i>+...+<i>а</i>n-2.</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>Попередні міркування</b>.
+Найлегше буде виконати перші два завдання, якщо у процесі введення чисел буде
+формуватися <i>стек </i>із занесенням чисел чи звертанням до ланок у кінці
+списку. При виконанні третього завдання треба організувати звертання до ланок
+на початку списку.</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>program </b>Pr2;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>const </b>nmax=30;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>List = ^ListRecord;</p>
+
+<p class=MsoNormal style='text-autospace:none'>        ListRecord = <b>record </b>a:integer;
+next:List; <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>Chain:List;
+s,a_new:integer; i,n:byte;st:<b>string</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>function </b>IsEmpty(head:List):boolean;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            </b>IsEmpty:=
+head=nil </p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>InEnd(<b>var </b>head:List;
+a_p:integer);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>node, curr: List;  {
+нова і поточна ланка списку }</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>new(node);     { розміщення
+нової ланки }</p>
+
+<p class=MsoNormal style='text-autospace:none'>            node^.a:=a_p;
+node^.next:=<b>nil</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=RU>{</span>
+вставляння ланки у кінець списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>head=<b>nil
+then </b>head:=node</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        else </b><b> </b><span
+lang=RU>{</span> пошук останьої ланки списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                                   begin
+</b>curr:=head;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                                               while
+</b>curr^.next &lt;&gt; <b>NIL do </b>curr:=curr^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'>                                               <span
+lang=RU>{</span> додавання нової ланки у кінець списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>                                               curr^.next:=node</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                                   end</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>OutEnd(<b>var </b>head:List;
+<b>var </b>a_p:integer);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr: List; <span
+lang=RU> {</span> поточна ланка списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>IsEmpty(head)
+<b>then </b><b> </b><span lang=EN-US>{</span> список порожний<span lang=EN-US>
+}</span></p>
+
+<p class=MsoNormal><b>                        begin </b>write ('Chain is
+empty!'); exit <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=EN-US>{</span>
+пошук передостанньої ланки списку<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            while </b>curr^.next^.next
+&lt;&gt; NIL <b>do </b>curr:=curr^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            a_p:=curr^.next^.a;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            Dispose(curr^.next) {
+знищення останньої ланки }</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=RU>{</span>
+передостання ланка списку стає останньою<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>            curr^.next:=NIL;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>OutBegin(var
+head:List; var a_p:integer);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>node: List;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>{ див. програму Pr1}</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>output(<b>var </b>head:
+List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr: List; st<span
+lang=EN-US>2</span>:<b>string</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>{ див. програму Pr1}
+</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>                        </span><b><span
+lang=EN-US style='font-size:14.0pt'>{</span></b><b><span style='font-size:14.0pt'>
+реалізація задачі</span></b><b><span lang=EN-US style='font-size:14.0pt'> }</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>Chain:=<b>nil</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=EN-US>{</span>
+введення кількості чисел<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            repeat </b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        </b>write('Kilk.chysel:');
+readln(n)</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            until </b>(n&gt;=1)
+<b>and </b>(n&lt;=nmax);</p>
+
+<p class=MsoNormal style='text-autospace:none'>            writeln('Chysla:');</p>
+
+<p class=MsoNormal style='text-autospace:none'>            <span lang=RU>{</span>
+введення послідовності чисел з формуванням стека<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            for </b>i:=1 <b>to
+</b>n <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        begin
+</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                                   </b>read(a_new);
+InEnd(Chain,a_new) </p>
+
+<p class=MsoNormal style='text-autospace:none'>                        <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+завдання 1<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>output(Chain); readln; </p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+завдання 2<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>st:='Vylucheno:';</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>2 <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            begin </b>OutEnd(Chain,
+a_new);</p>
+
+<p class=MsoNormal style='text-autospace:none'>                        st:=st+IntToStr(a_new)
++ ' '</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln(st); readln;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+завдання 3<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>s:=0;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>while </b>Chain&lt;&gt; <b>nil
+do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            begin </b>OutBegin(Chain,
+a_new);</p>
+
+<p class=MsoNormal style='text-autospace:none'>                        s:=s+a_new;
+write(s, ' ')</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>readln</p>
+
+<p class=MsoNormal><b>end</b>.</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>Приклад 3</b>.<span
+style='font-family:TimesNewRomanPSMT'> Дано натуральне число </span><span
+style='font-family:CourierNewPSMT'>n </span><span style='font-family:TimesNewRomanPSMT'>і
+послідовність дійсних чисел </span><span lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>1, </span><span lang=EN-US
+style='font-family:TimesNewRomanPSMT'>a</span><span style='font-family:TimesNewRomanPSMT'>2,...,
+</span><span lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>n. Знайти найменше число </span><span
+lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>і (</span><span style='font-family:CourierNewPSMT'>і</span><span
+style='font-family:TimesNewRomanPSMT'>=1..</span><span style='font-family:CourierNewPSMT'>n</span><span
+style='font-family:TimesNewRomanPSMT'>) і найбільше число </span><span
+lang=EN-US style='font-family:TimesNewRomanPSMT'>a</span><span
+style='font-family:TimesNewRomanPSMT'>j (</span><span style='font-family:CourierNewPSMT'>j</span><span
+style='font-family:TimesNewRomanPSMT'>=1..</span><span style='font-family:CourierNewPSMT'>n</span><span
+style='font-family:TimesNewRomanPSMT'>) та поміняти їх місцями. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:TimesNewRomanPSMT'>            Для
+розв</span><span lang=EN-US style='font-family:TimesNewRomanPSMT'>'</span><span
+style='font-family:TimesNewRomanPSMT'>язання задачі достатньо знайти порядкові
+номери</span><i><span style='font-family:TimesNewRomanPS-ItalicMT'> </span></i><span
+style='font-family:TimesNewRomanPSMT'>найменшого числа і найбільшого числа
+послідовності. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>program </b>Pr3;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>const </b>nmax=30;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>type </b>List = ^ListRecord;</p>
+
+<p class=MsoNormal style='text-autospace:none'>        ListRecord = record
+a:integer; next:List; end;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>kmin,kmax,
+Chain:List; a_new:integer; i,n:byte; st:<b>string</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>function </b>IsEmpty(head:List):boolean;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'>            IsEmpty:= head=nil </p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>InEnd(<b>var </b>head:List;
+a_p:integer);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>node, curr: List;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>{ див. програму Pr2}</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>output(var
+head: List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr: List; st:<b>string</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>{ див. програму Pr1}
+</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>delall(<b>var </b>head:List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr:List;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>{ див. програму Pr1}
+</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>PozMin(<b>var </b>head:
+List; <b>var </b>p_min: List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr: List; <span
+lang=RU> {</span> поточна ланка списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>IsEmpty(head)
+<b>then </b><b> </b><span lang=EN-US>{</span> порожний список<span lang=EN-US>
+}</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        begin
+</b>write ('Chain is empty!'); exit <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            p_min:=head;
+curr:=head^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            while </b>curr
+&lt;&gt; NIL <b>do  </b>{ шукаємо 1-шу позицію мінімуму }</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        begin
+if </b>p_min^.a&gt;curr^.a <b>then </b>p_min:=curr;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            curr:=curr^.next; <b>end</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>procedure </b>PozMax(<b>var </b>head:
+List; <b>var </b>p_max: List);</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>var </b>curr: List; <span
+lang=RU> {</span> поточна ланка списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            if </b>IsEmpty(head)
+<b>then </b><b> </b><span lang=EN-US>{</span> порожний список<span lang=EN-US>
+}</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        begin
+</b>write ('Chain is empty!'); exit <b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>            p_max:=head;
+curr:=head^.next;</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>            while </b>curr
+&lt;&gt; NIL <b>do  </b>{ шукаємо останню позицію максимуму }</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>                        begin
+if </b>p_max^.a&lt;=curr^.a <b>then </b>p_max:=curr;</p>
+
+<p class=MsoNormal>            curr:=curr^<span lang=EN-US>.next;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>end</span></b><span lang=EN-US>;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>                                   </span><b><span
+lang=EN-US style='font-size:14.0pt'>{</span></b><b><span style='font-size:14.0pt'>
+реалізація задачі</span></b><b><span lang=EN-US style='font-size:14.0pt'> }</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>begin </b>Chain:=nil;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>{</span>
+введення кількості чисел<span lang=EN-US> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b>repeat </b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US>            </span></b>write('Kilk.chysel:');
+readln(n)</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>until </b>(n&gt;=1) <b>and </b>(n&lt;=nmax);</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU>{</span> введення
+послідовності чисел з формуванням списку<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>writeln('Chysla:');</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>for </b>i:=1 <b>to </b>n <b>do</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US>            </span>begin
+</b></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US>                        </span></b>read(a_new);
+InEnd(Chain,a_new)</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US>            </span><b>end</b>;</p>
+
+<p class=MsoNormal style='text-autospace:none'>output (Chain); readln;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU>{</span>
+знаходження позицій мінімуму та максимуму<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>PozMin(Chain,kmin);
+PozMax(Chain,kmax);</p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU>{</span> обмін
+значень мінімуму та максимуму<span lang=RU> }</span></p>
+
+<p class=MsoNormal style='text-autospace:none'>a_new:=kmin^.a;
+kmin^.a:=kmax^.a; kmax^.a:= a_new;</p>
+
+<p class=MsoNormal style='text-autospace:none'>output(Chain); readln;</p>
+
+<p class=MsoNormal style='text-autospace:none'>delall(Chain)</p>
+
+<p class=MsoNormal style='text-autospace:none'><b>end</b>.</p>
+
+</div>
+
+</body>
+
+</html>

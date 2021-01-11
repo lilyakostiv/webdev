@@ -1,0 +1,855 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>9</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>9. Рядки (тип string)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Змінна типу </span><span lang=EN-US style='font-size:
+12.0pt'>string</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>є послідовністю символів із змінною довжиною (змінною
+є довжина  </span><span lang=EN-US style='font-size:12.0pt'>stringa</span><span
+style='font-size:12.0pt'>) і сталим максимальним розміром між 1 і 255.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Опис </span><span lang=EN-US style='font-size:12.0pt'>stringa</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>в
+Паскалі</span><span lang=EN-US style='font-size:12.0pt'>:   </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><i><span
+lang=EN-US style='font-size:12.0pt'>I </span></i><i><span style='font-size:
+12.0pt'>спосіб</span></i><i><span lang=EN-US style='font-size:12.0pt'>:</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><span lang=EN-US
+style='font-size:12.0pt'> type Str16=string[16];</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>                </span><span lang=EN-US
+style='font-size:12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span lang=RU style='font-size:
+12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>Str</span><span
+lang=RU style='font-size:12.0pt'>16;                         - </span><span
+style='font-size:12.0pt'>рядок </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>складається
+з 16 символів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'>        </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>II </span></i><i><span style='font-size:12.0pt'>спосіб</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>:</span></i><span style='font-size:12.0pt'> 
+</span><span lang=EN-US style='font-size:12.0pt'>var S:string[16];</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>У
+квадратних дужках задається максимально допустима довжина описаного рядка (</span><span
+lang=EN-US style='font-size:12.0pt'>stringa</span><span lang=RU
+style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>. Якщо рядок
+може містити максимальну кількість символів, тобто 255, то цей рядок описується
+так :   </span><span lang=EN-US style='font-size:12.0pt'>var</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>S</span><span style='font-size:12.0pt'>:</span><span lang=EN-US
+style='font-size:12.0pt'>string</span><span style='font-size:12.0pt'>;&lt;=&gt;
+</span><span lang=EN-US style='font-size:12.0pt'>var</span><span lang=EN-US
+style='font-size:12.0pt'>  </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>string</span><span
+style='font-size:12.0pt'>[255];    </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='font-size:12.0pt'>S[i]</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>– </span><span
+style='font-size:12.0pt'>це </span><span lang=EN-US style='font-size:12.0pt'>i-</span><span
+style='font-size:12.0pt'>ий елемент </span><span lang=EN-US style='font-size:
+12.0pt'>  stringa</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>      S[0] –</span><span style='font-size:12.0pt'>
+містить довжину змінної типу </span><span lang=EN-US style='font-size:12.0pt'>string</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Нехай задано:  </span><span lang=EN-US
+style='font-size:12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>S</span><span style='font-size:12.0pt'>2</span><span lang=RU
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>string</span><span
+lang=RU style='font-size:12.0pt'>[</span><span style='font-size:12.0pt'>10</span><span
+lang=RU style='font-size:12.0pt'>];  </span><span style='font-size:12.0pt'>тобто
+довжина рядка повинна бути не більша ніж 10.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Якщо</span><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>2:=’123’,
+то довжина рядка = 3, якщо </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>2:=’12345678901’, то довжина = 10.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:18.0pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:18.0pt'><span
+style='font-size:12.0pt'>У </span><span lang=EN-US style='font-size:12.0pt'>Turbo</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>Pascal</span><span style='font-size:12.0pt'>  та </span><span
+lang=EN-US style='font-size:12.0pt'>Borland</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>Pascal</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>для
+операцій над рядками оголошено такі функції (всі вони реалізовані в модулі </span><span
+lang=EN-US style='font-size:12.0pt'>System</span><span style='font-size:12.0pt'>,
+який підключається автоматично):</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>1) </span><span style='font-size:12.0pt'>   Конкатенація
+(об</span><span lang=EN-US style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>єднання) рядків</span><span lang=EN-US
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>    </span></i><i><span lang=EN-US style='font-size:
+12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>I </span><span
+style='font-size:12.0pt'>спосіб</span><span lang=EN-US style='font-size:12.0pt'> 
+:  S:=S1+S2+S3 (</span><span style='font-size:12.0pt'>)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>     </span><span style='font-size:12.0pt'>Наприклад</span><span
+lang=RU style='font-size:12.0pt'>: </span><span style='font-size:12.0pt'>Нехай
+задано </span><span lang=EN-US style='font-size:12.0pt'>S</span><span lang=RU
+style='font-size:12.0pt'>1:=’123’ ; </span><span lang=EN-US style='font-size:
+12.0pt'>S</span><span lang=RU style='font-size:12.0pt'>2:=’</span><span
+lang=EN-US style='font-size:12.0pt'>abc</span><span lang=RU style='font-size:
+12.0pt'>’ ; </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+lang=RU style='font-size:12.0pt'>3:=’#@’</span><span style='font-size:12.0pt'>,
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                         
+тоді </span><span lang=EN-US style='font-size:12.0pt'>S:=S1+S2+S3; &lt;=&gt;
+S:=’123abc#@’; &lt;=&gt; S:=’123’+’abc’+’#@’;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>    
+Це справедливе, якщо рядок </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'> може містити не менше ніж 8 символів. Якщо рядок </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>        описаний  </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>:</span><span
+lang=EN-US style='font-size:12.0pt'>string</span><span style='font-size:12.0pt'>[7],
+тоді   </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>=’123</span><span lang=EN-US style='font-size:12.0pt'>abc</span><span
+style='font-size:12.0pt'>#’, тобто останній символ був відрізаний).  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>   
+</span><span lang=EN-US style='font-size:12.0pt'>II </span><span
+style='font-size:12.0pt'>спосіб </span><span lang=EN-US style='font-size:12.0pt'>:
+S:=Concat(S1,S2,S3); </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>2)     
+</span><span lang=EN-US style='font-size:12.0pt'>Length</span><span
+style='font-size:12.0pt'> – визначає реальну довжину рядка.  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:12.0pt'>       
+</span></i><span style='font-size:12.0pt'> Наприклад</span><span lang=EN-US
+style='font-size:12.0pt'>: S1=’123abc#@’ ; Length(S1) = 8 </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>       
+Також визначити довжину дають змогу такі операції</span><span lang=RU
+style='font-size:12.0pt'>:</span><span lang=RU style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:39.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt'>byte(S1[0]) – </span><span
+style='font-size:12.0pt'>приведення типу,</span><span lang=EN-US
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:39.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=RU style='font-size:12.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt'>Ord</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>S</span><span lang=RU style='font-size:12.0pt'>1[0]) – </span><span
+style='font-size:12.0pt'> отримання коду символа.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US style='font-size:12.0pt'>Copy</span><span lang=RU
+style='font-size:12.0pt'> – </span><span style='font-size:12.0pt'>вирізає
+підрядок з рядка. </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>:=</span><span
+lang=EN-US style='font-size:12.0pt'>Copy</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>1,2,3);
+де </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1 – звідки різати, 2 – з якої позиції, 3 – скільки
+символів.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='font-size:12.0pt'>Наприклад</span><span lang=EN-US style='font-size:
+12.0pt'>: S1:=’123abc#@’ ; S:=Copy(S1,2,3) &lt;=&gt;S=’23a’</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>4)     
+</span><span lang=EN-US style='font-size:12.0pt'>Delete</span><span
+style='font-size:12.0pt'> – вирізає вказану кількість символів з рядка,
+починаючи з певної позиції.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='font-size:12.0pt'>Наприклад</span><span lang=EN-US style='font-size:
+12.0pt'>: S1=’123abc#@’; Delete(S1,4,2) = ‘123c#@’</span><span
+style='font-size:12.0pt'>. (Число 4 вказує на позицію з якої вирізати, число 2
+вказує скільки символів вирізати).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>5)     
+</span><span lang=EN-US style='font-size:12.0pt'>Insert</span><span
+style='font-size:12.0pt'> – вставляє підрядок в рядок.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-indent:
+-27.0pt'><span style='font-size:12.0pt'>         Наприклад: </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>1=’123</span><span
+lang=EN-US style='font-size:12.0pt'>abc</span><span style='font-size:12.0pt'>#@’
+; </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>2=’</span><span lang=EN-US style='font-size:12.0pt'>df</span><span
+style='font-size:12.0pt'> ‘ ; </span><span lang=EN-US style='font-size:12.0pt'>Insert</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>2,</span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1,4) , тоді рядок </span><span lang=EN-US
+style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>1 матиме
+вигляд                       </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1=’123</span><span lang=EN-US style='font-size:12.0pt'>dfabc</span><span
+style='font-size:12.0pt'>#@’  (</span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>2 - або рядок, або змінна рядкового типу, </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>1 –
+змінна, число 4 вказує в яку позицію вставляти).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>6)     
+</span><span lang=EN-US style='font-size:12.0pt'>Pos</span><span
+style='font-size:12.0pt'> – визначає індекс початку підрядка в рядку.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0cm;text-align:justify;text-indent:
+-1.0cm'><span style='font-size:12.0pt'>         </span><span lang=EN-US
+style='font-size:12.0pt'>Pos</span><span style='font-size:12.0pt'>(‘</span><span
+lang=EN-US style='font-size:12.0pt'>abc</span><span style='font-size:12.0pt'>’,</span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>1)=4;
+(замість ‘</span><span lang=EN-US style='font-size:12.0pt'>abc</span><span
+style='font-size:12.0pt'>’ і </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1 можуть бути як рядки так і змінні рядкового типу)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>        
+Наприклад : </span><span lang=EN-US style='font-size:12.0pt'>var</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>n</span><span style='font-size:12.0pt'>:</span><span lang=EN-US
+style='font-size:12.0pt'>integer</span><span style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>        
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>:=</span><span lang=EN-US style='font-size:12.0pt'>Pos</span><span
+style='font-size:12.0pt'>(‘</span><span lang=EN-US style='font-size:12.0pt'>abc</span><span
+style='font-size:12.0pt'>’,</span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1);  тоді  </span><span lang=EN-US style='font-size:
+12.0pt'>n</span><span style='font-size:12.0pt'>=4, бо </span><span lang=EN-US
+style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>1=’123</span><span
+lang=EN-US style='font-size:12.0pt'>abc</span><span style='font-size:12.0pt'>#@’</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>        
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>:=</span><span lang=EN-US style='font-size:12.0pt'>Pos</span><span
+style='font-size:12.0pt'>(‘</span><span lang=EN-US style='font-size:12.0pt'>df</span><span
+style='font-size:12.0pt'>’,</span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1);  тоді  </span><span lang=EN-US style='font-size:
+12.0pt'>n</span><span style='font-size:12.0pt'>=0 ,бо нема такого підряка в
+рядку </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+style='font-size:12.0pt'>1.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Заданий
+рядок </span><span lang=EN-US style='font-size:12.0pt'>Line</span><span
+lang=RU style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:
+12.0pt'>string</span><span lang=RU style='font-size:12.0pt'>[4]; </span><span
+style='font-size:12.0pt'>надрукувати цей рядок.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var Line:string[4];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   Line:=’</span><span style='font-size:12.0pt'>урок</span><span
+lang=EN-US style='font-size:12.0pt'>’;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   Writeln(Line)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.2.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+кількість елементів, рівних символу </span><i><span lang=EN-US
+style='font-size:12.0pt'>c</span></i><span lang=EN-US style='font-size:12.0pt'>
+</span><span style='font-size:12.0pt'>в стрічці.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var S:string; c:char; k,i:integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  Writeln(‘</span><span style='font-size:12.0pt'>Введіть
+символ</span><span lang=EN-US style='font-size:12.0pt'>’);  Readln(c);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  </span><span lang=RU style='font-size:12.0pt'>{</span><span
+style='font-size:12.0pt'>Вводити  рядок потрібно за допомогою</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>команди </span><span
+lang=EN-US style='font-size:12.0pt'>Readln</span><span style='font-size:12.0pt'>.
+Якщо задамо команду </span><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>Read</span><span style='font-size:12.0pt'>,
+то Паскаль буде чекати вводу всіх 225 символів, бо так описаний наш </span><span
+lang=EN-US style='font-size:12.0pt'>string</span><span style='font-size:12.0pt'>.</span><span
+lang=RU style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Writeln(‘</span><span style='font-size:12.0pt'>Введіть
+рядок</span><span lang=EN-US style='font-size:12.0pt'>’);  Readln(s);</span><span
+lang=EN-US style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  k:=0;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  For i:=1 to Length(S) do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>      If S[i]=c then k:=k+1;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   Writeln(k)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.3.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+кількість елементів = </span><span lang=EN-US style='font-size:12.0pt'>‘5’ </span><span
+style='font-size:12.0pt'>у рядку </span><span lang=EN-US style='font-size:12.0pt'>S:string[10].</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.4.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+кількість цифр в рядку </span><span lang=EN-US style='font-size:12.0pt'>S</span><span
+lang=RU style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:
+12.0pt'>string</span><span lang=RU style='font-size:12.0pt'>[15].</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.5.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Дано рядок </span><span
+lang=EN-US style='font-size:12.0pt'>Line</span><span lang=RU style='font-size:
+12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>string</span><span
+lang=RU style='font-size:12.0pt'>[20]. </span><span style='font-size:12.0pt'>Всі
+малі латинські літери рядка замінити на символ </span><span lang=RU
+style='font-size:12.0pt'>‘*’.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Знайти
+порядковий номер елемента </span><span lang=RU style='font-size:12.0pt'>‘</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'>’ </span><span style='font-size:12.0pt'>в рядку </span><span
+lang=EN-US style='font-size:12.0pt'>s</span><span lang=RU style='font-size:
+12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>string</span><span
+lang=RU style='font-size:12.0pt'>[15].    </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.7.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>З рядка </span><span
+lang=EN-US style='font-size:12.0pt'>S</span><span style='font-size:12.0pt'>:</span><span
+lang=EN-US style='font-size:12.0pt'>string</span><span style='font-size:12.0pt'>[10]
+вирізати елемент ’</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>’ (такий елемент один, можна розглянути стрічку, де
+таких елементів є кілька і всі потрібно вирізати).    </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var S:string[10]; i:integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  Read(s);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  i:=Pos(‘t’,s);              {  </span><span
+style='font-size:12.0pt'>або W</span><span lang=EN-US style='font-size:12.0pt'>rite(Delete(s,Pos(‘t’,s),1)) 
+}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  Delete(s,i,1);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  Write(s)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.8.<i>
+</i></span></b><span style='font-size:12.0pt'>Перетворити заданий рядок по
+наступному правилу</span><span lang=RU style='font-size:12.0pt'>:</span><span
+lang=RU style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=RU style='font-size:12.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити всі сполучення </span><span
+lang=EN-US style='font-size:12.0pt'>red</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>в рядку.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-indent:-17.45pt'><span
+style='font-size:12.0pt'>б)  </span><span lang=RU style='font-size:12.0pt'>В</span><span
+style='font-size:12.0pt'>сі сполучення </span><span lang=EN-US
+style='font-size:12.0pt'>abc</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>в рядку замінити на </span><span lang=EN-US
+style='font-size:12.0pt'>defn</span><span style='font-size:12.0pt'>,
+підрахувати кількість таких замін.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>     
+в)   Після кожної букви </span><span lang=EN-US style='font-size:12.0pt'>t&nbsp;</span><span
+style='font-size:12.0pt'>в рядку записати букву </span><span lang=EN-US
+style='font-size:12.0pt'>s</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:1.0cm;margin-bottom:.0001pt;text-align:justify;text-indent:
+-1.0cm'><span style='font-size:12.0pt'>      г)  Замінити в рядку всі
+входження  </span><span lang=EN-US style='font-size:12.0pt'>red</span><span
+style='font-size:12.0pt'> на </span><span lang=EN-US style='font-size:12.0pt'>yellow</span><span
+style='font-size:12.0pt'> , а всі   входження </span><span lang=EN-US
+style='font-size:12.0pt'>green</span><span lang=EN-US style='font-size:12.0pt'>
+</span><span style='font-size:12.0pt'>на </span><span lang=EN-US
+style='font-size:12.0pt'>black</span><span style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.9</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Дано непорожній текст з великих літер, за якими стоїть
+крапка. Визначити, чи впорядковані ці літери по алфавіту.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.10.</span></b><span
+style='font-size:12.0pt'> Задано :<b><i> </i></b></span><span lang=EN-US
+style='font-size:12.0pt'>type</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>slovo</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>string</span><span style='font-size:12.0pt'>[5];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                        
+                     </span><span lang=EN-US style='font-size:12.0pt'>spysok=array
+[1..10] of slovo;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                       var c:spysok;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Надрукувати
+</span><span lang=EN-US style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Всі слова зі списку, відмінні від
+слова </span><span lang=EN-US style='font-size:12.0pt'>hello</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=RU style='font-size:12.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Текст, що утвориться з останніх
+літер всіх слів списку с.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=RU style='font-size:12.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Всі слова зі списку с, що містять
+дві букви </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок, що містить не
+більше 30 символів. Надрукувати тільки малі букви, що входять в цей рядок. <b><i> </i></b></span><span
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень В (</span></i></b><b><i><span
+lang=RU style='font-size:12.0pt'>завдання середнього рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок з малих </span><span
+lang=RU style='font-size:12.0pt'>латинських </span><span style='font-size:12.0pt'>літер
+( або рядок з малих та великих літер)</span><span style='font-size:12.0pt'>, за
+якими є крапка.</span><span style='font-size:12.0pt'>. Видрукувати статистику
+літер тексту. ( Тобто </span><span style='font-size:12.0pt'>кількість входжень
+кожної </span><span style='font-size:12.0pt'> літери в текст.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Надрукувати в алфавітному порядку
+всі  різні малі літери, що входять в заданий текст з 100 літер (Скільки раз
+літера входить в текст, стільки раз її друкувати).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>4</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'> Надрукувати малі літери тексту
+по одному разу в порядку першого їх входження в заданий текст.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>5</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Надрукувати в алфавітному порядку
+всі ті літери</span><span style='font-size:12.0pt'>, які хоча б один раз
+зустрічаються в тексті.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>6</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Надрукувати в алфавітному порядку
+всі ті літери</span><span style='font-size:12.0pt'>, які входять в </span><span
+style='font-size:12.0pt'>заданий текст по одному разу. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i><span
+style='font-size:12.0pt'>У наступних прикладах вводиться рядок,</span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i><span
+style='font-size:12.0pt'>в якому слова розділені одним або кількома пропусками.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.17</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести рядок. Знайти кількість слів, що складаються з
+трьох букв.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>8</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок. Знайти кількість
+слів, що містять три голосні  букви.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>9</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок. Видрукувати слова,
+що містять буквосполучення, задане користувачем.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>0</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок. Знайти кількість
+слів, що містять буквосполучення, задане користувачем.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.2</span></b><b><span style='font-size:12.0pt'>1.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести рядок. Видрукувати кожне слово навпаки. (
+Наприклад слово <i>сир </i>перетвориться на <i>рис</i>).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.22</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести рядок. Вибрати слова, що не містять цифр і
+вивести їх. ( Слова, що не містять цифр вивести навпаки. )</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.23</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести рядок, в якому слова розділені комою. ( Або
+ввести масив слів.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>а)
+Видрукувати слова цього рядка в зворотньому порядку (наприклад, задано рядок:
+один два три чотири, потрібно видрукувати: чотири три два один).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>б)
+Видрукувати цей рядок, видаливши з нього повторні входження слів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>в)
+Вивести всі слова, які зустрічаються в цій послідовності по одному разу.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>г)
+Вивести всі різні слова, вказавши для кожного з них число його входжень в
+рядок.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.24.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок. Надрукувати ті
+слова послідовності ( і їх кількість), що задовільняють умові:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Які складаються тільки з малих
+латинських літер.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Слово є симетричне.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перша буква слова входить в нього
+ще раз.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Букви слова впорядковані по
+алфавіту.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>e)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Слово співпадає  з початковим
+відрізком англійського алфавіту (</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>ab</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>abc</span><span
+style='font-size:12.0pt'>, …)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>f)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Довжина слова є максимальна.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>g)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>У слові букви не повторюються.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>h)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>У слові голосні букви (</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>e</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>I</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>j</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>u</span><span
+lang=RU style='font-size:12.0pt'>) </span><span style='font-size:12.0pt'>чергуються
+з приголосними.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Довжина слова є числом парним.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.</span></b><b><span
+lang=RU style='font-size:12.0pt'>25</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Вивести рядок, змінивши кожне
+слово вхідного рядка за наступними правилами</span><span lang=RU
+style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перенести першу букву в кінець
+слова.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перенести останню букву на початок
+слова.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити із слова першу букву.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити із слова останню букву.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>e)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити із слова всі наступні
+входження першої букви.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>f)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Залишити у слові тільки перші
+входження кожної букви.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>g)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Якщо слово непарної, то видалити
+його середню букву.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>6</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок. Надрукувати цей
+рядок, підкреслюючи ( тобто поставити мінуси у відповідних позиціях наступного
+рядка) всі великі літери, що входять в нього. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.27</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести рядок. Видрукувати цей рядок так, щоб між
+кожним словом був тільки один пропуск.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень С</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання високого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><i><span
+style='font-size:12.0pt'>У наступних прикладах вводиться рядок,в якому слова
+розділені одним або кількома пропусками.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.28.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести рядок. Надрукувати ті
+слова послідовності ( і їх кількість), що задовільняють умові:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>j)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Які складаються тільки з малих
+латинських літер.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>k)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Слово є симетричне.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>l)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перша буква слова входить в нього
+ще раз.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>m)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Букви слова впорядковані по
+алфавіту.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>n)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Слово співпадає  з початковим
+відрізком англійського алфавіту (</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>ab</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>abc</span><span
+style='font-size:12.0pt'>, …)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>o)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Довжина слова є максимальна.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>p)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>У слові букви не повторюються.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>q)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>У слові голосні букви (</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>e</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>I</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>j</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>u</span><span
+lang=RU style='font-size:12.0pt'>) </span><span style='font-size:12.0pt'>чергуються
+з приголосними.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>r)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Довжина слова є числом парним.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.29</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Вивести рядок, змінивши кожне слово вхідного рядка за
+наступними правилами</span><span lang=RU style='font-size:12.0pt'>:</span><span
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>h)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перенести першу букву в кінець
+слова.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перенести останню букву на початок
+слова.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>j)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити із слова першу букву.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>k)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити із слова останню букву.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>l)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Видалити із слова всі наступні
+входження першої букви.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>m)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Залишити у слові тільки перші
+входження кожної букви.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>n)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Якщо слово непарної, то видалити
+його середню букву.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>9.30.</span></b><span
+style='font-size:12.0pt'> Нехай задано два слова, кожне складається з 10 літер(символів),
+причому літери не повторюються. Змінній </span><span lang=EN-US
+style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'> присвоїти
+значення </span><span lang=EN-US style='font-size:12.0pt'>true</span><span
+style='font-size:12.0pt'>, якщо слова відрізняються тільки порядком входження
+літер в них, і значення </span><span lang=EN-US style='font-size:12.0pt'>false</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.31</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Надрукувати
+заданий текст із 30 літер, видаливши з нього повторні входження кожної літери.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.32</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Визначити,
+скільки різних літер входить в заданий текст, який складається з не більш як з
+100 літер і закінчується крапкою.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.33</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Дано
+непорожню послідовність слів з малих латинських літер, між сусідніми словами –
+кома, за останнім словом крапка. Надрукувати всі букви, які входять в найбільшу
+кількість слів цієї послідовності.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.34</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Задане ціле число від 1 до 9999 надрукувати римськими
+цифрами.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>9.35</span></b><b><span style='font-size:12.0pt'>.<i> </i></span></b><span
+style='font-size:12.0pt'>Заданий рядо</span><span lang=RU style='font-size:
+12.0pt'>к</span><span style='font-size:12.0pt'> з великих латинських літер.
+Визначити, чи є цей текст правильним записом римськими цифрами цілого числа від
+1 до 9999. Якщо є, то надрукувати відповідне арабське число.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

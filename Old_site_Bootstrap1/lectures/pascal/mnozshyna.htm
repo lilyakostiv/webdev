@@ -1,0 +1,688 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>4</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 42.55pt 42.55pt 70.9pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoTitle>13. Множинний тип</p>
+
+<p class=MsoTitle><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-autospace:none'><i><span
+style='font-size:12.0pt'>Множина </span></i><span style='font-size:12.0pt'>–
+основне математичне поняття. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-autospace:none'><span
+style='font-size:12.0pt'>            У Паскалі розглядаються тільки скінченні
+множини<i>, </i>що складаються<b><i> не більш ніж з 256 різних елементів</i></b><i>.
+</i>Всі елементи мають бути значеннями <b><i>одного порядкового типу</i></b>
+(це типи Byte і Char або діапазон чи перелік значень з урахуванням допустимої
+кількості елементів).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-autospace:none'><span
+style='font-size:12.0pt'>            У Паскалі елементи множини беруть у
+квадратні дужки. Множина може не мати елементів, тобто бути <i>порожньою, </i>тоді
+її зображають так [ ]. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-autospace:none'><span
+style='font-size:12.0pt'>            У квадратних дужках можуть знаходитися
+допустимі вирази зі змінними, наприклад, [i, j] – множина, що містить значення
+змінних i, j типу Byte<b><i>. Порядок перерахування елементів ролі не грає і
+кожний елемент враховується тільки один раз</i></b>, тому множина [1, 7, 3]
+еквівалентно [3, 1, 7]. Запис типу [5..5]  відповідає множині [5] , а [9..0] -
+порожній множині.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-autospace:none'><span
+style='font-size:12.0pt'>            Після задання типу множини сукупність
+значень відповідної змінної множинного типу визначається автоматично. У неї
+входять всі можливі підмножини, що є довільними комбінаціями значень. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>            Змінну
+множинного типу описують так:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><i><span style='font-size:12.0pt'>1
+спосіб </span></i></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span lang=EN-US
+style='font-size:12.0pt'>t</span></b><b><span style='font-size:12.0pt'>ype </span></b><span
+lang=EN-US style='font-size:12.0pt'>Int</span><span style='font-size:12.0pt'>Set
+= <b>set of </b></span><span lang=EN-US style='font-size:12.0pt'>1..3;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-size:12.0pt'>var
+</span></b><span lang=EN-US style='font-size:12.0pt'>m:</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>Int</span><span
+style='font-size:12.0pt'>Set; </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><i><span lang=EN-US
+style='font-size:12.0pt'>2</span></i><i><span style='font-size:12.0pt'> спосіб </span></i></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-size:12.0pt'>var
+</span></b><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> <b>set of </b>1..3;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=EN-US
+style='font-size:12.0pt'>      </span><span lang=EN-US style='font-size:12.0pt'>c:
+<b>set of</b> char;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>     
+</span><span lang=EN-US style='font-size:12.0pt'>y: <b>set of</b> (a,b,c); </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>     
+</span><span lang=EN-US style='font-size:12.0pt'>z: <b>set of</b> ‘a’..’f’;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><i><span style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>Змінні
+множини </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>можуть
+набувати значень: [1, 2, 3],  [1, 2], [1, 3], [2, 3], [1], [2], [З], []. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>Змінні
+множини b:<b>Set of </b>Boolean можуть мати значення: [true, false], [true],
+[false], [].</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>Змінній
+</span><span lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>задамо значення
+[1, 2] за допомогою оператора присвоєння</span><span lang=RU style='font-size:
+12.0pt'>: </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=RU style='font-size:12.0pt'>:=</span><span style='font-size:12.0pt'> [1,
+2]</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU style='font-size:
+12.0pt'>            </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>Набір
+операцій над множинами у</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Паскалі:</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
+= В     (Множини А і В збігаються)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
+&lt;&gt;      (Множини А і В не збігаються)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
+&gt;= В  (Всі елементи множини В належать множині А)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
+&lt;= В  (Всі елементи множини А належать множині В)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>х
+<b>in </b>А    (Значення х є того ж  типу, що і елементи множини А і належить
+множині А)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
++ В    (Об’єднання множин А і В)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
+* В    (Перетин множин А і В)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>А
+- В     (Різниця множин А і В)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>            Перші
+п’ять операцій у таблиці – це операції відношення. Вони повертають логічне
+значення true або false. Останні три операції утворюють нові множини. Операнди
+повинні бути одного типу. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:12.0pt'>            Є
+дві спеціальні процедури для роботи з одиночними елементами множини: include(А,
+</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>) і exclude(А, х), які відповідно включають або
+виключають елемент х з множини А.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span lang=RU style='font-size:
+12.0pt'>            </span><span style='font-size:12.0pt'>Множини зберігаються
+у пам’яті дуже компактно: кожне значення</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>типу</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>множини представляється лише одним бітом. У пам’ять
+комп’ютера заноситься 1 або 0 залежно від того, містить множина цей елемент чи
+ні.</span><span style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Наприклад,
+опишемо змінну <b>var </b></span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> <b>set of </b>1..5;
+то якщо </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>:= </span><span style='font-size:12.0pt'>[1, 3]; то у
+пам</span><span lang=RU style='font-size:12.0pt'>'</span><span
+style='font-size:12.0pt'>яті множина буде представлена так 10100, якщо M := [];
+тоді - 00000.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+dayweek=(pon, vivt, ser, chetv, pyat, sub, ned); </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+множинний тип, який включає в себе множини з</span><span lang=RU
+style='font-size:12.0pt'>:</span><span lang=RU style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>назв всіх днів тижня</span><span lang=RU
+style='font-size:12.0pt'>; </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>назв робочих днів тижня.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.2.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>var
+s:set of char; c,d:char;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+</span><span lang=EN-US style='font-size:12.0pt'>s</span><span
+style='font-size:12.0pt'> присвоїти</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>порожню множину</span><span lang=RU style='font-size:
+12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> множину з малих голосних латинських літер (</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>e</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>i</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>o</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>u</span><span
+lang=RU style='font-size:12.0pt'>);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>множину зі всіх цифр</span><span lang=RU
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> множину літер, які більші літери с, але менші літери </span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'> (</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'>&lt;</span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.3.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Описати
+функцію </span><span lang=EN-US style='font-size:12.0pt'>compute</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>s</span><span
+style='font-size:12.0pt'>), яка рахує загальну кількість цифр та знаків ‘+’,
+‘-‘ і ‘*’, що входять в рядок </span><span lang=EN-US style='font-size:12.0pt'>s</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>13.4.</span><span
+style='font-size:12.0pt;font-weight:normal'> </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>type</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'> </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>month</span><span style='font-size:
+12.0pt;font-weight:normal'>=1..12;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+функцію </span><span lang=EN-US style='font-size:12.0pt'>kilkdays</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>), яка визначає кількість днів у місяці </span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'>
+(невисокосного року).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.5.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>letters=set</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>of</span><span lang=EN-US style='font-size:12.0pt'>  </span><span
+lang=EN-US style='font-size:12.0pt'>‘a’</span><span style='font-size:12.0pt'>..</span><span
+lang=EN-US style='font-size:12.0pt'>’z’</span><span style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+процедуру </span><span lang=EN-US style='font-size:12.0pt'>print</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>), яка друкує в алфавітному порядку всі елементи
+множини а, що має тип </span><span lang=EN-US style='font-size:12.0pt'>letters</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+dayweek=(pon, vivt, ser, chetv, pyat, sub, ned); </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                             
+</span><span lang=EN-US style='font-size:12.0pt'>w</span><span
+style='font-size:12.0pt'>orkday=</span><span style='font-size:12.0pt'> <span
+lang=EN-US>pon..pyat;</span></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                      var dw:dayweek;t:boolean;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+t присвоїти true, якщо dw – робочий день, і значення false інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.7.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Задано
+текст з цифр та малих латинських літер, за якими стоїть крапка. Визначити, яких
+букв – голосних (</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>e</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>o</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>u</span><span lang=RU style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> чи приголосних – більше в цьому тексті.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.8.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'> var
+</span><span style='font-size:12.0pt'>a,b:set of char; x:char;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+b присвоїти множину, одержану з a:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>)
+додаванням елемента </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> видаленням </span><span lang=RU style='font-size:
+12.0pt'>елемента </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>B</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання середнього рівня)</span></i></b></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>13.9.</span><span
+style='font-size:12.0pt;font-weight:normal'> Дано 100 цілих чисел від 1 до 50.
+Визначити, скільки серед них чисел Фібоначчі та скільки чисел, перша значуща
+цифра в десятковому записі яких – 1 або 2.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.10.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>set</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>of</span><span lang=EN-US style='font-size:12.0pt'>  </span><span
+style='font-size:12.0pt'>0..99;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+функцію </span><span lang=EN-US style='font-size:12.0pt'>kilkelem</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>), яка рахує кількість елементів у множині </span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>
+типу </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>. (Наприклад, </span><span lang=EN-US
+style='font-size:12.0pt'>kilkelem</span><span style='font-size:12.0pt'>([5,8,29])=3.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>1.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'> const
+n=10;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                       type number=1..n;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                               matrix=array [number</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>
+number] of real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                               num=set of </span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>number;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+функцію </span><span lang=EN-US style='font-size:12.0pt'>sum(a,s1,s2)</span><span
+style='font-size:12.0pt'>, яка обчислює суму тих елементів матриці а, номери
+рядків та стовпців яких належать відповідно непорожнім множинам s1 та s2</span><span
+lang=EN-US style='font-size:12.0pt'> типу num.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>13.12</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Поміняти місцями значення змінних-множин a і b,
+використовуючи (не використовуючи) допоміжні змінні.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.</span></b><b><span
+lang=EN-GB style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>3.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>v</span><span
+lang=EN-US style='font-size:12.0pt'>ar x,y,z:s</span><span lang=EN-US
+style='font-size:12.0pt'>et of </span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>8..35;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>Змінній</span><span lang=RU style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>x </span><span lang=RU style='font-size:
+12.0pt'>присвоїти</span><span lang=RU style='font-size:12.0pt'> </span><span
+lang=RU style='font-size:12.0pt'>множину</span><span lang=RU style='font-size:
+12.0pt'> </span><span lang=RU style='font-size:12.0pt'>всіх</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>цілих</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>чисел</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>від</span><span
+lang=EN-US style='font-size:12.0pt'> 8 </span><span lang=RU style='font-size:
+12.0pt'>до</span><span lang=EN-US style='font-size:12.0pt'> 35</span><span
+style='font-size:12.0pt'>, змінній y – множину всіх простих чисел із цього
+діапазону, а змінній z – множину всіх складених чисел з цього діапазону.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>13.14</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Дано текст із малих латинських літер, який
+закінчується крапкою. Надрукувати:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>) перші
+входження букв у текст, зберігаючи їх початковий взаємний порядок;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> всі літери, що входять в текст не менше ніж два рази;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>)</span><span
+lang=RU style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>всі
+літери, що входять в текст по одному разу.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>13.15</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Дано текст, який закінчується крапкою. В алфавітному
+порядку надрукувати (по одному разу) всі малі англійські голосні літери (a, e,
+i, o, u), що входять в цей текст.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>C</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання високого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.</span></b><b><span
+lang=RU style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>naturalne</span><span
+lang=RU style='font-size:12.0pt'>=1..</span><span lang=EN-US style='font-size:
+12.0pt'>maxint</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати</span><span
+lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>функцію kilk(n), яка </span><span lang=RU
+style='font-size:12.0pt'>рахує кількість різних (значущих) цифр в десятковому
+записі натурального числа </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>)</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>процедуру
+</span><span lang=EN-US style='font-size:12.0pt'>print</span><span lang=RU
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=RU style='font-size:12.0pt'>), яка друкує по зростанню всі цифри, які не
+входять у десятковий запис натурального числа </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>13.17</span><span style='font-size:12.0pt'>.</span><i><span
+style='font-size:12.0pt;font-weight:normal'> </span></i><span style='font-size:
+12.0pt;font-weight:normal'> </span><span style='font-size:12.0pt;font-weight:
+normal'>У порядку зростання надрукувати всі цілі числа з діапазону 1..10000,
+які можна представити у вигляді <sub><img width=55 height=21
+src="lectures/pascal/mnozshyna_files/image001.gif"></sub>, де n, m≥</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>0.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>13.</span><span
+lang=RU style='font-size:12.0pt'>18</span><span style='font-size:12.0pt'>.</span><i><span
+style='font-size:12.0pt;font-weight:normal'> </span></i><span style='font-size:
+12.0pt;font-weight:normal'> </span><span style='font-size:12.0pt;font-weight:
+normal'>У порядку спадання надрукувати всі цілі числа з діапазону 1..5000, які
+можна представити у вигляді <sub><img width=63 height=21
+src="lectures/pascal/mnozshyna_files/image002.gif"></sub>, але не можна представити у вигляді
+7ij+j+3 (n, m</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>,
+</span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>i</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>, </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>j</span><span style='font-size:
+12.0pt;font-weight:normal'>≥</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>0).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.</span></b><b><span
+lang=RU style='font-size:12.0pt'>19</span></b><b><span style='font-size:12.0pt'>.</span></b><b><span
+style='font-size:14.0pt'> </span></b><span style='font-size:12.0pt'>Дано ціле n
+від 2 до 1000. Використовуючи метод </span><span lang=RU style='font-size:12.0pt'>”</span><span
+style='font-size:12.0pt'>решета Ератосфена</span><span lang=RU
+style='font-size:12.0pt'>”</span><span style='font-size:12.0pt'>, надрукувати в
+порядку спадання всі прості числа з діапазону n .</span><span lang=RU
+style='font-size:12.0pt'>.2</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=RU style='font-size:12.0pt'>. </span><b><span style='font-size:14.0pt'>  </span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>(Суть
+цього методу: виписуються всі цілі числа, більші 1; вибирається перше з них (це
+2, просте число) і викреслюються всі кратні йому числа, крім нього самого; тоді
+береться наступне з невикреслених чисел (це 3, також просте число) і
+викреслюються всі кратні йому, крім нього самого; і так для кожного не викресленого
+числа. В результаті залишаться тільки прості числа починаючи з 2.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>13.20.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>produc</span><span style='font-size:12.0pt'>t=(</span> <span
+lang=EN-US style='font-size:12.0pt'>bread</span><span style='font-size:12.0pt'>,
+</span><span lang=EN-US style='font-size:12.0pt'>butter</span><span
+style='font-size:12.0pt'>,</span> <span lang=EN-US style='font-size:12.0pt'>oil</span><span
+style='font-size:12.0pt'>,</span> <span lang=EN-US style='font-size:12.0pt'>milk</span><span
+style='font-size:12.0pt'>,</span> <span lang=EN-US style='font-size:12.0pt'>meat</span><span
+style='font-size:12.0pt'>,</span> <span lang=EN-US style='font-size:12.0pt'>fish</span><span
+style='font-size:12.0pt'>,</span> <span lang=EN-US style='font-size:12.0pt'>salt</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>cheese</span><span
+style='font-size:12.0pt'>,</span> <span style='font-size:12.0pt'>sausage,</span>
+<span style='font-size:12.0pt'>sugar);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                            
+</span><span lang=EN-US style='font-size:12.0pt'>assortment=set of </span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>produc</span><span style='font-size:12.0pt'>t</span><span lang=EN-US
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                             shop</span><span
+style='font-size:12.0pt'>s</span><span lang=EN-US style='font-size:12.0pt'>=array
+[1..15] of assortment;</span><span lang=EN-US> </span><span lang=EN-US
+style='font-size:12.0pt'>      </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+процедуру presence(</span><span lang=EN-US style='font-size:12.0pt'>sh</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>a,b,c)</span><span
+style='font-size:12.0pt'>, яка </span><span lang=EN-US style='font-size:12.0pt'>по
+інформації з масиву sh типу shop</span><span style='font-size:12.0pt'>s</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>(sh[i] – це
+множина продуктів, які є в i-ому магазині) присвоює параметрам a, b, c типу  </span><span
+lang=EN-US style='font-size:12.0pt'>assortment</span><span style='font-size:
+12.0pt'> наступні значення:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>а</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'> –</span><span style='font-size:12.0pt;font-weight:normal'> множина
+продуктів, які є у всіх магазинах;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'> – </span><span style='font-size:12.0pt;font-weight:normal'>множина
+продуктів, кожен з яких є хо б в одному магазині;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>c</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'> – </span><span style='font-size:12.0pt;font-weight:normal'>множина
+продуктів, яких немає ні в одному магазині.</span></p>
+
+<p class=MsoNormal style='margin-left:5.0cm;text-align:justify;text-indent:
+-5.0cm'><b><span style='font-size:12.0pt'>13.2</span></b><b><span lang=EN-GB
+style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+name=(</span><b><span lang=EN-US style='font-size:12.0pt'> </span></b><span
+lang=EN-US style='font-size:12.0pt'>Ann, Oksana, Boris, Nina, Sasha, Victor,
+Vladimir, Olga, Maria, Natalka, Oleg</span><span lang=EN-US style='font-size:
+12.0pt'>);</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                              visitors=set of </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>name;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                              </span><span
+lang=EN-GB style='font-size:12.0pt;font-weight:normal'>group=array[</span><span
+style='font-size:12.0pt;font-weight:normal'>name</span><span lang=EN-GB
+style='font-size:12.0pt;font-weight:normal'>] of</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>  visitors;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати </span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>логічну функцію </span><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>everywhere</span><span style='font-size:12.0pt;
+font-weight:normal'>(gr), яка визначає, чи є в групі gr хоча б одна людина, яка
+була в гостях у решти людей  (gr[x] – множина людей, які були в гостях у людини
+з іменем x; x</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>
+¢ </span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>gr</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>[</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>x</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>]).</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>13.22.</span><i><span
+style='font-size:12.0pt;font-weight:normal'> </span></i><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>Дано непорожню послідовність слів </span><span
+style='font-size:12.0pt;font-weight:normal'>з малих англійських букв; між
+сусідніми словами – кома, за останнім словом крапка. Надрукувати в алфавітному
+порядку:</span></p>
+
+<p class=MsoTitle align=left style='text-align:left'><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>a</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>) </span><span style='font-size:
+12.0pt;font-weight:normal'>всі букви (</span><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>пр</span><span style='font-size:12.0pt;font-weight:
+normal'>иголосні), які входять в кожне слово; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які не входять ні
+в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>c</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі голосні</span><span style='font-size:12.0pt;
+font-weight:normal'>(</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'>пр</span><span style='font-size:12.0pt;font-weight:normal'>иголосні)
+букви, які входять хоча б в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>d</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які не входять
+хоча б в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>e</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які  входять
+тільки в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>f</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які не входять
+тільки в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>g</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які входять більш
+ніж в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>h</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які не входять
+більш ніж в одне слово;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>i</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які входять в
+кожне непарне слово і не входять ні в одне парне слово; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>(слово парне, якщо:  1) його порядковий номер </span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>є </span><span
+style='font-size:12.0pt;font-weight:normal'>парний;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>                                    </span><span
+style='font-size:12.0pt;font-weight:normal'>2) кількість його літер є парна)</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>j</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) всі </span><span style='font-size:12.0pt;font-weight:
+normal'>голосні (</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пр</span><span
+style='font-size:12.0pt;font-weight:normal'>иголосні) букви, які входять в
+кожне непарне слово і не входять хоча б в одне парне слово</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

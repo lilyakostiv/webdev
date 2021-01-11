@@ -1,0 +1,509 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Логічний тип</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-indent:35.45pt;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	line-height:200%;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	font-size:8.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<h1><b>Логічний тип</b></h1>
+
+<h1 style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:justify;
+text-indent:27.0pt'><span style='font-size:12.0pt'>   </span><span lang=RU
+style='font-size:12.0pt'>Працюючи з логічним типом, як і з іншими типами,
+використовують сталі та змінні величини. Сталі величини логічного типу мають
+значення <b><i>true</i></b>  (істинне) та <b><i>false </i></b>(хибне). Для</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>опису
+змінних величин цього типу використовують службове слово <b><i>boolean</i></b>.
+Наприклад, </span></h1>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>var</span></b><span
+style='font-size:12.0pt'> log, B1: boolean;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Логічні сталі та змінні величини є прикладами логічних
+виразів. Ще одним варіантом простого логічного виразу є відношення. Відношення
+будують з <b>двох </b>однотипних виразів, з'єднаних знаком відношення. Знак
+відношення - це один з шести варіантів символів, які позначають такі
+відношення: &gt;більше, &gt;=  більше або рівне, &lt; менше,  &lt; =  менше або
+рівне, = рівне , &lt;&gt; не рівне.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:27.0pt'><span style='font-size:
+12.0pt'>Наприклад, 2*x &gt; 3.5  або  k mod 7  = 0.</span></p>
+
+<p class=MsoBodyText2 style='text-indent:27.0pt'><span style='font-size:12.0pt'>Операція
+відношення має найнижчий пріоритет, тобто  виконується  останньою. Наприклад, у
+виразі k mod 3 = k div 5 - 1 порядок виконання операцій такий: </span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><span
+style='font-size:12.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>k mod 3  ;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><span
+style='font-size:12.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>k div 5  ;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><span
+style='font-size:12.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>від k div 5 відняти 1  ;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><span
+style='font-size:12.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>виконати порівняння .</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><b><span
+style='font-size:12.0pt'>Приклад 1.</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Обчислити
+значення виразу sqr(x)+sqr(y)&lt;= 4 при x=3;y= -2 та </span></p>
+
+<p class=MsoBodyTextIndent3 style='text-indent:27.0pt'><span style='font-size:
+12.0pt'>x= -1;y=1.</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Легко
+бачити, що у першому варіанті значення логічного виразу буде false (неправильно
+що 16+9&lt;=4 ), а у другому - true (насправді 1+1&lt;=4).</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='position:absolute;
+z-index:1;left:0px;margin-left:156px;margin-top:35px;width:177px;height:52px'>
+
+</span><span style='font-size:12.0pt'>   До складу логічних виразів можуть
+входити функції, зокрема функція, яка визначає парність цілого числа. Це
+функція odd(k), яка визначена так:</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>
+ <table cellpadding=0 cellspacing=0 style="border: none; margin-left: 4em;">
+ <tr>
+  <td>
+ 	<span style='font-size:12.0pt'>odd(k)=
+		<sub><img width=12 height=23 src="lectures/pascal/Pascal_Logika_files/image001.gif"></sub>
+		<sub><img width=68 height=48 src="lectures/pascal/Pascal_Logika_files/image002.gif"></sub> 
+ 	</span> 
+  </td>
+  <td width=177 height=52 style='vertical-align:top'>
+  	<span style='position: absolute;z-index:1'>
+  	<table cellpadding=0 cellspacing=0 width="100%" style="border: none;">
+   		<tr>
+    		<td>
+    			<div style='padding:3.6pt 7.2pt 3.6pt 7.2pt'>
+    				якщо k – непарне<br>
+    				у протилежному випадку
+    			</div>
+    		</td>
+   		</tr>
+  	</table>
+  	</span>&nbsp;</td>
+ </tr>
+ </table>
+</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><b><span
+style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:27.0pt'><b><span
+style='font-size:12.0pt'>Приклад 2.</span></b></p>
+
+<p class=MsoBodyTextIndent style='text-indent:27.0pt'><span style='font-size:
+12.0pt'>Обчислити значення виразу odd(trunc(10*p)) при p=0.182.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Насамперед обчислюємо значення виразу 10*p, яке при
+заданому значенні p дорівнює 1,82. Далі це значення буде перетворено до цілого
+типу з використанням фунції trunc і дорівнюватиме 1. На останньому кроці
+виконується функція odd , результатом її виконання є значення true. Отже,
+значенням цілого виразу є true.</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>   Треба
+пам'ятати, що операцію порівняння можна виконати і над логічними значеннями.
+Істинним є те, що false &lt; true .</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>   Складні логічні вирази будують з простих,
+використовуючи логічні операції:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><b><span
+style='font-size:12.0pt'>not </span></b><b><span lang=RU style='font-size:12.0pt'>–</span></b><span
+style='font-size:12.0pt'> заперечення (одномісна операція, результатом якої є
+значення, протилежне до значення її аргументу, тобто not true = false  і навпаки);</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>   <b>and </b></span><b><span lang=RU
+style='font-size:12.0pt'>–</span></b><span style='font-size:12.0pt'> кон'юнкція
+(двомісна операція логічного множення, результат якої істинний лише тоді, коли
+обидва аргументи є істинними);</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><b><span
+style='font-size:12.0pt'>or –</span></b><span style='font-size:12.0pt'>
+диз'юнкція (двомісна операція логічного додавання, результат якої хибний лише
+тоді, коли обидва аргументи є хибними). </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Найвищий пріоритет серед логічних операцій  має 
+заперечення, а найнижчий </span><span lang=RU style='font-size:12.0pt'>–</span><span
+style='font-size:12.0pt'>  диз'юнкція. Будь-які інші логічні операції можна
+визначити через наведені три. Turbo Pascal охоплює окремо операцію додавання за
+модулем 2, яку позначають  <b>xor</b> і яка має такий самий пріоритет як
+операція <b>or.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>Приклад
+3.</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Записати
+на Паскалі вираз істинний тоді, коли 0&lt;x&lt;1 .</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Для
+такого запису треба використати операцію <b>and</b>, тобто вираз буде таким: 
+(0&lt;x) <b>and</b> (x&gt;1).</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>Приклад
+4.</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Обчислити
+значення виразу</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>t
+and (p mod 3=0) при t=true, p=101010;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Для обчислення значення виразу  насамперед треба
+виконати дію p mod 3; її результат при p=101010  дорівнюватиме 0. Результат
+порівняння у дужках матиме значення true. Останньою виконуватиметься операція
+логічного множення <b>and</b> над двома значеннями true. Тому остаточно
+значення виразу дорівнюватиме true.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>Приклад
+5.</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Обчислити
+значення виразу  a or (not b) при a=false; b=true .</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Першою виконуватиметься операція заперечення not b і з
+результатом  false. На останньому кроці обчислюватиметься значення операції <b>or
+</b>для двох аргументів зі значенням false. Тому остаточний  результат
+обчислення виразу є false.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-indent:27.0pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:0cm;text-indent:27.0pt;
+line-height:normal'><span style='font-size:12.0pt'>Логічні  вирази
+використовують у різних фрагментах програм. Зокрема, їх  як і арифметичні
+вирази можна використовувати в операторах присвоєння. Логічний оператор
+присвоєння має вигляд    &lt;логічна змінна&gt; := &lt;логічний вираз&gt;  .</span></p>
+
+<p class=MsoBodyText2 style='text-indent:27.0pt'><span style='font-size:12.0pt'>Для
+того щоб такий оператор виконувався коректно, потрібно, щоб всі величини, які
+входять до складу логічного виразу, були визначеними.</span></p>
+
+<p class=MsoBodyText2 style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>   <b>Приклад
+6.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Логічній змінній t присвоїти значення true , якщо
+цілочислова величина k ділиться без остачі на 7 і false у протилежному випадку.
+Вивести значення t.</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Для
+реалізації цієї задачі можна використати таку програму:</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>program</span></i></b><i><span style='font-size:12.0pt'>  log1;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>var </span></i></b><i><span style='font-size:12.0pt'>k: integer;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>     
+t: boolean;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>begin</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>writeln('введіть
+ціле число');  read(k);</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>t:=
+k <b>mod</b> 7 = 0;  writeln('t=',t)</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>end.</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Використовуючи відношення, треба пам'ятати, що для
+дійсних виразів відношення строгої рівності некоректне через наближене
+представлення у комп'ютері дійсних чисел, тобто не варто записувати, наприклад,
+такі відношення 2.5*a = 10 або x&lt;=1.1 . Над дійсними значеннями можна
+виконувати порівняння лише на строгу нерівність, наприклад, x&lt;1.15 .</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Розглянемо
+ще декілька програм.</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>Приклад7.</span></b><span
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Надрукувати true, якщо x належить проміжку (a,b) і
+false - у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>program</span></i></b><i><span style='font-size:12.0pt'>  log2;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>var
+</span></b><span style='font-size:12.0pt'>a,b,x: real;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>     
+t: boolean;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>begin</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>writeln('введіть
+проміжок (a,b)');</span><span lang=EN-US style='font-size:12.0pt'>  </span><span
+style='font-size:12.0pt'>read(a,b);</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>writeln('введіть
+дійсне число');  read(x);</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>t:=
+(x&gt;a) and (x&lt;b);</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>writeln('t=',t)</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>end.</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>Приклад
+8.</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>Змінній
+b присвоїти true, якщо точка з координатами (x,y) належить заштрихованій
+фігурі, і false - у протилежному випадку (межі фігури не брати до уваги).</span></p>
+
+<table style="border: none;">
+ <tr>
+  <td>
+  	<span style='position:absolute;z-index:3;margin-left:97px;margin-top:12px;width:203px;height:145px'>
+		<img width=203 height=145 src="lectures/pascal/Pascal_Logika_files/image003.gif">
+	</span>
+  </td>
+  <td width=23 height=24 style='vertical-align:top'><span style='position:absolute; z-index:2'>
+  </span>&nbsp;</td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>  
+</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>   </span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:12.0pt'>                             
+</span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>program</span></i></b><i><span style='font-size:12.0pt'>  log3;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>uses
+Crt;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>var </span></i></b><i><span style='font-size:12.0pt'>x,y: real;      b:
+boolean;</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><sub><span
+style='font-size:12.0pt'>begin </span></sub></i></b><i><sub><span
+style='font-size:12.0pt'>ClrScr;</span></sub></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>writeln('введіть
+координати точки x,y ');</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>read(x,y);</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>b:=
+(x&gt;0) and (x&lt;2)and (y&gt;0) and (y&lt;1);</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><i><span style='font-size:12.0pt'>writeln('b=',b)</span></i></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><i><span style='font-size:
+12.0pt'>end.</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<h4 style='text-indent:27.0pt'>Завдання</h4>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Записати відношення істинне під
+час виконання зазначеної умови і  хибне у протилежному випадку:</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>      а) квадратне рівняння <sub><img width=105
+height=21 src="lectures/pascal/Pascal_Logika_files/image004.gif"></sub> (<sub><img width=44
+height=21 src="lectures/pascal/Pascal_Logika_files/image005.gif"></sub>не має дійсних коренів;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>      б) точка (x,y) лежить поза кругом радіуса r з
+центром у точці (1,1);</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>      в) натуральне n є повним квадратом.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Записати вираз істинний у разі
+виконання зазначеної умови і  хибний у протилежному випадку:</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>      а) x = max (x, y, z);</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>      б) хоча б одна з логічних змінних a та b має
+значення true;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>      в) обидві логічні змінні a та b мають значення
+true.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Надрукувати true, якщо x лежить
+зовні відрізка [0,1] і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Надрукувати true, якщо x лежить
+зовні відрізків [2,5] та [-1,1 ]  і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Надрукувати true, якщо x належить
+відрізку (-2,1) або (4,6) і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Надрукувати true, якщо кожне з
+дійсних чисел x, y та z додатне і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Надрукувати true, якщо рік з
+порядковим номером Y є високосним і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Використовуючи логічний оператор
+присвоєння, змінній t присвоїти значення true, якщо цілі числа x, y, z рівні
+між собою і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Використовуючи логічний оператор
+присвоєння змінній t присвоїти значення true, якщо квадратне рівняння <sub><img
+width=107 height=21 src="lectures/pascal/Pascal_Logika_files/image006.gif"></sub> (<sub><img
+width=44 height=21 src="lectures/pascal/Pascal_Logika_files/image005.gif"></sub> має тільки
+один корінь і false у протилежному випадку.</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-size:12.0pt'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt'> Використовуючи логічний оператор присвоєння, змінній 
+t присвоїти значення true, якщо цифра 5 входить до запису трицифрового цілого
+числа k.</span></p>
+
+</div>
+
+</body>
+
+</html>

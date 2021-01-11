@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Програма 3     Інформація про учня</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>Програма 3    <i> Інформація про учня</i></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=642 height=491 src="lectures/delphi/Delphi_Programa3_files/image001.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>Задати кольори формі та всім панелям. </p>
+
+<p class=MsoNormal>Для <span lang=EN-US>ComboBox</span><span lang=EN-US> </span>у
+властивості <span lang=EN-US>Items</span> задати перелік з 5 імен.</p>
+
+<p class=MsoNormal>Для <span lang=EN-US>LabeledEdit</span><span lang=EN-US> </span>вибрати
+властивість <span lang=EN-US>EditLabel</span><span lang=EN-US> </span>і задати <span
+lang=EN-US>Caption</span>.</p>
+
+<p class=MsoNormal>Для кнопки <span lang=EN-US>BitBtn</span><span lang=EN-US> </span>задати
+назву кнопки (властивість <span lang=EN-US>Caption</span>) та малюнок
+(властивість <span lang=EN-US>Glyph</span>) завантажити з файлу .<span
+lang=EN-US>bmp</span>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>По натисканні кнопки <i>Підсумок</i> у <span lang=EN-US>Memo</span><span
+lang=EN-US> </span>вивести<span lang=RU>:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>1</span>. Прізвище, ім<span lang=EN-US>'</span>я
+(<span lang=EN-US>ComboBox1.text)</span> та по-батькові учня.</p>
+
+<p class=MsoNormal>2. Клас.</p>
+
+<p class=MsoNormal>3. Улюблені предмети ( <span lang=EN-US>if CheckBox1.Checked
+then Memo1.Lines.Add(CheckBox1.Caption</span>)<span lang=EN-US>;</span> )</p>
+
+<p class=MsoNormal><span lang=RU>4</span>. Середнє арифметичне значення оцінок
+учня.</p>
+
+<p class=MsoNormal>5. Оцінити досягнення учня (10..12 - відмінно, 7..9 - добре,
+4..6 - задовільно, 1..3 - погано)<span lang=RU>.</span> </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Код Проекту (основної програми):  </b>{Відкрити командою
+Prоject / <span lang=EN-US>View</span>}</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b>program</b> Prоject1;</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b>uses</b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>  Forms,</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>  Unit1 in 'Unit1.pas' {Form1};</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>{$R *.res}</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b>begin</b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>  Application.Initialize;</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>  Application.CreateForm(TForm1,
+Form1);</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'>  Application.Run;</p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b>end.</b></p>
+
+</div>
+
+</body>
+
+</html>

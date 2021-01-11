@@ -1,0 +1,1000 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>12</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoTitle>12. Комбіновані типи. Оператор приєднання</p>
+
+<p class=MsoTitle style='text-align:justify;text-indent:1.0cm'><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>Опишемо</span><span lang=RU
+style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>комбінований тип для представлення часу в годинах, хвилинах
+та секундах:</span></p>
+
+<p class=MsoTitle style='text-align:justify;text-indent:1.0cm'><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>type time=record hour:0..23;</span></p>
+
+<p class=MsoTitle style='text-align:justify;text-indent:1.0cm'><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>                            
+minute</span><span lang=EN-GB style='font-size:12.0pt;font-weight:normal'>, </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>second</span><span
+lang=EN-GB style='font-size:12.0pt;font-weight:normal'>:0.</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>.59</span></p>
+
+<p class=MsoTitle style='text-align:justify;text-indent:1.0cm'><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>                  end</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>; </span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>12.1.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Описати
+комбінований тип для представлення наступних понять:</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU
+style='font-size:12.0pt'>) ціна у гривнях та копійках;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>b</span><span lang=RU
+style='font-size:12.0pt'>) </span><span style='font-size:12.0pt'>дата (число,
+місять, рік);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU
+style='font-size:12.0pt'>) адреса (місто, вулиця, будинок, квартира).</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.</span><span
+lang=EN-US style='font-size:12.0pt'>2</span><span style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a) type </span><span style='font-size:12.0pt;
+font-weight:normal'>strichka:string[8];</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                            a</span><span
+style='font-size:12.0pt;font-weight:normal'>dress</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>=record misto, vulyca:</span><span
+style='font-size:12.0pt;font-weight:normal'>strichka</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                                   budynok,kvartyra:1..999</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                        end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                    var adr1, adr2</span><span
+lang=EN-GB style='font-size:12.0pt;font-weight:normal'> </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>a</span><span
+style='font-size:12.0pt;font-weight:normal'>dress</span><span lang=EN-GB
+style='font-size:12.0pt;font-weight:normal'>:</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>a</span><span style='font-size:
+12.0pt;font-weight:normal'>dress</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Використовуючи оператор приєднання, присвоїти змінній </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>adr1 </span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>значення</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>, </span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>відповідне</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'> </span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>адресі</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'> ”</span><span style='font-size:
+12.0pt;font-weight:normal'>Львів, вул. Петлюри, б. 5, кв. 17</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>”;</span><span
+style='font-size:12.0pt;font-weight:normal'> а змінній adr2 присвоїти таке ж
+значення, замінивши в ньому номер будинку на 23.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b) type </span><span style='font-size:12.0pt;
+font-weight:normal'>krug</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>=record radius:real;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                               center:record
+x,y:real end</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                    end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                    var k:</span><span lang=EN-GB
+style='font-size:12.0pt;font-weight:normal'> </span><span style='font-size:
+12.0pt;font-weight:normal'>krug</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Використовуючи оператор приєднання, змінній k присвоїти</span><span
+style='font-size:12.0pt;font-weight:normal'> </span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>значення</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>, </span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>відповідне</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'> </span><span style='font-size:
+12.0pt;font-weight:normal'>кругу радіуса 2,5 з центром в точці (0;1,8).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>12.</span></b><b><span
+lang=RU style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.</span></b><b><span
+style='font-size:12.0pt'> </span></b><span style='font-size:12.0pt'>Визначити
+комбінований тип для представлення анкети школяра, яка включає в себе його
+прізвище, ім’</span><span lang=RU style='font-size:12.0pt'>я</span><span
+style='font-size:12.0pt'>, по-батькові, вік, школу, клас та оцінки з десяти
+предметів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Описати змінну
+даного типу і присвоїти їй значення, відповідне наступній анкеті: Романів Софія
+Михайлівна, 16 років, класична гімназія, 10-Б клас, оцінки 9, 10, 10, 8, 11. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>Описати масив </span><span lang=EN-US
+style='font-size:12.0pt'>klass</span><span lang=EN-US style='font-size:12.0pt'>
+</span><span style='font-size:12.0pt'>з 30 школярів. Знайти </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+кількість щколярів на ім</span><span lang=RU style='font-size:12.0pt'>'</span><span
+style='font-size:12.0pt'>я Андрій, </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+кількість щколярів віком 15 - 17 років,</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>            - кількість щколярів, у
+яких середня оцінка не менша 8 і не більша 10,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+вивести прізвища та імена школярів, у яких найменша оцінка 10,</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>            -вивести прізвища, імена,
+по-батькові тих школярів, прізвище яких                          починається на
+літеру К,</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>           
+</span><span style='font-size:12.0pt;font-weight:normal'>-вивести прізвища,
+імена, по-батькові школярів, які навчаються у 10-Г класі           ЛФМЛ.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>12.4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Описати
+комбінований тип для представлення понять</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>) урок
+(предмет, учитель, день тижня, години уроку, кабінет);</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span lang=RU style='font-size:12.0pt'>            Задати масив з 35
+уроків (1 тиждень навчання 10-Г класу), знайти</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span lang=RU style='font-size:12.0pt'>            - кількість уроків
+інформатики на тиждень,</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span lang=RU style='font-size:12.0pt'>            - вивести дні
+тижня, коли є урок інформатики,</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span lang=RU style='font-size:12.0pt'>            - кількість уроків
+у кабінеті №309,</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span lang=RU style='font-size:12.0pt'>            - вивести назви
+уроків (предметів), які проводяться у кабінеті №309. </span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span lang=EN-US style='font-size:12.0pt'>b</span><span lang=RU
+style='font-size:12.0pt'>) бланк вимог на книгу</span><span style='font-size:
+12.0pt'> (відомості про книгу: шифр, автор, назва; відомості про читача: номер
+читацького квитка, прізвище</span><span lang=RU style='font-size:12.0pt'>; дата
+замовлення</span><span style='font-size:12.0pt'>).</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify;text-indent:
+-35.45pt'><span lang=RU style='font-size:12.0pt'>            Задати масив з 20 бланків</span><span
+style='font-size:12.0pt'>. З</span><span lang=RU style='font-size:12.0pt'>найти</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>              -</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>кількість </span><span
+lang=RU style='font-size:12.0pt'>бланків вимог на </span><span
+style='font-size:12.0pt'>книгу автора <i>Марка Леві</i>,</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>              - вивести назви і шифри
+книг <i>Марка Леві</i>,</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>              - скільки разів замовляв
+книги читач <i>Конотопський</i>,</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>              - вивести прізвища і
+номери читацьких квитків всіх читачів, що замовляли книгу <i>Володар перснів.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>12.5. </span></b><span lang=RU style='font-size:12.0pt'>Описати
+комбінований тип для представлення поняття </span><span style='font-size:12.0pt'>книга
+(автор, назва, видавництво, кількість сторінок, кількість екземплярів, рік
+видання, ціна (гривні, копійки)). Задати масив з 10 книг. Знайти</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+кількість книг, виданих у 2013 році,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+кількість книг видавництва <i>Ранок,</i></span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:12.0pt'>            </span></i><span
+style='font-size:12.0pt'>- кількість книг з ціною до 100 гривень,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+кількість книг з ціною 99 або 100 гривень,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+вивести імена авторів і назви книг, у яких кількість сторінок не менше 50 і          не
+більше 100,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+вивести всі дані про книги автора <i>Толкіна</i>,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+середнє арифметичне значення кількості сторінок всіх книг, </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+вивести ім'я автора і назву книги з найбільшою кількістю сторінок,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+вивести дані про книгу, екземплярів якої є найбільше,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            -
+вивести назву і видавництво найновішої книги.</span></p>
+
+<p class=MsoNormal style='margin-left:42.55pt;text-align:justify;text-indent:
+-42.55pt'><span style='font-size:12.0pt'>              </span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>B</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання середнього рівня)</span></i></b></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.</span><span
+lang=EN-US style='font-size:12.0pt'>6</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>type </span><span style='font-size:12.0pt;font-weight:normal'>strichka:string[15];</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                            vershyna=record nazva:</span><span
+style='font-size:12.0pt;font-weight:normal'>strichka</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                                      
+vysota:1000..9999</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                           end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                            spysok=array[1..30] of</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>  vershyna;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>            - </span><span style='font-size:12.0pt;
+font-weight:normal'>процедуру</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>, яка знаходить висоти найвищої вершини;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>            - </span><span style='font-size:12.0pt;
+font-weight:normal'>процедуру</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>, яка др</span><span style='font-size:12.0pt;font-weight:
+normal'>у</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>кує  назву
+найвищої вершини;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>            - </span><span style='font-size:12.0pt;
+font-weight:normal'>функцію, яка визначає середню висоту вершин</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>            </span><span style='font-size:12.0pt;
+font-weight:normal'>- функцію для підрахунку кількості вершин, висота яких
+більша середньої</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.</span><span
+lang=EN-US style='font-size:12.0pt'>7</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>type time=record hour:0..23;</span></p>
+
+<p class=MsoTitle style='text-align:justify;text-indent:1.0cm'><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>                           
+minute</span><span lang=EN-GB style='font-size:12.0pt;font-weight:normal'>, </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>second</span><span
+lang=EN-GB style='font-size:12.0pt;font-weight:normal'>:0.</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>.59</span></p>
+
+<p class=MsoTitle style='text-align:justify;text-indent:1.0cm'><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>                  end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a</span><span style='font-size:12.0pt;font-weight:
+normal'>) логічну функію </span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>before(t1,t2) </span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>для</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'> </span><span lang=RU style='font-size:12.0pt;font-weight:normal'>пер</span><span
+style='font-size:12.0pt;font-weight:normal'>е</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>вірки</span><span style='font-size:
+12.0pt;font-weight:normal'>, чи передує час t1 часу t2 (в межах доби);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>)</span><span
+style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>процедуру</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>nastsek(t,t</span><span style='font-size:12.0pt'>1</span><span
+lang=EN-US style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>,
+яка присвоює параметру t1 час, на секунду більший часу t (враховуючи зміну
+доби);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>) процедуру
+interval(d,t1,t2), яка обчислює час d, який пройшов від часу t1 до часу t2:
+d=t2-t1 (вважати, що t2&gt;t1). </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.</span><span
+lang=EN-US style='font-size:12.0pt'>8</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt;font-weight:normal'> <span lang=EN-US>type </span></span><span
+style='font-size:12.0pt;font-weight:normal'>name</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>=(Ann, Oksana, Boris, Nina, Sasha,
+Victor, Vladimir, Olga, Maria);</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                 dani=record stat:(man, woman); </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                     rist:140..200 </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                          end;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>        var group=array[</span><span
+style='font-size:12.0pt;font-weight:normal'>name</span><span lang=EN-GB
+style='font-size:12.0pt;font-weight:normal'>] of</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>  dani;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a) </span><span style='font-size:12.0pt;font-weight:
+normal'>функцію sered_rist(gr), яка визначає середній ріст жінок з групи gr;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b) </span><span style='font-size:12.0pt'>функцію tall</span><span
+lang=EN-US style='font-size:12.0pt'>est</span><span style='font-size:12.0pt'>(gr)</span><span
+style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>для</span><span
+lang=RU style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>визначення
+імені найвищого мужчини з групи gr;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>) логічну
+функцію </span><span lang=EN-US style='font-size:12.0pt'>odyn</span><span
+style='font-size:12.0pt'>_</span><span lang=EN-US style='font-size:12.0pt'>rist</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>gr</span><span
+style='font-size:12.0pt'>), яка перевіряє, чи є в групі gr&nbsp;хоча б дві
+людини одного росту.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.</span><span
+lang=EN-US style='font-size:12.0pt'>9</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt;font-weight:normal'> <span lang=EN-US>type racionalne=record
+chyselnyk:integer; </span></span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                               znamenyk:1..maxint</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                             end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                masyv=array[1..20] of</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>  racionalne;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>            </span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>- </span><span style='font-size:12.0pt;font-weight:normal'>функцію,
+яка визначає середнє раціональне число</span><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>            - функцію, яка знаходить суму від</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>'</span><span
+style='font-size:12.0pt;font-weight:normal'>ємних раціональних чисел</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>            - процедуру</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>, яка знаходить кількість
+неправильних дробів;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>            </span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>- </span><span style='font-size:12.0pt;font-weight:normal'>процедуру</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>, яка знаходить раціональне
+число (чисельник і знаменник) з                             найбільшим
+чисельником.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.</span><span
+lang=EN-US style='font-size:12.0pt'>10</span><span style='font-size:12.0pt'>.</span><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+number=1..31; month</span><span style='font-size:12.0pt'>=1</span><span
+lang=EN-US style='font-size:12.0pt'>..12; year=1..2100;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                              data=record d:number; m:
+month; y: year end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                              dayweek=(pon, vivt, ser,
+chetv, pyat, sub, ned); </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Вважаючи,
+що всі дати даються по григоріанському календарю (</span><span lang=RU
+style='font-size:12.0pt'>”новому стилю”), описати:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>)
+фукцію </span><span lang=EN-US style='font-size:12.0pt'>kilkpod</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>), яка знаходить кількість
+днів в тому місяці, якому належить дата </span><span lang=EN-US
+style='font-size:12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>)</span><span
+lang=RU style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>логічну
+функцію correctdata(d), яка перевіряє правильність дати d (тобто щоб не було 31
+червня і т.п.);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>) функцію </span><span
+lang=EN-US style='font-size:12.0pt'>kilkdniv</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>),
+яка рахує скільки днів минуло від 1 січня 1-го року нашої ери до дати d;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>) функцію </span><span
+lang=EN-US style='font-size:12.0pt'>dayweek</span><span lang=RU
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>) для визначення дня тижня, на який припадає
+дата </span><span lang=EN-US style='font-size:12.0pt'>d</span><span lang=RU
+style='font-size:12.0pt'> (врахувати, що 1 січня 1-го року було понеділком).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>12.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>11</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type </span><span style='font-size:12.0pt'>strichka:string[16];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                            
+</span><span lang=EN-US style='font-size:12.0pt'>data=record number</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>1..31;
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                                 month:</span><span
+style='font-size:12.0pt'>1</span><span lang=EN-US style='font-size:12.0pt'>..12;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                                 year=1900..2000
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                     end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                              anketa=record
+famile_name:</span><span style='font-size:12.0pt'>trichka</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                                    
+stat:(man, woman);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                                    
+birthday:data</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                           end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                               group=array[1..10] of
+anketa;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>) процедуру </span><span
+lang=EN-US style='font-size:12.0pt'>oldest</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>gr</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>fam</span><span style='font-size:12.0pt'>),
+яка присвоює рядку  </span><span lang=EN-US style='font-size:12.0pt'>fam</span><span
+style='font-size:12.0pt'> прізвище найстаршого мужчини з групи </span><span
+lang=EN-US style='font-size:12.0pt'>gr</span><span style='font-size:12.0pt'>
+(вважати, що такий мужчина єдиний);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>) процедуру
+druk(</span><span lang=EN-US style='font-size:12.0pt'>gr</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>bu</span><span
+style='font-size:12.0pt'>kva), яка друкує всі прізвища людей з групи </span><span
+lang=EN-US style='font-size:12.0pt'>gr</span><span style='font-size:12.0pt'>,
+які починаються на літеру </span><span lang=EN-US style='font-size:12.0pt'>bu</span><span
+style='font-size:12.0pt'>kva, і дати  народження цих людей.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                             
+</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>C</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання високого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:1.1pt;text-align:justify;text-indent:
+-1.1pt'><b><span style='font-size:12.0pt'>12.1</span></b><b><span lang=RU
+style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Описати
+комбінований тип для представлення поняття: е</span><span style='font-size:
+12.0pt'>кзаменаційна відомість (предмет, клас, дата екзамену, 30 рядків з
+полями: прізвище учня, номер білета, оцінка за екзамен</span><span lang=RU
+style='font-size:12.0pt'>).</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.1</span><span
+lang=EN-US style='font-size:12.0pt'>3</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt;font-weight:normal'> <span lang=EN-US>type </span></span><span
+style='font-size:12.0pt;font-weight:normal'>mast</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>=(pyky, trefy, bubny, chervy);</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                            velychyna=(six, seven,
+eight, nine, ten, valet, dama, korol, tuz);</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                            karta=record m:mast;
+d:velychyna end;</span><span lang=EN-US style='font-size:12.0pt;font-weight:
+normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати логічну функцію </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>shoot</span><span style='font-size:
+12.0pt;font-weight:normal'>(k1,k2,km), яка перевіряє, чи карта k1 </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>”</span><span
+style='font-size:12.0pt;font-weight:normal'>б’</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>є” карту k2</span><span
+style='font-size:12.0pt;font-weight:normal'>, з врахуванням того, що масть km є
+козирною.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.1</span><span
+lang=EN-US style='font-size:12.0pt'>4</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt;font-weight:normal'> </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>type </span><span style='font-size:
+12.0pt;font-weight:normal'>p</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>ole</span><span style='font-size:12.0pt;font-weight:normal'>=</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>record</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>vert:(a,b,c,d,e,f,g,h)</span><span
+style='font-size:12.0pt;font-weight:normal'>; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>                                               </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>goryz</span><span
+style='font-size:12.0pt;font-weight:normal'>:1..8</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>                                           </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>end</span><span
+style='font-size:12.0pt;font-weight:normal'>; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати логічну функцію </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>hid</span><span style='font-size:
+12.0pt;font-weight:normal'>_</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>ferzya</span><span style='font-size:12.0pt;font-weight:
+normal'>(</span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>n</span><span
+style='font-size:12.0pt;font-weight:normal'>1,</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>n</span><span style='font-size:
+12.0pt;font-weight:normal'>2), яка перевірятиме, чи може ферзь за один хід
+перейти з поля </span><span lang=EN-US style='font-size:12.0pt;font-weight:
+normal'>n</span><span style='font-size:12.0pt;font-weight:normal'>1 шахової
+дошки на поле n2.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.1</span><span
+lang=EN-US style='font-size:12.0pt'>5</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt;font-weight:normal'> <span lang=EN-US>type
+domino=record left, right:0..6 end;</span></span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                            line=array[1..28] of</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>  domino;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати логічну функцію </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>right_line(r)</span><span
+style='font-size:12.0pt;font-weight:normal'>, яка перевіряє, чи правильно
+виставлені кістки доміно в ряді </span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>r</span><span style='font-size:12.0pt;font-weight:normal'>
+(чи рівна права цифра чергової кістки лівій цифрі наступної кістки).</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.1</span><span
+lang=EN-US style='font-size:12.0pt'>6</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt;font-weight:normal'> <span lang=EN-US>type </span></span><span
+style='font-size:12.0pt;font-weight:normal'>strichka:string[20];</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>                            </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>people=record </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span><span
+style='font-size:12.0pt;font-weight:normal'>family</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>_</span><span style='font-size:
+12.0pt;font-weight:normal'>name</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>, town:</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'> </span><span style='font-size:12.0pt;font-weight:normal'>strichka</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>;                       </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                                    a</span><span
+style='font-size:12.0pt;font-weight:normal'>dress</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>=record vulyca:</span><span
+style='font-size:12.0pt;font-weight:normal'>strichka</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                                                            budynok,kvartyra:1..999</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                                                end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                                         end;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                            spysok=array[1..15] of </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>people;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати процедуру ironiya_doli(c), яка друкує прізвища двох
+(будь-яких) жителів зі списку c, які живуть у різних  містах по однаковій
+адресі.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>12.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>17</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type </span><span style='font-size:12.0pt'>s</span><span
+lang=EN-US style='font-size:12.0pt'>lovo=</span><span style='font-size:12.0pt'>string[</span><span
+lang=EN-US style='font-size:12.0pt'>9</span><span style='font-size:12.0pt'>];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                            
+num_telefon=1000000..9999999;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                            
+</span><span lang=EN-US style='font-size:12.0pt'>friend=record family_name</span><span
+style='font-size:12.0pt'>: s</span><span lang=EN-US style='font-size:12.0pt'>lovo;
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                                  
+number: num_telefon</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                    end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                        page=array[1..20] of</span><span
+style='font-size:12.0pt'>  </span><span lang=EN-US style='font-size:12.0pt'>friend;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                        notebook=array[‘A’..’Z’] of  page;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Вважаючи, що на кожній сторінці записної книжки вказані
+прізвища, які починаються з однієї і тієї ж букви – індекса цієї сторінки,
+описати логічну функцію:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a</span><span style='font-size:12.0pt;font-weight:
+normal'>) </span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>number</span><span
+style='font-size:12.0pt;font-weight:normal'>(</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>nb</span><span style='font-size:
+12.0pt;font-weight:normal'>,</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>f</span><span style='font-size:12.0pt;font-weight:normal'>,</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>t</span><span
+style='font-size:12.0pt;font-weight:normal'>), яка визначає, чи є в записній
+книжці nb відомості про знайомого з прізвищем f, і, якщо є, то присвоює
+параметру t номер його телефону; </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b</span><span style='font-size:12.0pt;font-weight:
+normal'>) family(nb,t,f), яка визначає , чи є в записній книжці nb відомості
+про знайомого, який має телефон з номером t, і, якщо є, то присвоює параметру </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>f</span><span
+style='font-size:12.0pt;font-weight:normal'> прізвище цього знайомого.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>12.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>18</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>const n=20;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                      type zapys=record key</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>integer;
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                                   body:array[1..99]
+of</span><span style='font-size:12.0pt'>  </span><span lang=EN-US
+style='font-size:12.0pt'>‘a’..’z’</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                        end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                      table=array[1..n] of  zapys;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Вважаючи,
+що в таблиці всі записи мають різні ключі, описати:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>a)
+процедуру </span><span lang=EN-US style='font-size:12.0pt'>vporyadkuvaty</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>), яка впорядковує записи таблиці по зростанню їх
+ключів;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>) логічну
+функцію </span><span lang=EN-US style='font-size:12.0pt'>poshuk</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'>), яка визначає, чи є в таблиці </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>
+(всі записи якої вже впорядковані по зростанню їх ключів) запис з ключем </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>, і,
+якщо є, то присвоює його  номер параметру </span><span lang=EN-US
+style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>.    </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>12.19</span><span style='font-size:12.0pt'>.</span><i><span
+style='font-size:12.0pt;font-weight:normal'> </span></i><span style='font-size:
+12.0pt;font-weight:normal'>У вхідному файлі міститься інформація про підсумки
+зимової сесії на 1 курсі факультету прикладної математики та інформатики.
+Відомості про кожного студунта-першокурсника (всього їх 100) задані у вигляді
+такого тексту:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>&lt;</span><span style='font-size:12.0pt;font-weight:
+normal'>прізвище</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>&gt;,&lt;</span><span
+style='font-size:12.0pt;font-weight:normal'>номер групи</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>&gt;,&lt;</span><span
+style='font-size:12.0pt;font-weight:normal'>оцінка1</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>&gt;,&lt;</span><span
+style='font-size:12.0pt;font-weight:normal'>оцінка2</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>&gt;,&lt;</span><span
+style='font-size:12.0pt;font-weight:normal'>оцінка3</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>&gt;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>причому у пізвища – не більше 12 літер, номер групи
+– ціле від 101 до 116, кожна оцінка – це 2, 3, 4 або 5, причому перша оцінка –
+за екзамен по матаналізу, друга – по алгебрі, третя – по програмуванню.
+Відомості про студентів розділені одне від одного крапкою з комою.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>Написати програму, яка вводить цю інформацію і
+друкує наступні дані:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) </span><span style='font-size:12.0pt;font-weight:normal'>прізвища
+студентів, які мають мають оцінку </span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>”2” хоча б з одного предмету;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>)</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'> </span><span lang=RU style='font-size:12.0pt;font-weight:normal'>”</span><span
+style='font-size:12.0pt;font-weight:normal'>якість</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>”</span><span style='font-size:
+12.0pt;font-weight:normal'> успішності, тобто процент студентів, які здали
+екзамени на 5 і 4;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>c</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>)</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'> </span><span style='font-size:12.0pt;font-weight:normal'>назву
+предмета, який був зданий найкраще</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>d</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>)</span><span style='font-size:12.0pt;font-weight:normal'>
+номери груп в порядку спадання середньої успішності їх студентів.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>12.20</span><span style='font-size:12.0pt'>.</span><i><span
+style='font-size:12.0pt;font-weight:normal'> </span></i><span style='font-size:
+12.0pt;font-weight:normal'>У вхідному файлі міститься така інформація про кожного
+з 200 студентів деякого вузу</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=RU style='font-size:
+12.0pt;font-weight:normal'>&lt;</span><span style='font-size:12.0pt;font-weight:
+normal'>прізвище</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>&gt;,&lt;</span><span
+style='font-size:12.0pt;font-weight:normal'>ім</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>’</span><span style='font-size:
+12.0pt;font-weight:normal'>я</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>&gt;,&lt;по-батькові&gt;,&lt;стать&gt;,&lt;вік&gt;,&lt;</span><span
+style='font-size:12.0pt;font-weight:normal'>курс</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>&gt;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Причому у прізвищі, імені та по-батькові – більше 12 літер,
+стать вказується буквами Ж і Ч, вік – ціле від 16 до 30, курс – ціле від 1 до
+5. Відомості про студентів відділені одне від одного крапкою з комою.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Написати програму ,яка вводить цю інформацію і друкує
+наступні дані</span><span lang=RU style='font-size:12.0pt;font-weight:normal'>:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) н</span><span style='font-size:12.0pt;font-weight:normal'>омер
+курсу, на якому найбільший процент чоловіків</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>)</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'> </span><span style='font-size:12.0pt;font-weight:normal'>найпоширеніше
+чоловіче та жіноче імена;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>c</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>)</span><span lang=RU style='font-size:12.0pt;font-weight:
+normal'> </span><span style='font-size:12.0pt;font-weight:normal'>прізвища (в
+алфавітному порядку) та ініціали всіх студенток, вік та по-батькові яких є
+одночасно найпоширенішими.</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt'>12.21.</span><span
+style='font-size:12.0pt;font-weight:normal'> <span lang=EN-US>type
+racionalne=record chyselnyk:integer; </span></span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                               znamenyk:1..maxint</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>                                             end;</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-GB style='font-size:
+12.0pt;font-weight:normal'>                masyv=array[1..20] of</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>  racionalne;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span style='font-size:12.0pt;
+font-weight:normal'>Описати</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>:</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>a) </span><span style='font-size:12.0pt;font-weight:
+normal'>логічну функцію </span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>rivni(a,b)</span><span style='font-size:12.0pt;font-weight:
+normal'>, яка порівнює два раціональні числа </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>a </span><span style='font-size:
+12.0pt;font-weight:normal'>і</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'> b;</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'> </span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>b</span><span style='font-size:12.0pt;font-weight:
+normal'>) процедуру </span><span lang=EN-US style='font-size:12.0pt;font-weight:
+normal'>dod</span><span style='font-size:12.0pt;font-weight:normal'>(</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>c</span><span
+style='font-size:12.0pt;font-weight:normal'>,</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>a</span><span style='font-size:
+12.0pt;font-weight:normal'>,</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>b</span><span style='font-size:12.0pt;font-weight:normal'>),
+яка додає два раціональні числа </span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'>a</span><span lang=EN-US style='font-size:12.0pt;
+font-weight:normal'> </span><span style='font-size:12.0pt;font-weight:normal'>і
+</span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>b</span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'> </span><span
+style='font-size:12.0pt;font-weight:normal'>і присвоює їх суму раціональному
+параметру с;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>c</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) </span><span style='font-size:12.0pt;font-weight:normal'>процедуру
+</span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>skoroch</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>(</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>r</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>)</span><span style='font-size:
+12.0pt;font-weight:normal'>, яка переводить раціональне число </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>r</span><span
+style='font-size:12.0pt;font-weight:normal'> до нескорочуваного вигляду</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>;</span></p>
+
+<p class=MsoTitle style='text-align:justify'><span lang=EN-US style='font-size:
+12.0pt;font-weight:normal'>d</span><span lang=RU style='font-size:12.0pt;
+font-weight:normal'>) </span><span style='font-size:12.0pt;font-weight:normal'>процедуру
+</span><span lang=EN-US style='font-size:12.0pt;font-weight:normal'>max</span><span
+lang=RU style='font-size:12.0pt;font-weight:normal'>(</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>x</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>,</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>m</span><span lang=RU
+style='font-size:12.0pt;font-weight:normal'>)</span><span style='font-size:
+12.0pt;font-weight:normal'>, яка присвоює параметру </span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'>m</span><span lang=EN-US
+style='font-size:12.0pt;font-weight:normal'> </span><span style='font-size:
+12.0pt;font-weight:normal'>найбільше з раціональних чисел масиву </span><span
+lang=EN-US style='font-size:12.0pt;font-weight:normal'>x</span><span
+style='font-size:12.0pt;font-weight:normal'>.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

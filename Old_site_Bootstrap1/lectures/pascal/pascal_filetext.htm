@@ -1,0 +1,750 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>15</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:70.9pt 63.75pt 53.95pt 70.9pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>15. Текстові файли</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN-US
+style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Текстові файли містять елементи символьного типу і
+складаються з рядків, довжини яких можуть бути різними.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Опис
+текстових файлів:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>:</span><span
+lang=EN-US style='font-size:12.0pt'>text</span><span style='font-size:12.0pt'>;         
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:12.0pt'>Команди</span></i><span
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Assign</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,’ім’я
+файлу на диску’); - вказує адресу файлу на диску (файл з розширенням </span><span
+lang=EN-US style='font-size:12.0pt'>txt</span><span style='font-size:12.0pt'>).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Rewrite</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+створює файл і відкриває його для запису.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Append</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+відкриває файл для дописування в нього даних.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Write</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>); -
+в поточну позицію файлу записує значення змінної а.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Writeln</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>); -
+в поточну позицію файлу записує значення змінної а і вказівник поточної позиції
+переміщується на наступний рядок.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Writeln</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+у режимі введення даних вказівник поточної позиції переміщується на наступний
+рядок.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Reset</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+відкриває файл лише для читання.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Read</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>); -
+читає з поточної позиції файлу значення і записує в змінну </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Readln</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>); -
+читає з поточної позиції файлу значення і записує в змінну </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>,
+при цьому вказівник поточної позиції переміщується на наступний рядок.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Readln</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+у режимі зчитування даних вказівник поточної позиції переміщується на наступний
+рядок.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Close</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+закриття файлу.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Eof</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+перевірка на кінець файлу.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Eoln</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>); -
+перевірка на кінець рядка.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Немає
+команди </span><span lang=EN-US style='font-size:12.0pt'>Seek</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify;text-indent:
+-27.0pt'><b><span style='font-size:12.0pt'>15.1.</span></b><b><span
+style='font-size:12.0pt'> </span></b><span style='font-size:12.0pt'>Ввести 16
+цілих чисел у файл, причому записати в кожен рядок по 4 числа. Надрукувати на
+екрані пострічково вміст текстового файла </span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span lang=RU style='font-size:12.0pt'>.</span><span
+lang=RU style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>Program</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>g</span><span style='font-size:12.0pt'>1;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>Var</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>text</span><span
+style='font-size:12.0pt'>; </span><span lang=EN-US style='font-size:12.0pt'>i</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>integer</span><span
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>Begin</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>assign</span><span style='font-size:12.0pt'>(</span><span lang=EN-US
+style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>,’</span><span
+lang=EN-US style='font-size:12.0pt'>u:\fff.txt</span><span style='font-size:
+12.0pt'>’);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>         </span><span style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'> </span><span lang=EN-US
+style='font-size:12.0pt'>rewrite</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>          </span><span lang=EN-US
+style='font-size:12.0pt'>for</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span style='font-size:12.0pt'>:=1 </span><span
+lang=EN-US style='font-size:12.0pt'>to</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>16</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>do</span><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><i><span style='font-size:12.0pt'>         </span></i><span
+style='font-size:12.0pt'>  begin </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>           </span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>  </span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>read(a);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>            </span><span lang=EN-US
+style='font-size:12.0pt'>  </span><span style='font-size:12.0pt'> write(f,a)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>             </span><span lang=EN-US
+style='font-size:12.0pt'>  if i mod 4=0 then</span><span style='font-size:12.0pt'>
+writeln(f)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>          </span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>           close(f)</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>           reset(f);</span><span
+lang=EN-US style='font-size:12.0pt'>          </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>           while not eof(f)
+do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>              begin</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                 while not
+eoln(f) do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                        begin</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                            
+read(f,a); </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                            
+write(a)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                          end;                
+</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                  readln(f);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>                   writeln     
+</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>               end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>            close</span><span
+lang=EN-GB style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>f</span><span lang=EN-GB style='font-size:12.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>end.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести</span><span
+lang=RU style='font-size:12.0pt'> 20 </span><span style='font-size:12.0pt'>символів</span><span
+lang=RU style='font-size:12.0pt'> у файл, записуючи</span><span
+style='font-size:12.0pt'> по 5 символі в кожен рядок. Надрукувати на екрані
+пострічково вміст текстового файла </span><span lang=EN-US style='font-size:
+12.0pt'>f</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Переписати вміст текстового файла </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'> в текстовий файл </span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'> із
+збереженням поділу на стрічки. (Використовуючи процедуру prysvoity(f,h)).</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Сформувати
+текстовий файл з 5 стрічок таким чином: </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><i><span style='font-size:12.0pt'>                 </span></i><span
+lang=EN-US style='font-size:12.0pt'>a)</span><i><span style='font-size:12.0pt'>  
+</span></i><span style='font-size:12.0pt'>1 1 1 1 1 1 1 1 1 1</span><span
+lang=EN-US style='font-size:12.0pt'>                          б)  1 2 3 4 5 6 7
+8 9</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                    </span><span
+lang=EN-US style='font-size:12.0pt'>  </span><span style='font-size:12.0pt'> 2
+2 2 2 2 2 2 2 2 2</span><span lang=EN-US style='font-size:12.0pt'>                             
+1 2 3 4 5 6 7 8 9                      </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                     </span><span
+lang=EN-US style='font-size:12.0pt'>  </span><span style='font-size:12.0pt'>3 3
+3 3 3 3 3 3 3 3</span><span lang=EN-US style='font-size:12.0pt'>                             
+1 2 3 4 5 6 7 8 9</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                     </span><span
+lang=EN-US style='font-size:12.0pt'>  </span><span style='font-size:12.0pt'>4 4
+4 4 4 4 4 4 4</span><span lang=EN-US style='font-size:12.0pt'> 4                             
+1 2 3 4 5 6 7 8 9</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                     </span><span
+lang=EN-US style='font-size:12.0pt'>  </span><span style='font-size:12.0pt'>5 5
+5 5 5 5 5 5 5 5</span><span lang=EN-US style='font-size:12.0pt'>                             
+1 2 3 4 5 6 7 8 9</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>program program_a;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>var f:text; i,j:integer;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>begin assign(f,’u:\ggg.txt’);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>          rewrite(f);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>          for i:=1 to 5 do </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><i><span style='font-size:12.0pt'>         </span></i><span
+style='font-size:12.0pt'>  begin </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>             for j:=1 to 10 do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>              </span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'> write(f,</span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span style='font-size:12.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>             writeln(f)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>            end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>           close(f)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>end.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>15.</span></b><b><span
+lang=RU style='font-size:12.0pt'>5</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Знайти суму елементів в кожному рядку текстового
+файла. Вивести</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>суму елементів в кожному рядку.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>15.</span></b><b><span
+lang=RU style='font-size:12.0pt'>6</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Знайти суму та кількість додатніх елементів в кожному
+рядку текстового файла. Вивести у вигляді</span><span lang=RU style='font-size:
+12.0pt'>:</span><span style='font-size:12.0pt'> номер рядка – сума елементів,
+кількість елементів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>15.</span></b><b><span
+lang=RU style='font-size:12.0pt'>7</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+кількість елементів </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'> в кожному рядку. Вивести у вигляді</span><span
+lang=RU style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> номер
+рядка – кількість елементів</span><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>15.</span></b><b><span
+lang=RU style='font-size:12.0pt'>8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Знайти суму
+та кількість елементів, які лежать на проміжку </span><span lang=RU
+style='font-size:12.0pt'>[</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>] </span><span
+style='font-size:12.0pt'>в  кожному рядку. Вивести у вигляді</span><span
+lang=RU style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> номер
+рядка – сума елементів, кількість елементів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень В</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання середнього рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>9</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Сформувати
+текстовий файл з 9 стрічок так:</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                     1</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                      2 2</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                      3 3 3</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                      ……..</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                      8 8 8 8 8 8 8 8</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                      9 9 9 9 9 9 9 9 9</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                   Порахувати кількість
+елементів в цьому файлі. </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>(for i:=1 to 9 do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>   for j:=1 to i do)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>15.</span></b><b><span
+lang=RU style='font-size:12.0pt'>10</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Сформувати
+такі текстові файли:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>               
+</span><span lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU
+style='font-size:12.0pt'>)  1</span><span style='font-size:12.0pt'> 2 3 4</span><span
+lang=RU style='font-size:12.0pt'> 5 6</span><span style='font-size:12.0pt'>        
+      б) 5 6 7 8 9                 в) 1 3 5</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>    
+                 2 3 4 5</span><span lang=RU style='font-size:12.0pt'> 6 7 </span><span
+style='font-size:12.0pt'>                 3 4 5 6 7                      2 4 6</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                    
+</span><span style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>3
+4 5 6 </span><span lang=RU style='font-size:12.0pt'>7 8</span><span
+style='font-size:12.0pt'>                  1 2 3 4 5                      3 5 7</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=RU
+style='font-size:12.0pt'>                                                                                         
+</span></i></b><span lang=RU style='font-size:12.0pt'> 4 6 8<b><i>       </i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>                                                                                  </span></i></b><span
+style='font-size:12.0pt'>         5 7 9</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>11</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Задано
+текстовий файл. Знайти максимальний елемент цього файлу. Сформувати файл </span><span
+lang=EN-US style='font-size:12.0pt'>h&nbsp;</span><span style='font-size:12.0pt'>так:
+в 1-ому рядку записати 5 раз максимальний елемент; у 2-ому - 4 рази
+максимальний, зменшений на 1, у 3-ому -  3 рази максимальний, зменшений на 2 і
+т.д.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>12</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Описати процедуру prysvoity(f,h), яка переписуватиме
+вміст текстового файла </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'> в
+текстовий файл </span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'> із збереженням поділу на стрічки, але без порожніх
+стрічок.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>13</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> Нехай
+задано текстовий файл </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>, який містить рядки, довжина яких не перевищує 10.
+Описати процедуру </span><span lang=EN-US style='font-size:12.0pt'>peretvoryty</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>10), яка, доповнюючи короткі рядки файла f  символами
+‘*’,формує текстовий файл f10, всі рядки в якому рівні 10. </span></p>
+
+<p class=MsoNormal style='margin-left:70.9pt;text-align:justify;text-indent:
+-70.9pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>14</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Знайти
+максимальний елемент  кожному рядку текстового файлу. Вивести у вигляді: номер
+рядка – максимальний елемент.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>15</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>lines</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>),
+яка пострічково друкує вміст текстового файлу </span><span lang=EN-US
+style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>, вставляючи на
+початку кожного рядка його порядковий номер (він повинен займати 4 позиції) і
+пропуск.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Записати у
+файл таблицю значень функцій </span><span lang=EN-US style='font-size:12.0pt'>sin</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>tg</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>на відрізку </span><span lang=RU style='font-size:
+12.0pt'>[0,3] </span><span style='font-size:12.0pt'>з кроком 0.1. Значення х
+друкувати з однією цифрою в дробовій частині, значення синуса – з п</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>ятьма,
+а значення тангенса – в експоненціальній формі.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень С</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання високого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>17</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Задано текстовий файл з 7 стрічок. Визначити довжину
+і номер найдовшої стрічки.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>Program</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>g</span><span style='font-size:12.0pt'>4;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>Var</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>text</span><span
+style='font-size:12.0pt'>; </span><span lang=EN-US style='font-size:12.0pt'>i,j,k,n,s,c:integer;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>Begin assign(f,’hhh’);  {</span><span
+style='font-size:12.0pt'>Файл </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'> вже створений, символи в ньому розділені пропуском</span><span
+lang=EN-US style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>          reset(f); i:=0;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>          while not eoln(f)
+do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>            begin</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>              read(f,k);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>              i:=i+1              
+{</span><span lang=RU style='font-size:12.0pt'>Кількість</span><span lang=RU
+style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>елементів</span><span
+lang=RU style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>в</span><span
+lang=EN-US style='font-size:12.0pt'> 1-</span><span lang=RU style='font-size:
+12.0pt'>ому</span><span lang=RU style='font-size:12.0pt'> </span><span lang=RU
+style='font-size:12.0pt'>рядку</span><span lang=EN-US style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>            end</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=RU style='font-size:12.0pt'>          </span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'>:=1; </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=RU style='font-size:12.0pt'>:=1;           {</span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span lang=RU style='font-size:12.0pt'> –
+номер </span><span style='font-size:12.0pt'>рядка}</span><span lang=RU
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=RU style='font-size:12.0pt'>          </span><span
+lang=EN-US style='font-size:12.0pt'>readln(f);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>          j:=0; </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>          while not eof(f)
+do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>            begin</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>               while not
+eoln(f) do</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><i><span style='font-size:12.0pt'>               </span></i><span
+style='font-size:12.0pt'>  begin </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                   read(f,k);</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                   j:=j+1</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                 end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>             n:=n+1;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>             if j&gt;i then </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                       begin
+c:=n;i:=j;j:=0</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>                       end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>             j:=0</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span lang=EN-US style='font-size:12.0pt'>             </span><span
+style='font-size:12.0pt'>readln(f)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>          end;</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>          write(</span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span style='font-size:12.0pt'>,’        
+’,c);          </span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>         close(f)</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><span style='font-size:12.0pt'>end.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>18</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Описати
+функцію для виведення найдовшої стрічки текстового файлу.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>19</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'>  Надрукувати першу найкоротшу стрічку текстового
+файлу.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>20</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Описати
+функцію для підрахунку кількості порожніх рядків текстового файлу.</span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-align:justify;text-indent:
+-72.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=RU
+style='font-size:12.0pt'>21</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Заданий
+текстовий файл. Підрахувати кількість стрічок</span><span lang=RU
+style='font-size:12.0pt'> (вивести стрічки)</span><span style='font-size:12.0pt'>,
+які</span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>1).</span></i><span style='font-size:12.0pt'>.починаються
+з букви </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>2). </span></i><span style='font-size:12.0pt'>закінчуються
+буквою </span><span lang=EN-US style='font-size:12.0pt'>z</span><span
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>3).</span></i><span style='font-size:12.0pt'>починаються
+буквою </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>і
+закінчуються буквою </span><span lang=EN-US style='font-size:12.0pt'>z</span><span
+style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>4). </span></i><span style='font-size:12.0pt'>починаються
+і закінчуються однаковою літерою;</span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>5).</span></i><span style='font-size:12.0pt'>
+складаються з однакових літер.</span></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-align:justify'><span
+style='font-size:12.0pt'>(Використати процедури)</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>15.22.</span></b><b><span
+style='font-size:12.0pt'>           </span></b><span style='font-size:12.0pt'>Описати
+процедуру </span><span lang=EN-US style='font-size:12.0pt'>line</span><span
+style='font-size:12.0pt'>40(</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>), </span><span style='font-size:12.0pt'>яка зчитує з
+вхідного файла літери до першої крапки і записує їх (без крапки) в текстовий
+файл t, формуючи в ньому рядки по 6 літер (в останньому рядку літер може бути
+менше).</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>15.</span></b><b><span lang=EN-US
+style='font-size:12.0pt'>23</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>slov</span><span
+lang=EN-US style='font-size:12.0pt'>o</span><span lang=EN-GB style='font-size:
+12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>string[10];</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><i><span lang=EN-US style='font-size:12.0pt'>                            
+</span></i><i><span lang=EN-US style='font-size:12.0pt'> </span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><span lang=EN-US
+style='font-size:12.0pt'>spysok=array[1..15] of slovo; </span></p>
+
+<p class=MsoNormal style='margin-left:70.9pt;text-align:justify;text-indent:
+-70.9pt'><span lang=EN-US style='font-size:12.0pt'>                        </span><span
+style='font-size:12.0pt'>Описати процедуру zapys(k,t), яка записуватиме слова
+зі списку k як рядки в текстовий файл t.</span></p>
+
+<p class=MsoNormal style='margin-left:70.9pt;text-align:justify;text-indent:
+-70.9pt'><b><span style='font-size:12.0pt'>15.24.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Нехай
+задано текстовий файл. Написати програму, яка, ігноруючи вихідне ділення цього
+файлу на рядки, переформатовуватиме його ,розбиваючи на рядки так, щоб кожен
+рядок закінчувався крапкою або містила рівно 15 літер, якщо серед них немає
+крапки.</span></p>
+
+</div>
+
+</body>
+
+</html>

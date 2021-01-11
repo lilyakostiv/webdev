@@ -1,0 +1,816 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>6</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:14.0pt'>6. Перелічувані</span></b><b><span lang=RU
+style='font-size:14.0pt'> </span></b><b><span lang=RU style='font-size:14.0pt'>та</span></b><b><span
+style='font-size:14.0pt'> обмежені типи</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>Оператор варіанту </span></b><b><span lang=RU
+style='font-size:14.0pt'>С</span></b><b><span lang=EN-US style='font-size:14.0pt'>ASE</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>Case</span></i><i><span lang=RU style='font-size:12.0pt'>
+&lt;</span></i><i><span style='font-size:12.0pt'>вираз</span></i><i><span
+lang=RU style='font-size:12.0pt'>&gt; </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>of</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'> &lt;</span></i><i><span style='font-size:12.0pt'>значення</span></i><i><span
+style='font-size:12.0pt'> </span></i><i><span style='font-size:12.0pt'>1</span></i><i><span
+lang=RU style='font-size:12.0pt'>&gt;:&lt;</span></i><i><span style='font-size:
+12.0pt'>оператор1</span></i><i><span lang=RU style='font-size:12.0pt'>&gt;;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'> …</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'> &lt;значення </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>n</span></i><i><span lang=RU style='font-size:12.0pt'>&gt;:&lt;</span></i><i><span
+style='font-size:12.0pt'>оператор </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>n</span></i><i><span lang=RU style='font-size:12.0pt'>&gt;;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>else</span></i><i><span
+lang=RU style='font-size:12.0pt'> &lt;</span></i><i><span style='font-size:
+12.0pt'>оператор </span></i><i><span lang=EN-US style='font-size:12.0pt'>n</span></i><i><span
+lang=RU style='font-size:12.0pt'>+1&gt;;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>end</span></i><i><span
+lang=RU style='font-size:12.0pt'>;</span></i></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>В залежності від значення <i>&lt;виразу&gt;
+ </i>виконується відповідний оператор, наприклад, якщо <i>&lt;вираз&gt; </i>рівний
+<i>&lt;значенню 1&gt;</i>, то виконується <i>&lt;оператор1&gt; </i>і т.д., якщо
+вираз не є рівний ні одному із вказаних значень, то виконується <i>&lt;оператор
+</i></span><i><span lang=EN-US>n</span></i><i><span lang=RU>+1&gt;</span></i><span
+lang=RU>. </span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Скорочений оператор варіанту не
+містить частини </span><i><span lang=EN-US>else</span></i>.<span lang=RU> Якщо
+потрібно виконати більше ніж один оператор, то застосовуємо складений оператор.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Оператор </span><i><span lang=EN-US style='font-size:
+12.0pt'>Case</span></i><span style='font-size:12.0pt'> зручно використати
+замість такого запису</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><i><span
+lang=RU style='font-size:12.0pt'>                                   </span></i><i><span
+lang=EN-US style='font-size:12.0pt'>if</span></i><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>B</span></i><i><span
+lang=EN-GB style='font-size:12.0pt'>1 </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>then</span></i><i><span lang=EN-US style='font-size:
+12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>S</span></i><i><span
+lang=EN-GB style='font-size:12.0pt'>1 </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>else</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-GB
+style='font-size:12.0pt'>                                                </span></i><i><span
+lang=EN-US style='font-size:12.0pt'>if B2 then S2 else</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>                                                  </span></i><i><span
+lang=RU style='font-size:12.0pt'>…</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'>                                                     </span></i><i><span
+lang=EN-US style='font-size:12.0pt'>if</span></i><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>Bk</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>then</span></i><i><span lang=EN-US style='font-size:
+12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>Sk</span></i><i><span
+lang=RU style='font-size:12.0pt'>  - </span></i><span style='font-size:12.0pt'>це
+дуже громіздкий запис.</span><i><span lang=RU style='font-size:12.0pt'>  </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'>Приклад. </span></i><span lang=RU style='font-size:
+12.0pt'>Обчислити значення змінної </span><span lang=EN-US style='font-size:
+12.0pt'>m</span><span style='font-size:12.0pt'> в залежності від того, яке
+значення набуває змінна </span><span lang=EN-US style='font-size:12.0pt'>i</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Оператор
+</span><span lang=EN-US style='font-size:12.0pt'>case </span><span
+style='font-size:12.0pt'>виглядає так</span><span lang=EN-US style='font-size:
+12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Case i of</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>1:m:=1;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>2:m:=sqr(2);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>3:m:=sqr(3)*3;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>else m:=0</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>end;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span lang=RU
+style='font-size:12.0pt'>Якщо потрібно виконати спільну дію для кількох
+значень, то ці значення записують через кому. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Case i of</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>1</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>3</span><span style='font-size:12.0pt'>,7</span><span
+lang=EN-US style='font-size:12.0pt'>:m:=</span><span style='font-size:12.0pt'>i</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>4,6,8:m:=sin(i);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>9..20:m:=2*cos(i)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'>Приклад</span></i><i><span lang=EN-GB
+style='font-size:12.0pt'>. </span></i><span lang=RU style='font-size:12.0pt'>Обчислити
+значення змінної </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'> в залежності від того яке значення набуває вираз </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>^2+5.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Program R2;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var i,m:integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  Read(i);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  Case sqr(i)+5 of</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   1..5:m:=sqr(i);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   6,9:m:=i+3</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   else m:=10</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> writeln(‘m=’,m)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>end</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>A</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання простого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.1.</span></b><i><span lang=RU style='font-size:12.0pt'>
+</span></i><span style='font-size:12.0pt'>Ввести число </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span lang=RU style='font-size:12.0pt'>. </span><span
+style='font-size:12.0pt'>В залежності від числа </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>вивести назву одного із 7 днів тижня.</span><span
+lang=RU style='font-size:12.0pt'> Якщо введене число більше 7, то вивести
+повідомлення про помилку.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.2.</span></b><i><span lang=RU style='font-size:12.0pt'>
+</span></i><span style='font-size:12.0pt'>Ввести число </span><span lang=EN-US
+style='font-size:12.0pt'>s</span><span lang=RU style='font-size:12.0pt'>. </span><span
+style='font-size:12.0pt'>В залежності від числа s</span><span style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>вивести кількість днів у
+відповідному місяці (рік невисокосний).</span><span style='font-size:12.0pt'> <span
+lang=RU>Якщо введене число більше 12, то вивести повідомлення про помилку.</span></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.3.</span></b><i><span lang=RU style='font-size:12.0pt'>
+</span></i><span lang=RU style='font-size:12.0pt'>Ввести число </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>.
+Якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span lang=RU
+style='font-size:12.0pt'>=</span><span style='font-size:12.0pt'>1,</span><span
+lang=RU style='font-size:12.0pt'>2,3</span><span style='font-size:12.0pt'>,</span><span
+lang=RU style='font-size:12.0pt'>4,5,</span><span style='font-size:12.0pt'> то
+обчислити </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=RU style='font-size:12.0pt'>=5</span><span lang=EN-US style='font-size:
+12.0pt'>k</span><span lang=RU style='font-size:12.0pt'>, <sub><img width=52
+height=21 src="lectures/pascal/Pascal6_files/image001.gif"></sub></span><span style='font-size:
+12.0pt'> , якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>=6,7</span><span style='font-size:12.0pt'>, то
+обчислити <sub><img width=53 height=24 src="lectures/pascal/Pascal6_files/image002.gif"></sub>,</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>z</span><span
+lang=RU style='font-size:12.0pt'>=7,</span><span style='font-size:12.0pt'>
+інакше об</span><span lang=RU style='font-size:12.0pt'>числити </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=RU style='font-size:
+12.0pt'>=1</span><span style='font-size:12.0pt'>, </span><span lang=EN-US
+style='font-size:12.0pt'>z</span><span lang=RU style='font-size:12.0pt'>=1.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести число
+</span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>. Якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=1,2,3,4,5,6, то обчислити </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>, </span><span
+lang=RU style='font-size:12.0pt'><sub><img width=44 height=21
+src="lectures/pascal/Pascal6_files/image003.gif"></sub></span><span style='font-size:12.0pt'>,
+якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=8, то обчислити </span><span lang=RU
+style='font-size:12.0pt'><sub><img width=44 height=21
+src="lectures/pascal/Pascal6_files/image004.gif"></sub></span><span style='font-size:12.0pt'>, якщо
+</span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=7,9,  то обчислити </span><span lang=RU
+style='font-size:12.0pt'><sub><img width=52 height=25
+src="lectures/pascal/Pascal6_files/image005.gif"></sub></span><span style='font-size:12.0pt'>,
+інакше обчислити </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>cos</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>k</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.5</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести число
+x, обчислити k=2x+5. Якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=1,3,5,7,9, то обчислити </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>,
+якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'> набуває значень від 12 до 33, то обчислити </span><span
+lang=RU style='font-size:12.0pt'><sub><img width=44 height=21
+src="lectures/pascal/Pascal6_files/image003.gif"></sub></span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>=2</span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>, якщо
+k=2, 4, 6, 8, 10, то обчислити </span><span lang=RU style='font-size:12.0pt'><sub><img
+width=43 height=21 src="lectures/pascal/Pascal6_files/image006.gif"></sub></span><span
+style='font-size:12.0pt'>, </span><span lang=RU style='font-size:12.0pt'><sub><img
+width=79 height=21 src="lectures/pascal/Pascal6_files/image007.gif"></sub></span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+число </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>. Якщо </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>=1,3,12, то обчислити </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>=3</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>cos</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=RU style='font-size:12.0pt'>π</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>/2,
+якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=4,5,6,7,8,9,10, то обчислити </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>=4/</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>,
+якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=15,16,17,18,19,20, то обчислити </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>tg</span><span style='font-size:12.0pt'> 2</span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.7.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести число
+f, обчислити <sub><img width=113 height=27 src="lectures/pascal/Pascal6_files/image008.gif"></sub>.
+Якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=1,3,5, то обчислити </span><span lang=RU
+style='font-size:12.0pt'><sub><img width=101 height=24
+src="lectures/pascal/Pascal6_files/image009.gif"></sub></span><span style='font-size:12.0pt'>,
+якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=2,4,6, то обчислити </span><span lang=RU
+style='font-size:12.0pt'><sub><img width=111 height=24
+src="lectures/pascal/Pascal6_files/image010.gif"></sub></span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>sqr</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>),
+якщо </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=7,8,9,10,11,12,13,14,15,  то обчислити </span><span
+lang=RU style='font-size:12.0pt'><sub><img width=45 height=24
+src="lectures/pascal/Pascal6_files/image011.gif"></sub></span><span style='font-size:12.0pt'>, </span><span
+lang=RU style='font-size:12.0pt'><sub><img width=75 height=27
+src="lectures/pascal/Pascal6_files/image012.gif"></sub></span><span style='font-size:12.0pt'>,
+інакше обчислити </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>=10, </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести число
+x. Якщо x – парне, то обчислити його квадрат, а якщо не парне – куб.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.9</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>var</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>:1..9;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>Надрукувати значення змінної </span><span lang=EN-US style='font-size:
+12.0pt'>k</span><span lang=RU style='font-size:12.0pt'> римськими цифрами.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>10</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>letter</span><span
+lang=EN-GB style='font-size:12.0pt'>=(a, b, c, d);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-GB
+style='font-size:12.0pt'>                    </span><span lang=EN-US
+style='font-size:12.0pt'>v</span><span lang=EN-GB style='font-size:12.0pt'>ar
+x:letter;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Ввести
+змінну типу letter (тобто a, b, c</span><span lang=EN-US style='font-size:12.0pt'>
+або</span><span style='font-size:12.0pt'> d) і присвоїти її значення змінній x.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>11</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>colour</span><span
+lang=EN-GB style='font-size:12.0pt'>=(</span><span lang=EN-US style='font-size:
+12.0pt'>red</span><span lang=EN-GB style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>yellow</span><span lang=EN-GB
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>blue</span><span
+lang=EN-GB style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>black</span><span lang=EN-GB style='font-size:12.0pt'>);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-GB
+style='font-size:12.0pt'>                   </span><span lang=EN-US
+style='font-size:12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=EN-GB style='font-size:
+12.0pt'>: </span><span lang=EN-US style='font-size:12.0pt'>colour</span><span
+lang=EN-GB style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Надрукувати
+значення змінної c.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>12</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type month=(sich, lut, ber, kvit, trav,
+cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var d:28..31; m:month;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+d присвоїти кількість днів в місяці m (рік вважати невисокосний).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>13</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>country=(Ukraine, Austria, Bulgaria, Greece, Italy, France);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                               capital=(Kiev, Vienna, Sofia, Athens, Rome, Paris);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var st:country; cap:capital;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>По
+значенню змінної st</span><span lang=EN-US style='font-size:12.0pt'> (назві
+країни) присвоїти змі</span><span style='font-size:12.0pt'>н</span><span
+lang=EN-US style='font-size:12.0pt'>ній</span><span style='font-size:12.0pt'>
+cap назву столиці цієї країни.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>14</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type </span><span style='font-size:12.0pt'>nazva=</span><span
+lang=EN-US style='font-size:12.0pt'>(zero, one, two, three, four, five);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                    var d:’0’..’5’; n:</span><span
+style='font-size:12.0pt'>nazva</span><span lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>По
+літері-цифрі d п</span><span lang=EN-US style='font-size:12.0pt'>рисвоїти змі</span><span
+style='font-size:12.0pt'>н</span><span lang=EN-US style='font-size:12.0pt'>ній</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>n </span><span style='font-size:12.0pt'>назву цієї цифри.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>B</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання середнього рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>15</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type month=(sich, lut, ber, kvit, trav,
+cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           day=1..31;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var d1, d2:day; m1,m2:month;
+t:boolean;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+t присвоїти значення true, якщо дата d1, m1 передує (в рамках  року) даті d2,
+m2 і значення false інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>16</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type month=(sich, lut, ber, kvit, trav,
+cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>            </span><span
+lang=EN-US style='font-size:12.0pt'>                var m1,m2:month; </span><span
+style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:12.0pt'>:1..12;
+k:1..maxint;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+</span><span lang=EN-US style='font-size:12.0pt'>m</span><span lang=RU
+style='font-size:12.0pt'>2</span><span style='font-size:12.0pt'> присвоїти</span><span
+lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>а)
+назву n-</span><span lang=RU style='font-size:12.0pt'>го </span><span
+style='font-size:12.0pt'>місяця року; </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>) назву місяця,
+наступного за місяцем m (з врахуванням того, що за груднем йде січень);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>) назву k-го
+місяця після місяця m.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>7.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+</span><span style='font-size:12.0pt'>season</span><span lang=EN-US
+style='font-size:12.0pt'>=(winter, spring, summer, autumn);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           month=(sich, lut, ber,
+kvit, trav, cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var m:month; s:season;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Визначити
+</span><span lang=EN-US style='font-size:12.0pt'>s</span><span
+style='font-size:12.0pt'>-сезон для місяця m.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>18</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type mira=(dc, km, m, mm, sm);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           length=real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var x: length; p: mira;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>Значення змінної </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>, яке позначає деяку довжину в одиницях p, замінити на
+величину цієї ж довжини в метрах.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>19</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type </span><span style='font-size:12.0pt'>vidminok</span><span
+lang=EN-US style='font-size:12.0pt'>=(nazv, , dav, znah, orud, misc, klich);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           slovo=(учитель, секретар);</span><span
+lang=EN-US style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var </span><span style='font-size:
+12.0pt'>w</span><span lang=EN-US style='font-size:12.0pt'>: slovo; p:</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>vidminok</span><span
+lang=EN-US style='font-size:12.0pt'>;  </span><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>або
+англійською :  t</span><span lang=EN-US style='font-size:12.0pt'>ype</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>vidminok=(</span><span
+lang=EN-US style='font-size:12.0pt'>nazv</span><span style='font-size:12.0pt'>,
+</span><span lang=EN-US style='font-size:12.0pt'>rod</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>orud</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>misc</span><span
+style='font-size:12.0pt'>);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>                               
+        </span><span lang=EN-US style='font-size:12.0pt'>slovo=(</span><span
+style='font-size:12.0pt'>pupil, teacher, </span><span lang=EN-US
+style='font-size:12.0pt'>referent, director);</span><span lang=EN-US
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                                 var </span><span
+style='font-size:12.0pt'>w</span><span lang=EN-US style='font-size:12.0pt'>: slovo;
+p:</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>vidminok</span><span lang=EN-US style='font-size:12.0pt'>; 
+</span><span lang=EN-US style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Надрукувати
+слово w у відмінку </span><span lang=EN-US style='font-size:12.0pt'>p</span><span
+style='font-size:12.0pt'> і в однині (наприклад, при </span><span lang=EN-US
+style='font-size:12.0pt'>w</span><span style='font-size:12.0pt'>= учитель і </span><span
+lang=RU style='font-size:12.0pt'>p</span><span style='font-size:12.0pt'>= </span><span
+lang=EN-US style='font-size:12.0pt'>rod</span><span style='font-size:12.0pt'>
+(родовий) потрібно надрукувати слово ”учителя”<i> </i>або, в англійському
+варіанті, при при </span><span lang=EN-US style='font-size:12.0pt'>w</span><span
+style='font-size:12.0pt'>= pupil і </span><span lang=RU style='font-size:12.0pt'>p</span><span
+style='font-size:12.0pt'>= </span><span lang=EN-US style='font-size:12.0pt'>rod</span><span
+style='font-size:12.0pt'> (родовий) потрібно надрукувати сполучення слів “of 
+pupil”).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>20</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type month=(sich, lut, ber, kvit, trav,
+cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var m:month;d:</span><span
+style='font-size:12.0pt'>1</span><span lang=EN-US style='font-size:12.0pt'>..31;</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>m:month;</span><span style='font-size:12.0pt'>y:1901.</span><span
+lang=EN-US style='font-size:12.0pt'>.2000; t:boolean;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінній
+</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'> присвоїти </span><span lang=EN-US style='font-size:
+12.0pt'>значення true, якщо трійка y, m, d утворює правильну дату, і значення
+false – інакше </span><span style='font-size:12.0pt'>(наприклад, неправильна
+дата 31 червня і т.д.).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>21</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type month=(sich, lut, ber, kvit, trav,
+cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var d,d2:</span><span
+style='font-size:12.0pt'>1</span><span lang=EN-US style='font-size:12.0pt'>..31;</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>m</span><span style='font-size:12.0pt'>,m2</span><span lang=EN-US
+style='font-size:12.0pt'>:month;d:</span><span style='font-size:12.0pt'>1</span><span
+lang=EN-US style='font-size:12.0pt'>..31;</span><span style='font-size:12.0pt'>
+y:1901.</span><span lang=EN-US style='font-size:12.0pt'>.2000; </span><span
+style='font-size:12.0pt'>y</span><span lang=EN-US style='font-size:12.0pt'>2</span><span
+style='font-size:12.0pt'>:1901.</span><span lang=EN-US style='font-size:12.0pt'>.2001;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>По
+даті  d, </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>y</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>визначити d2, </span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'>2</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>y</span><span style='font-size:12.0pt'>2</span><span style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>–  дату наступнрго дня.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>22</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type month=(sich, lut, ber, kvit, trav,
+cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-GB
+style='font-size:12.0pt'>                   </span><span lang=EN-US
+style='font-size:12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>k</span><span lang=RU style='font-size:12.0pt'>:</span><span
+style='font-size:12.0pt'>1</span><span lang=RU style='font-size:12.0pt'>..366;</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=RU style='font-size:
+12.0pt'>:1..31;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>а)</span><span
+lang=RU style='font-size:12.0pt'> Визначити </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span lang=RU style='font-size:12.0pt'>–порядковий
+</span><span style='font-size:12.0pt'>номер того дня високосного року, який має
+дату d, m;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>)</span><span
+lang=RU style='font-size:12.0pt'> Визначити </span><span lang=EN-US
+style='font-size:12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=RU style='font-size:
+12.0pt'> – дату </span><span style='font-size:12.0pt'>k-го по рахунку дня
+високосного року.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>C</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання високого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>23</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type </span><span style='font-size:12.0pt'>no</span><span
+lang=EN-US style='font-size:12.0pt'>ta=(do, re, mi, fa, sol, lya, si);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           interval=(sekunda, terciya,
+kvarta, kvinva, seksta, septima);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var n1,n2:nota; i:interval;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Визначити
+і-інтервал, утворений нотами n1 i n2 (n1≠</span><span lang=EN-US
+style='font-size:12.0pt'>n2)</span><span style='font-size:12.0pt'>: секунда –
+це інтервал з двох сусідніх (по колу) нот (наприклад, ре і мі, сі і до), терція
+– інтервал через ноту (наприклад, фа і ля, сі і ре) і т.д.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.24</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Для цілого
+числа k від 1 до 99 надрукувати фразу </span><span lang=RU style='font-size:
+12.0pt'>“мені </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'> років”, враховуючи при цьому відмінки слова “рік”.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.25</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Для
+натурального числа k надрукувати фразу </span><span lang=RU style='font-size:
+12.0pt'>”</span><span style='font-size:12.0pt'>Ми з’</span><span lang=RU
+style='font-size:12.0pt'>їли </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'> яблук”, узгодивши закінчення слова “яблуко” з
+число</span><span style='font-size:12.0pt'>м</span><span lang=RU
+style='font-size:12.0pt'> k.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>26</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type </span><span style='font-size:12.0pt'>kurs</span><span
+lang=EN-US style='font-size:12.0pt'>=(Pivnich, Pivden, Zahid, Shid);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           nakaz=(vpered, vpravo,
+nazad, vlivo);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                   var k1,k2:</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>kurs</span><span
+lang=EN-US style='font-size:12.0pt'>; n: nakaz;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Корабель
+спочатку йшов по курсу </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>1, а потім його курс був змінений згідно
+наказу </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>. Визначити </span><span lang=EN-US style='font-size:
+12.0pt'>k</span><span lang=RU style='font-size:12.0pt'>2 – новий курс корабля.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>27</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>type number=1..31;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           month=(sich, lut, ber,
+kvit, trav, cherv, lyp, serp, ver, zschov, lyst, grud);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                           dayweek=(pon, vivt, ser,
+chetv, pyat, sub, ned); </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-GB
+style='font-size:12.0pt'>                   </span><span lang=EN-US
+style='font-size:12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=EN-GB style='font-size:
+12.0pt'>:</span><span lang=EN-GB style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>number</span><span lang=EN-GB
+style='font-size:12.0pt'>;</span><span lang=EN-US style='font-size:12.0pt'> m: month;
+dw</span><span style='font-size:12.0pt'>1</span><span lang=EN-US
+style='font-size:12.0pt'>, dw2: dayweek; k:0..12;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Вважаючи,
+що рік невисокосний і 1 січня цього року припадає на день тижня </span><span
+lang=EN-US style='font-size:12.0pt'>dw</span><span style='font-size:12.0pt'>1,
+визначити</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>) </span><span
+lang=EN-US style='font-size:12.0pt'>dw</span><span lang=RU style='font-size:
+12.0pt'>2 – </span><span style='font-size:12.0pt'>день тижня, на який припадає
+день з датою </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>m</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>) </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span lang=RU style='font-size:
+12.0pt'> – </span><span style='font-size:12.0pt'>кількість понеділків у році,
+що припадають на 13-і числа.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>6.28</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>У
+старояпонському календарі був прийнятий 60-річний цикл, який складався з п</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>яти
+12-річний підциклів. Підцикли позначались назвами кольорів</span><span lang=RU
+style='font-size:12.0pt'>: </span><span style='font-size:12.0pt'>зелений,
+червоний, жовтий, білий і чорний. Всередині кожного підциклу роки носили назви
+тварин</span><span lang=RU style='font-size:12.0pt'>:</span><span
+style='font-size:12.0pt'> щура, корови, тигра, зайця, дракона, змії, коня,
+вівці, мавпи, курки,собаки і свині. (1984 рік – рік зеленого щура – був
+початком чергового циклу). </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Написати програму, яка вводить номер деякого року
+нашої ери і друкує його назву по старояпонському календарю.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>6.29.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Нехай
+значення функції </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>) рівне кількості букв у записі числа </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>
+українськими (англійськими) буквами: </span><span lang=EN-US style='font-size:
+12.0pt'>f</span><span style='font-size:12.0pt'>(1)=4 (один); </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>(3)=3
+(три); </span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+style='font-size:12.0pt'>(42)=8 (сорок два) і т.д. Надрукувати всі натуральні
+числа </span><span lang=RU style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>, менші 100, для яких </span><span lang=RU
+style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>(</span><span
+lang=RU style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>)=</span><span
+lang=RU style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>.</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:Calibri;}
+p.ListParagraph, li.ListParagraph, div.ListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:Calibri;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK>
+
+<div class=Section1>
+
+<p class=ListParagraph><b><span lang=EN-US style='font-size:14.0pt;line-height:
+115%'>            </span></b><b><span style='font-size:14.0pt;line-height:115%'>Графіка
+в Паскалі</span></b><b><span style='font-size:14.0pt;line-height:115%'> </span></b><span
+lang=RU style='font-size:12.0pt;line-height:115%'>(</span><span
+style='font-size:12.0pt;line-height:115%'>Середовище розробки Алго)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>Line</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>1,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>1,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>x</span><span
+style='font-size:12.0pt;line-height:115%'>2,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>y</span><span style='font-size:12.0pt;
+line-height:115%'>2); -малювання лінії від точки (</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>1,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>1) до (</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>x</span><span
+style='font-size:12.0pt;line-height:115%'>2,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>y</span><span style='font-size:12.0pt;
+line-height:115%'>2)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>LineTo</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>); - малювання
+лінії від поточної позиції курсора до точки (</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt'>Pen</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>p</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>r</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>); -
+задання кольору лінії (по замовчуванню - чорний),</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>            </span><span
+lang=EN-US style='font-size:12.0pt'>p</span><span style='font-size:12.0pt'> -
+товщина лінії (набуває значень від 1 до 6) ; </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>            </span><span
+lang=EN-US style='font-size:12.0pt'>r</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span style='font-size:12.0pt'> - три складові кольору лінії:
+червоний, зелений, синій</span><span lang=RU style='font-size:12.0pt'> (</span><span
+style='font-size:12.0pt'>від 0 до 255)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>            Наприклад,
+Pen(1,0,0,255);  - лінія синього кольору, Pen(0,0,0,0);  - прозора лінія</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt'>Brush</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>p</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>r</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>); -
+задання кольору для замальовування фігур;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>             </span><span
+lang=EN-US style='font-size:12.0pt'>p</span><span style='font-size:12.0pt'> -
+тип замальовування (1-суцільний, 2-пунктирний і т.д.); </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>            </span><span
+lang=EN-US style='font-size:12.0pt'>r</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span style='font-size:12.0pt'> - три складові кольору лінії:
+червоний, зелений, синій</span><span lang=RU style='font-size:12.0pt'> (</span><span
+style='font-size:12.0pt'>від 0 до 255)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>            </span><span
+lang=EN-US style='font-size:12.0pt'>Brush</span><span style='font-size:12.0pt'>(1,0,0,0);
+- чорний колір, </span><span lang=EN-US style='font-size:12.0pt'>Brush</span><span
+style='font-size:12.0pt'>(1,255,255,255); - білий, </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>            </span><span
+lang=EN-US style='font-size:12.0pt'>Brush</span><span style='font-size:12.0pt'>(0,0,0,0);
+- прозорий фон</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>Rectangle</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>1,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>1,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>x</span><span
+style='font-size:12.0pt;line-height:115%'>2,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>y</span><span style='font-size:12.0pt;
+line-height:115%'>2); - малювання прямокутника </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'>            (</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>x</span><span
+style='font-size:12.0pt;line-height:115%'>1,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>y</span><span style='font-size:12.0pt;
+line-height:115%'>1) , (</span><span lang=EN-US style='font-size:12.0pt;
+line-height:115%'>x</span><span style='font-size:12.0pt;line-height:115%'>2,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>y</span><span
+style='font-size:12.0pt;line-height:115%'>2) - координати діагоналі цього
+прямокутника</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>Ellipse</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>1,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>1,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>x</span><span
+style='font-size:12.0pt;line-height:115%'>2,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>y</span><span style='font-size:12.0pt;
+line-height:115%'>2); - малювання еліпса </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'>            (</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>x</span><span
+style='font-size:12.0pt;line-height:115%'>1,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>y</span><span style='font-size:12.0pt;
+line-height:115%'>1) , (</span><span lang=EN-US style='font-size:12.0pt;
+line-height:115%'>x</span><span style='font-size:12.0pt;line-height:115%'>2,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>y</span><span
+style='font-size:12.0pt;line-height:115%'>2) - координати діагоналі
+прямокутника, у який вписаний еліпс</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>Fill</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>); - замальовування
+замкненої області, у якій міститься точка (</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>Point</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>); - малювання
+крапки в позиції (</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>x</span><span style='font-size:12.0pt;line-height:115%'>,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>y</span><span
+style='font-size:12.0pt;line-height:115%'>)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;line-height:115%'>MoveTo</span><span
+style='font-size:12.0pt;line-height:115%'>(</span><span lang=EN-US
+style='font-size:12.0pt;line-height:115%'>x</span><span style='font-size:12.0pt;
+line-height:115%'>,</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>y</span><span style='font-size:12.0pt;line-height:115%'>); - переміщення
+курсора в точку (</span><span lang=EN-US style='font-size:12.0pt;line-height:
+115%'>x</span><span style='font-size:12.0pt;line-height:115%'>,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:115%'>y</span><span
+style='font-size:12.0pt;line-height:115%'>)</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%'>Coordinates</span><span style='font-size:12.0pt;
+line-height:150%'>(</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%'>x</span><span style='font-size:12.0pt;line-height:150%'>,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%'>y</span><span
+style='font-size:12.0pt;line-height:150%'>); - знаходження координат поточної
+позиції курсора</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%'>TextColor</span><span style='font-size:12.0pt;
+line-height:150%'>(</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%'>r</span><span style='font-size:12.0pt;line-height:150%'>,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%'>g</span><span
+style='font-size:12.0pt;line-height:150%'>,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%'>b</span><span style='font-size:12.0pt;
+line-height:150%'>); -</span><span style='font-size:12.0pt;line-height:150%'> </span><span
+style='font-size:12.0pt;line-height:150%'>задання кольору тексту, який вивести
+оператором </span><span lang=EN-US style='font-size:12.0pt;line-height:150%'>write</span><span
+lang=RU style='font-size:12.0pt;line-height:150%'>('</span><span
+style='font-size:12.0pt;line-height:150%'>Текст</span><span lang=RU
+style='font-size:12.0pt;line-height:150%'>');</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%'>Font</span><span lang=RU style='font-size:12.0pt;
+line-height:150%'>(</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%'>h</span><span lang=RU style='font-size:12.0pt;line-height:150%'>,</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%'>a</span><span lang=RU
+style='font-size:12.0pt;line-height:150%'>,</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%'>b</span><span lang=RU
+style='font-size:12.0pt;line-height:150%'>); - </span><span style='font-size:
+12.0pt;line-height:150%'>задання шрифта для тексту </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%'>            </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%'>h</span><span lang=RU style='font-size:12.0pt;line-height:
+150%'> -</span><span style='font-size:12.0pt;line-height:150%'> висота в
+пікселях, </span><span lang=EN-US style='font-size:12.0pt;line-height:150%'>a</span><span
+style='font-size:12.0pt;line-height:150%'> - кут нахилу в градусах, </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%'>            </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%'>b</span><span style='font-size:12.0pt;line-height:150%'> -
+насиченість кольору (від 0 до 1000</span><span lang=RU style='font-size:12.0pt;
+line-height:150%'>; </span><span style='font-size:12.0pt;line-height:150%'>звичайний
+текст - 400</span><span lang=RU style='font-size:12.0pt;line-height:150%'>; </span><span
+style='font-size:12.0pt;line-height:150%'>жирний - 600</span><span lang=RU
+style='font-size:12.0pt;line-height:150%'>)</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=RU style='font-size:
+12.0pt;line-height:150%'>            </span><span style='font-size:12.0pt;
+line-height:150%'>По замовчуванню </span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%'>Font</span><span lang=RU style='font-size:12.0pt;
+line-height:150%'>(</span><span style='font-size:12.0pt;line-height:150%'>8,0,400)</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%'>Clear</span><span style='font-size:12.0pt;line-height:
+150%'> - встановлюється чорний колір для малювання, прозорий фон для
+замальовування фігур, курсор переміщається в позицію (0,0).</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt'>Завдання
+1</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>-
+Намалювати  три квадрати різного розміру, які дотикаються один до одного.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>-
+Задати різні кольори квадратам та їх границям.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'> Використати
+команди: Pen, </span><span style='font-size:12.0pt'> </span><span lang=EN-US
+style='font-size:12.0pt'>B</span><span style='font-size:12.0pt'>rush, Rectangle.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span lang=RU
+style='font-size:12.0pt'>Завдання 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=RU style='font-size:
+12.0pt'>-Намалювати три ел</span><span style='font-size:12.0pt'>іпси один в
+одному.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%'>- Задати різні кольори еліпсам, щоб найменший еліпс був на
+передньому плані, а найбільшій – на задньому.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt'>Використати
+команди:  Pen,</span><span style='font-size:12.0pt'> </span><span lang=EN-US
+style='font-size:12.0pt'>B</span><span style='font-size:12.0pt'>rush,</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Ellipse.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span lang=RU
+style='font-size:12.0pt'>Завдання 3</span></b></p>
+
+<p class=MsoNormal><span lang=RU style='font-size:12.0pt;line-height:115%'>-</span><span
+style='font-size:12.0pt;line-height:115%'> Намалювати рівнобедрений трикутник і
+заповнити його жовтим кольором.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'>Використати
+команди:  LineTo, Brush, Fill.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span lang=RU
+style='font-size:12.0pt'>Завдання 4</span></b></p>
+
+<p class=MsoNormal><span lang=RU style='font-size:12.0pt;line-height:115%'>-</span><span
+style='font-size:12.0pt;line-height:115%'> Намалювати три паралельні лінії
+різної товщини та кольорів.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'>Використати
+команди:  Line, Pen.</span>  </p>
+
+<p class=MsoNormal style='line-height:normal'><b><span lang=RU
+style='font-size:12.0pt'>Завдання 5</span></b></p>
+
+<p class=MsoNormal><span lang=RU style='font-size:12.0pt;line-height:115%'>-</span><span
+lang=RU style='font-size:12.0pt;line-height:115%'> </span><span
+style='font-size:12.0pt;line-height:115%'>Вивести слово <i>графіка в алго </i>три
+рази різними кольорами, розмірами, насиченістю кольору, нахилами, щоб написи не
+перетнулись.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:12.0pt;
+line-height:150%'>Використати команди:  </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%'>TextColor</span><span
+style='font-size:12.0pt;line-height:150%'>, </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%'>Font</span><span style='font-size:
+12.0pt;line-height:150%'>, </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%'>Write</span><span style='font-size:12.0pt;line-height:150%'>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span lang=RU>Завдання 6</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=RU>Написати в одному
+рядку</span><span lang=RU> </span><i>Інформатика, Математика, Фізика</i>
+різними кольорами та шрифтами.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання 7</span></b></p>
+
+<p class=MsoNormal><span lang=RU>Написати в окремрму рядку</span><span lang=RU>
+</span><i>Інформатика, Математика, Фізика</i> різними кольорами та шрифтами,
+кожен напис підкреслити лініями <span lang=RU>різної товщини </span>та <span
+lang=RU>різних кольорів.</span></p>
+
+<p class=MsoNormal><b><i><span lang=RU>Приклад</span></i></b><b><span lang=RU>.</span></b><span
+lang=RU> Намалювати 10 горизонтальних ліній різної товщини </span>та <span
+lang=RU>різних відтінків червого кольору.</span></p>
+
+<p class=MsoNormal style='line-height:normal'> Var    i: integer; </p>
+
+<p class=MsoNormal style='line-height:normal'>Begin  </p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US>     </span>For
+i:=1 to 10 do    </p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US>     </span> Begin     
+</p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US>       </span> Pen(
+i, i*20, 0, 0 );     </p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US>     </span>  Line(
+10, i*10, 100, i*10 )    </p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US>   </span> end </p>
+
+<p class=MsoNormal style='line-height:normal'>end.</p>
+
+<p class=MsoNormal><b>Завдання 8</b></p>
+
+<p class=MsoNormal>Намалювати 12 вертикальних ліній різної товщини та різних
+відтінків синього кольору.</p>
+
+<p class=MsoNormal><b><i><span lang=RU>Приклад</span></i></b><span lang=RU>.
+Намалювати крапками круг, ліва частина круга  – червоними крапками, а права –
+синіми.</span></p>
+
+<p class=MsoNormal>Var    i, x, y: integer;</p>
+
+<p class=MsoNormal>Begin  </p>
+
+<p class=MsoNormal><span lang=EN-US>  </span> For i:=1 to 5000 do    </p>
+
+<p class=MsoNormal><span lang=EN-US> </span><span lang=EN-US>    </span>Begin    
+</p>
+
+<p class=MsoNormal><span lang=EN-US>         </span> x := random( 100 );      </p>
+
+<p class=MsoNormal><span lang=EN-US>        </span> y := random( 100 );      </p>
+
+<p class=MsoNormal><span lang=EN-US>       </span> If sqr( x-50 )+           
+sqr( y-50 ) &lt; 1600</p>
+
+<p class=MsoNormal><span lang=EN-US>                </span> then        </p>
+
+<p class=MsoNormal><span lang=EN-US>                   </span> Begin          </p>
+
+<p class=MsoNormal><span lang=EN-US>                               </span> If
+x&gt;50  then   Pen( 1, 0, 0, 255 )  else  Pen( 1, 255, 0, 0 );          </p>
+
+<p class=MsoNormal><span lang=EN-US>                               </span>Point(
+x, y )       </p>
+
+<p class=MsoNormal><span lang=EN-US>                  </span> end     </p>
+
+<p class=MsoNormal><span lang=EN-US>    </span>end </p>
+
+<p class=MsoNormal>end.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>9</b></p>
+
+<p class=MsoNormal><span lang=RU>Намалювати крапками круг, ліва верхня частина
+круга  – червоними крапками, ліва нижня – зеленими, права верхня – синіми,
+права нижня – жовтими.</span></p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>10</b></p>
+
+<p class=MsoNormal>Намалювати 15 кіл радіусом 20 пікселів, які дотикаються між
+собою. Кола розміщені</p>
+
+<p class=MsoNormal>а) по горизонталі</p>
+
+<p class=MsoNormal>б) по вертикалі</p>
+
+<p class=MsoNormal>в) по діагоналі</p>
+
+<p class=MsoNormal>1) Кола намалювати різними відтінками червоного кольору. </p>
+
+<p class=MsoNormal>2) Замалювати круги різними відтінками зеленого кольору.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>11</b></p>
+
+<p class=MsoNormal>Намалювати 10 жовтих кругів радіусом 30 пікселів, які з’<span
+lang=RU>являються почергово на екран</span>і (коли <span lang=RU>з’</span>являється
+другий круг, то щезає перший і т.д.).</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>1</b><b><span lang=RU>2</span></b></p>
+
+<p class=MsoNormal>Намалювати шахову дошку.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>13</b></p>
+
+<p class=MsoNormal>Поставити туру у <span lang=EN-US>i</span><span lang=RU>-</span>рядок
+та <span lang=EN-US>j</span><span lang=RU>-</span>стовпчик шахової дошки, тоді 
+квадрат з турою замалювати червоним кольором, решту квадратів рядка - синім
+кольором, а решту квадратів стовпця - зеленим.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>14</b></p>
+
+<p class=MsoNormal>Ввести координати точки. Визначити квадрат шахової дошки, в
+якому міститься задана точка (тобто знайти номер рядка та номер стовпця
+квадрата). Також розглянути випадки, коли точка не міститься на шаховій дошці
+або міститься на лінії дотику квадратів.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>15</b></p>
+
+<p class=MsoNormal>Намалювати осі координат </p>
+
+<p class=MsoNormal>а) з центром у точці (100,100) і задати поділки на осях по
+20 пікселів<span lang=RU>;</span><span lang=RU> </span></p>
+
+<p class=MsoNormal>б) з центром у точці (300,200) і задати поділки на осі х по
+20 пікселів<span lang=RU>, а на осі у - по 40 пікселів;</span></p>
+
+<p class=MsoNormal>в) ввести координати перетину осей і задати поділки на осях
+по 10 пікселів.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>1</b><b><span lang=RU>6</span></b></p>
+
+<p class=MsoNormal>Намалювати ялинку (коричневий стовбур, по 5 гілок з лівого
+та правого боків), прикрасити ялинку кольоровими кульками.</p>
+
+<p class=MsoNormal><b><span lang=RU>Завдання </span>1</b><b><span lang=RU>7</span></b></p>
+
+<p class=MsoNormal>Намалювати сніговика (три кола різного радіуса, від
+середнього кола відходять лінії-руки<span lang=RU>;</span><span lang=RU> </span>очі,
+ніс, рот) та розмалювати його. </p>
+
+</div>
+
+</body>
+
+</html>
